@@ -1,8 +1,8 @@
-export const contractAddress = "0xb8FD22b124680Cba52f850C006D8FFE59f291EC1";
+export const contractAddress = "0x9bA655328197b3fF54b9554294ef8017CdC09AC3";
 
-export const contractAddress1 = "0xb8FD22b124680Cba52f850C006D8FFE59f291EC1";
+export const contractAddress1 = "0x9bA655328197b3fF54b9554294ef8017CdC09AC3";
 
-export const contractAddress2 = "0xb8FD22b124680Cba52f850C006D8FFE59f291EC1";
+export const contractAddress2 = "0x9bA655328197b3fF54b9554294ef8017CdC09AC3";
 // Replace this with your domain name.
 export const domainName = "https://rarebay.xyz";
 
