@@ -1,8 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import Head from "next/head";
-
-import Search from "../components/search";
 import Footer from "../components/footer";
 import { ConnectWallet } from "@thirdweb-dev/react";
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
@@ -16,8 +14,13 @@ import { Blockie } from "web3uikit";
 import styles from "../styles/Home.module.css";
 import Banner from "../components/banner";
 import Container from "../components/Container/Container"
-
-
+import { getUser } from "../auth.config";
+import toast, { Toaster } from "react-hot-toast";
+import toastStyle from "../util/toastConfig";
+import checkBalance from "../util/checkBalance";
+import { useLogout, useUser} from "@thirdweb-dev/react";
+import { ThirdwebSDK } from "@thirdweb-dev/react";
+import { CoreBlockchain } from "@thirdweb-dev/chains";
 
 
 const Home = (props) => {
@@ -26,7 +29,7 @@ const Home = (props) => {
   const { connect, connectors } = useConnect();
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
+  
  
 
   useEffect(() => {
@@ -44,20 +47,19 @@ const Home = (props) => {
       <div className="home-container">
         <Head>
           <title>RareBay | HOME OF RAR3</title>
-          <meta property="og:title" content="RareBay | DEX1" />
+          <meta property="og:title" content="RareBay | DEX" />
         </Head>
             <div className="home-container35">
               <div className="home-container36">
                 <div className="home-container37">
                   <Link className="home-link12" href="#">
                     
-                      <h1 className="home-heading1">WELCOME TO RAR3BAY</h1>
-                  
+                      <h1 className="home-heading1">WELCOME TO RAR3BAY TESTNET</h1>
                   </Link>
+                  <div style={{fontFamily: "Arial", color: "lightgray", textAlign: "center", width: "70%", padding: "3%", fontStyle: "italic", justifyItems: "center", borderBottom: "solid 1px"}}></div>
                 </div>
               </div>
-              <div className="home-container38">
-     <video loop autoPlay autoFocus src="RARE.mp4" style={{border: "solid 2px white", borderRadius: "16px", width: "70%"}}/>           
+              <div className="home-container38">         
               </div>
               <div className="home-container39">
                 <div className="home-container40">
@@ -74,15 +76,16 @@ const Home = (props) => {
                             className="home-image2"
                           />
                           <span className="home-text12">rar31oneS</span>
-                        </div>
-                        <div className="home-container45">
-                          <div className="home-container46">
-                            <span className="home-text13">
+                          </div>
+                        <div className="home-container52">
+                          <div className="home-container53">
+                            <span className="home-text17">
                              3100 RAR3 COLLECTIBLES PIONEERING THE DECENTRALIZATION OF NFTS ON RAREBAY DEX
+
                             </span>
                           </div>
-                          <div className="home-container47">
-                            <span className="home-text14">FLOOR: 0.0</span>
+                          <div className="home-container54">
+                            <span className="home-text18">FLOOR: 0.0</span>
                             <a href={`/collection`} className="home-text15">VIEW ITEMS</a>
                           </div>
                         </div>
@@ -98,7 +101,7 @@ const Home = (props) => {
                           width={30}
                           height={30}
                             alt="image"
-                            src="/sdzhksgdasha-200w.png"
+                            src="/bwyc1.png"
                             className="home-image3"
                           />
                           <span className="home-text16">BWYC II</span>
@@ -1126,7 +1129,7 @@ const Home = (props) => {
               180deg,
               rgb(255, 255, 255) 0%,
               rgb(45, 45, 45) 49%,
-              rgb(0, 100, 250) 98%
+              rgb(200, 100, 250) 98%
             );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -1732,7 +1735,7 @@ const Home = (props) => {
             display: flex;
             align-items: center;
             flex-direction: column;
-            color: inital;
+            color: lightgray;
           }
           .home-feature-card {
             width: 100%;
@@ -1968,3 +1971,48 @@ const Home = (props) => {
 };
 
 export default Home;
+
+
+export async function getServerSideProps(context) {
+  const user = await getUser(context.req);
+
+  if (!user) {
+    return {
+      redirect: {
+        destination: "/dex",
+        permanent: false,
+      },
+    };
+  }
+
+  // Ensure we are able to generate an auth token using our private key instantiated SDK
+  const PRIVATE_KEY = process.env.THIRDWEB_AUTH_PRIVATE_KEY;
+  if (!PRIVATE_KEY) {
+    throw new Error("You need to add an PRIVATE_KEY environment variable.");
+  }
+
+  // Instantiate our SDK
+  const sdk = ThirdwebSDK.fromPrivateKey(
+    process.env.THIRDWEB_AUTH_PRIVATE_KEY,
+    CoreBlockchainTestnet,
+  );
+
+  // Check to see if the user has an NFT
+  const hasNft = await checkBalance(sdk, user.address);
+
+  // If they don't have an NFT, redirect them to the login page
+  if (!hasNft) {
+    console.log("User", user.address, "doesn't have an NFT! Redirecting...");
+    return {
+      redirect: {
+        destination: "/login",
+        permanent: false,
+      },
+    };
+  }
+
+  // Finally, return the props
+  return {
+    props: {},
+  };
+}

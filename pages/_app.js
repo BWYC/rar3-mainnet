@@ -18,6 +18,8 @@ import Grid from "../components/grid"
 import { ChakraProvider } from '@chakra-ui/react'
 import Footer from "../components/footer";
 import Banner from "../components/banner"
+import Patner from "../components/partners";
+import ReactLanguageSelect from 'react-languages-select';
 
 const { publicClient, webSocketPublicClient } = configureChains(
   [mainnet],
@@ -37,6 +39,10 @@ export default function MyApp({ Component: Component, pageProps: pageProps }) {
  <ChakraProvider theme={{}}>
     <ThirdwebProvider
     clientId={process.env.NEXT_PUBLIC_TEMPLATE_CLIENT_ID}
+    authConfig={{
+      domain: "rarebay.xyz",
+      authUrl: "/api/auth",
+    }}
     activeChain={NETWORK}
     supportedWallets={[
       metamaskWallet({ recommended: true }),
@@ -57,7 +63,10 @@ export default function MyApp({ Component: Component, pageProps: pageProps }) {
         <Grid />
         
       <Component className="body" {...pageProps} />
+    
+      <Patner />
       <Footer />
+      
       </NextThemesProvider>
     
      
