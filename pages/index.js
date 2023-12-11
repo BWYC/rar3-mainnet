@@ -54,7 +54,7 @@ const Home = (props) => {
                 <div className="home-container37">
                   <Link className="home-link12" href="#">
                     
-                      <h1 className="home-heading1">WELCOME TO RAR3BAY TESTNET</h1>
+                      <h1 className="home-heading1">RAR3BAY | HOME OF RAR3</h1>
                   </Link>
                   <div style={{fontFamily: "Arial", color: "lightgray", textAlign: "center", width: "70%", padding: "3%", fontStyle: "italic", justifyItems: "center", borderBottom: "solid 1px"}}></div>
                 </div>
@@ -1118,7 +1118,7 @@ const Home = (props) => {
             align-self: center;
             background: -webkit-linear-gradient(
               rgb(1, 12, 241),
-              rgb(250, 100, 100)
+              rgb(0, 0, 100)
             );
             margin-top: 0px;
             text-align: center;
@@ -1129,7 +1129,7 @@ const Home = (props) => {
               180deg,
               rgb(255, 255, 255) 0%,
               rgb(45, 45, 45) 49%,
-              rgb(200, 100, 250) 98%
+              rgb(0, 0, 250) 98%
             );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
