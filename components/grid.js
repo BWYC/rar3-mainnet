@@ -51,8 +51,7 @@ const Grid = (props) => {
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
- const code = onSelectLanguage(languageCode)
- this.refs.userLanguage.updateSelected("it")
+
 
   useEffect(() => {
     if (!address) {
@@ -377,7 +376,6 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
   <ReactLanguageSelect
   onSelect={this.onSelectLanguage} 
   searchable={true}
-  ref="userLanguage"
   style={{
     backdropFilter: "blur(10px)",
     fontFamily: "Pixel Nes"
