@@ -57,7 +57,7 @@ const Patner = () => {
          .home-heading1 {
           color: rgb(140, 140, 140);
           height: 100%;
-          font-size: 40px;
+          font-size: 35px;
           align-self: center;
           background: -webkit-linear-gradient(
             rgb(1, 12, 241),
@@ -77,7 +77,7 @@ const Patner = () => {
           -webkit-text-fill-color: transparent;
         }
         .home-heading1:hover {
-          font-size: 30;
+          font-size: 30px;
           cursor: pointer;
         }
           .footer-container {
