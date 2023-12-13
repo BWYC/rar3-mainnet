@@ -11,22 +11,22 @@ import {
   import { BigNumber, ethers } from "ethers";
   import { useEffect, useState } from "react";
 import NFTGrid from "../components/NFT/NFTGrid.jsx";
-  import { NFT_COLLECTION_ADDRESS2, tokenContractAddress, stakingContractAddress2 } from "../const/contractAddresses"
+  import { NFT_COLLECTION_ADDRESS3, tokenContractAddress, stakingContractAddress4 } from "../const/contractAddresses"
   import styles from "../styles/stake.module.css";
-import Container from "../components/Container/Container";
-import NFTCard from "../components/NFTCardb"
+import Container from "../components/Container/Container.jsx";
+import NFTCard from "../components/NFTCard.jsx"
   
-  const Stake = () => {
+  const Stake3 = () => {
     const address = useAddress();
     const { contract: nftDropContract } = useContract(
-      NFT_COLLECTION_ADDRESS2,
+      NFT_COLLECTION_ADDRESS3,
       "nft-drop",
     );
     const { contract: tokenContract } = useContract(
       tokenContractAddress,
       "token",
     );
-    const { contract, isLoading } = useContract(stakingContractAddress2);
+    const { contract, isLoading } = useContract(stakingContractAddress4);
     const { data: ownedNfts } = useOwnedNFTs(nftDropContract, address);
     const { data: tokenBalance } = useTokenBalance(tokenContract, address);
     const [claimableRewards, setClaimableRewards] = useState<BigNumber>();
@@ -50,10 +50,10 @@ import NFTCard from "../components/NFTCardb"
   
       const isApproved = await nftDropContract?.isApproved(
         address,
-        stakingContractAddress2,
+        stakingContractAddress4,
       );
       if (!isApproved) {
-        await nftDropContract?.setApprovalForAll(stakingContractAddress2, true);
+        await nftDropContract?.setApprovalForAll(stakingContractAddress4, true);
       }
       await contract?.call("stake", [[id]]);
     }
@@ -111,12 +111,11 @@ import NFTCard from "../components/NFTCardb"
               color: "Orange",
             }}
             action={(contract) => contract.call("claimRewards")}
-            contractAddress={stakingContractAddress2}
+            contractAddress={stakingContractAddress4}
           >
             Claim Rewards
           </Web3Button>
-              <div style={{height: "50px"}}></div>
-              <h1 style={{ textAlign: "center", color: "lightgreen" }}>Staked Tokens</h1>
+              <h2 style={{ textAlign: "center", color: "lightgreen" }}>Staked Tokens</h2>
               <div className={styles.nftBoxGrid}>
                 {stakedTokens &&
                   stakedTokens[0]?.map((stakedToken: BigNumber) => (
@@ -127,7 +126,7 @@ import NFTCard from "../components/NFTCardb"
                   ))}
               </div>
               <div style={{height: "50px"}}></div>
-              <h2 style={{ textAlign: "center", color: "red" }}>Unstaked Tokens</h2>
+              <h1 style={{ textAlign: "center", color: "lightred" }}>Unstaked Tokens</h1>
               <div className={styles.nftBoxGrid}>
                 {ownedNfts?.map((nft) => (
                   <div key={nft.metadata.id.toString()}>
@@ -151,7 +150,7 @@ import NFTCard from "../components/NFTCardb"
                         color: "Orange",
                         alignItems: "center",
                       }}
-                      contractAddress={stakingContractAddress2}
+                      contractAddress={stakingContractAddress4}
                       action={() => stakeNft(nft.metadata.id)}
                     >
                       Stake
@@ -167,4 +166,4 @@ import NFTCard from "../components/NFTCardb"
     );
   };
   
-  export default Stake;
+  export default Stake3;

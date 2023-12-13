@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Head from "next/head";
 
-import Search from "../components/search";
+import Search from "./search";
 import Footer from "../components/footer";
 import { ConnectWallet } from "@thirdweb-dev/react";
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
@@ -15,10 +15,22 @@ import { useAccount, useConnect } from "wagmi";
 import { Blockie } from "web3uikit";
 import styles from "../styles/Home.module.css";
 import Banner from "../components/banner";
+import {Testnet} from '@web3uikit/icons'
+import ReactLanguageSelect from 'react-languages-select';
+ 
+//import css module
+import 'react-languages-select/css/react-languages-select.css';
+ 
+//OR import sass module
+import 'react-languages-select/scss/react-languages-select.scss';
+import { Token } from "web3uikit";
+import { Ref } from "react";
 
 
 
-const light = { background: "white" };
+
+
+const light = { background: "#d3d3d3" };
 const dark = { background: "black" };
 
 const GlobalStyle = createGlobalStyle`
@@ -31,6 +43,7 @@ const GlobalStyle = createGlobalStyle`
 
 const Grid = (props) => {
 
+  
   const address = useAddress()
   const { connect, connectors } = useConnect();
 
@@ -59,8 +72,8 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
     <ThemeProvider theme={theme}>
       <div className="home-container">
         <Head>
-          <title>RareBay | DEX</title>
-          <meta property="og:title" content="RareBay | HOME OF RARE" />
+          <title>RareBay | TESTNET</title>
+          <meta property="og:title" content="RareBay |  TESTNET" />
         </Head>
         <div className="home-container01">
           <div className="home-container02">
@@ -318,26 +331,12 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
         isDark={isDark}
         invertedIconLogic
         onChange={() => setDark((prev) => !prev)}
-        />
+        /><p style={{margin: "5%", fontFamily: "Pixel Nes"}}>DARK MODE</p>
         <hr />
-     
-                      </div>
-                      
-                    </div>
-                  </div>
-                </div>
-                
-                <div id="connect" className="home-container33">
-                <ReactThemeToggleButton
-        isDark={isDark}
-        invertedIconLogic
-        onChange={() => setDark((prev) => !prev)}
-        />
-                  <div id="connecting" className="home-container34">
-
-                  </div>
-                  {isLoggedIn ? (
+ 
+          {isLoggedIn ? (
           <section>
+                   <div style={{margin: "50px"}}></div>
             {connectors.map((connector) => (
               <>
  <ConnectWallet
@@ -371,26 +370,144 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
    "https://bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a.ipfs.nftstorage.link/ipfs/bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a/xcxczxz.png"
  }
 />
+<div style={{height: "100px", margin: "20px", cursor: "pointer", fontSize: "20px"}}>
+  <ReactLanguageSelect
+  searchable={true}
+  style={{
+    backdropFilter: "blur(10px)",
+    fontFamily: "Pixel Nes"
+  }}
+  showSelectedLabel={false}
+  showOptionLabel={false}
+  placeholder=""
+    ></ReactLanguageSelect>
+     <img src="https://img.icons8.com/?size=48&id=31016&format=png"  width={"25px"} style={{marginTop: "-15px"}}/>
+  </div>
 </>
             ))}
           </section>
         ) : (
+          <>
           <section className={styles.loggedIn_section}>
 <ConnectWallet 
    theme={({
    colors: {
-     modalBg: " rgba(0, 0, 50, 0.638)",
+     modalBg: "rbga(0, 0, 0, 0.9)",
      dropdownBg: "black",
-     accentText: "initial",
+     accentText: "grey",
+     accentButtonBg: "#0064fa",
+     borderColor: "initial",
+     primaryText: "grey",
+     background: "initial",
+     backdropFilter: "blur(10px)"
+   },
+  })}
+   style={{background: "black", color: "white", border: "solid", color: "white", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px"}} />
+
+</section>
+<div style={{height: "100px", margin: "20px", cursor: "pointer", fontSize: "20px", background: "black"}}>
+<ReactLanguageSelect
+  searchable={true}
+  style={{
+    backdropFilter: "blur(10px)",
+    background: "black"
+  }}
+  showSelectedLabel={false}
+  showOptionLabel={false}
+  placeholder=""
+    ></ReactLanguageSelect>
+     <img src="https://img.icons8.com/?size=48&id=31016&format=png"  width={"25px"} style={{marginTop: "-15px"}}/>
+  </div>
+</>
+        )}
+     
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                
+                <div id="connect" className="home-container33">
+                <ReactThemeToggleButton
+        isDark={isDark}
+        invertedIconLogic
+        onChange={() => setDark((prev) => !prev)}
+        />
+  <div style={{width: "100px", margin: "20px", cursor: "pointer", fontSize: "20px"}}>
+  <ReactLanguageSelect
+  style={{
+    backdropFilter: "blur(10px)",
+    background: "black"
+  }}
+  showSelectedLabel={false}
+  showOptionLabel={false}
+  placeholder=""
+    languages={["en", "ch"]} 
+    customLabels={{"en": "EN-US"}}
+    ></ReactLanguageSelect>
+     <img src="https://img.icons8.com/?size=48&id=31016&format=png"  width={"25px"} style={{marginTop: "-15px"}}/>
+  </div>
+                  <div id="connecting" className="home-container34">
+
+                  </div>
+                  {isLoggedIn ? (
+          <section style={{fontFamily: "Pixel NES"}}>
+            {connectors.map((connector) => (
+              <>
+ <ConnectWallet
+
+ style={{border: "solid", borderColor: "initial", borderWidth: "0.5px", fontFamily: "Pixel NES"}}
+ modalSize={"compact"}
+ theme={({
+  fontFamily: "Pixel Nes",
+   colors: {
+     modalBg: " rgba(0, 0, 50, 0.638)",
+     dropdownBg: "initial",
+     accentText: "white",
      accentButtonBg: "#0064fa",
      borderColor: "initial",
      primaryText: "white",
-     background: "black",
+   },
+ })}
+ btnTitle={"CONNECT"}
+ modalTitle={"RAREBAY"}
+ switchToActiveChain={true}
+ welcomeScreen={{
+   title: "WELCOME TO THE HOME OF RAR3",
+   Image: {
+     src: "https://bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a.ipfs.nftstorage.link/ipfs/bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a/xcxczxz.png",
+     width: 150,
+     height: 150,
+   },
+   subtitle:
+     "Connect wallet to get started.",
+ }}
+ modalTitleIconUrl={
+   "https://bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a.ipfs.nftstorage.link/ipfs/bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a/xcxczxz.png"
+ }
+/>
+</>
+            ))}
+          </section>
+        ) : (
+          <section className={styles.loggedIn_section}  style={{fontFamily: "Pixel NES"}}>
+<ConnectWallet 
+   theme={({
+    fontFamily: "Pixel Nes",
+   colors: {
+     modalBg: " rgba(0, 0, 50, 0.638)",
+     dropdownBg: "black",
+     accentText: "gray",
+     accentButtonBg: "#0064fa",
+     borderColor: "gray",
+     primaryText: "gray",
+     background: "rgba(0, 0, 0, 0.638)",
      backdropFilter: "blur(10px)"
    },
   })}
    style={{background: "black", color: "white", border: "solid", color: "white", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px"}} /><div style={{width: "45px", height: "45px", padding: "3.8px", border: "solid", marginTop: "5px", borderRadius: "100%", marginLeft: "5px", color: "initial" }}><Blockie seed={address} />
    </div>
+   
           </section>
         )}
                 </div>
@@ -578,7 +695,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           }
           .home-navbar-interactive {
             top: -1px;
-            color: var(--dl-color-gray-500);
+            color: lightgray;
             right: -1px;
             width: 100%;
             height: 68px;
@@ -591,7 +708,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             padding-left: 35px;
             padding-right: var(--dl-space-space-threeunits);
             padding-bottom: 11px;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(20px);
             justify-content: center;
           }
           .home-desktop-menu {
@@ -623,8 +740,6 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             cursor: pointer;
           }
           .home-burger-menu:hover{
-            background: gray;
-            border-radius: 16px;
             cursor: pointer;
             margin-left: 50px;
           }
@@ -650,7 +765,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             z-index: 1;
             position: absolute;
             transform: translateX(-100%);
-            box-shadow: 5px 5px 10px 0px #005ba3;
+            box-shadow: 5px 5px 10px 0px gray;
             transition: 0.5s;
             flex-direction: column;
             padding-bottom: 32px;
@@ -663,12 +778,12 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             display: flex;
             z-index: 1;
             align-self: center;
-            background: rgba(0, 0, 0, 0.77);
+            background: rgba(0, 0, 0, 0.57);
             align-items: center;
             border-color: #5f5f5f;
             border-width: 0.5px;
             flex-direction: column;
-            backdrop-filter: blur(500px);
+            backdrop-filter: blur(50px);
             justify-content: center;
             border-top-width: 0px;
             border-left-width: 0px;

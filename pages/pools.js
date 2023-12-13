@@ -6,6 +6,7 @@ import Stake from "./stake"
 import Stake1 from "./stake1"
 import Stake2 from "./stake2"
 import Image from 'next/image';
+import Stake3 from "./stake3"
 
 
 const customStyles = {
@@ -37,6 +38,7 @@ const Pools = (props) => {
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [modalIsOpen1, setIsOpen1] = React.useState(false);
   const [modalIsOpen2, setIsOpen2] = React.useState(false);
+  const [modalIsOpen3, setIsOpen3] = React.useState(false);
 
   function openModal() {
     setIsOpen(true);
@@ -46,6 +48,9 @@ const Pools = (props) => {
   }
   function openModal2() {
     setIsOpen2(true);
+  }
+  function openModal3() {
+    setIsOpen3(true);
   }
 
   function afterOpenModal() {
@@ -61,6 +66,9 @@ const Pools = (props) => {
   }
   function closeModal2() {
     setIsOpen2(false);
+  }
+  function closeModal3() {
+    setIsOpen3(false);
   }
 
   return (
@@ -125,7 +133,21 @@ const Pools = (props) => {
                   <br></br>
                 </span>
               </div>
-              <a href='https://app.youngparrotnft.com/core/pools/nfts/bwyc-whls' className="pools-button button" disabled>STAKE</a>
+              <button className="pools-button button" onClick={openModal}>STAKE</button>
+              <Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="STAKE"
+      >
+        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>STAKING POOL</h2>
+        <div><Stake3 />
+        <div style={{height: "10px"}}></div>
+        <button className='button' onClick={closeModal}>EXIT</button>
+        </div>
+       
+      </Modal>
    
             </div>
             <div className="pools-pricing-card2">

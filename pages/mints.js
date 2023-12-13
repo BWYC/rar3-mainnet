@@ -5,6 +5,7 @@ import Stake from "./stake"
 import Stake1 from "./stake1"
 import Stake2 from "./stake2"
 
+
 import Search from "../components/search";
 import Footer from "../components/footer";
 import { ConnectWallet } from "@thirdweb-dev/react";
