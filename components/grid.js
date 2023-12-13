@@ -374,9 +374,8 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
 />
 <div style={{height: "100px", margin: "20px", cursor: "pointer", fontSize: "20px"}}>
   <ReactLanguageSelect
-  onSelect={this.onSelectLanguage} 
-  searchable={true}
 
+  searchable={true}
   style={{
     backdropFilter: "blur(10px)",
     fontFamily: "Pixel Nes"
