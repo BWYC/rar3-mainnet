@@ -6,7 +6,7 @@ import {Link, Twitter, Discord, UserTeam, ArrowDown, Dapps, Checkmark } from '@w
 import Data from "./data1";
 import truncateEthAddress from "truncate-eth-address";
 import { Blockie } from "web3uikit"
-import NFTGrid from "../../components/NFT/NFTGrid";
+import NFTGrid from "../../components/NFT/bwycg";
 import Sell from "../sell"
 import Container from "../../components/Container/Container";
 

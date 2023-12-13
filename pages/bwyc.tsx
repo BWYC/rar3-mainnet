@@ -1,7 +1,6 @@
 import { useContract, useNFTs, useAddress, useOwnedNFTs, ThirdwebNftMedia,  useValidDirectListings,
   useValidEnglishAuctions } from "@thirdweb-dev/react";
 import Container from "../components/Container/Container";
-import NFTGrid from "../components/NFT/NFTGrid";
 import { NFT_COLLECTION_ADDRESS2, MARKETPLACE_ADDRESS } from "../const/contractAddresses";
 import ProfilePage from "./profile/[address]";
 import styles from "../styles/Profile.module.css";
@@ -69,7 +68,9 @@ export default function Buy() {
         </>
       ):(
 <>
-<button
+
+                <Container maxWidth="lg">
+                <button
                   onClick={() => {
                     setSelectedNft(undefined);
                   }}
@@ -77,7 +78,6 @@ export default function Buy() {
                 >
                   X
                 </button>
-                <Container maxWidth="lg">
                 <TokenPage contractMetadata={selectedNft.metadata} nft={selectedNft} />
                 </Container>
 

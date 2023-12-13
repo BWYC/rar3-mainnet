@@ -10,7 +10,6 @@ import {
   } from "@thirdweb-dev/react";
   import { BigNumber, ethers } from "ethers";
   import { useEffect, useState } from "react";
-import NFTGrid from "../components/NFT/NFTGrid";
   import { NFT_COLLECTION_ADDRESS3, tokenContractAddress, stakingContractAddress4 } from "../const/contractAddresses"
   import styles from "../styles/stake.module.css";
 import Container from "../components/Container/Container.jsx";
@@ -135,7 +134,7 @@ import NFTCard from "../components/NFTCardd"
                       style={{
                         borderRadius: "32px",
                         width: "100%",
-                        height: "250px",
+                        height: "auto",
                       }}
                       metadata={nft.metadata}
                       className={styles.nftMedia}
