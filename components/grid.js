@@ -437,7 +437,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
   <ReactLanguageSelect
   style={{
     backdropFilter: "blur(10px)",
-    background: "black"
+    fontFamily: "Pixel Nes"
   }}
   showSelectedLabel={false}
   showOptionLabel={false}
