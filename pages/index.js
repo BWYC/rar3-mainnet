@@ -128,7 +128,7 @@ const Home = (props) => {
                           width={30}
                           height={30}
                             alt="image"
-                            src="/sf-200h.png"
+                            src="/bwyc.png"
                             className="home-image4"
                           />
                           <span className="home-text20">BWYC I</span>
@@ -1162,6 +1162,7 @@ const Home = (props) => {
             display: flex;
             margin-top: var(--dl-space-space-twounits);
             align-items: flex-start;
+           
           }
           .home-container40 {
             width: 100%;
@@ -1178,6 +1179,7 @@ const Home = (props) => {
           }
           .home-container40:hover {
             width: 90%;
+            color: lightgray;
           }
           .home-container41 {
             width: 250px;
@@ -1470,7 +1472,7 @@ const Home = (props) => {
             flex-direction: column;
             background-size: cover;
             justify-content: center;
-            background-image: url("/adhsilzs%3Bl-1200w.png");
+            background-image: url("/k.png");
             background-position: center;
           }
           .home-container55:hover {
@@ -1589,6 +1591,7 @@ const Home = (props) => {
           .home-text23:hover {
             background: rgba(119, 119, 119, 0.68);
             backdrop-filter: blur(50px);
+            color: lightgray;
           }
           .home-container62 {
             width: 250px;
@@ -1755,6 +1758,8 @@ const Home = (props) => {
           }
           .home-feature-card:hover {
             font-size: larger;
+            width: 100%;
+            color: lightgray;
           }
           .home-icon32 {
             width: 68px;
