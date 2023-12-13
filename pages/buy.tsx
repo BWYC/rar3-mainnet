@@ -1,7 +1,8 @@
-import { useContract, useNFTs, useAddress, useOwnedNFTs, ThirdwebNftMedia } from "@thirdweb-dev/react";
+import { useContract, useNFTs, useAddress, useOwnedNFTs, ThirdwebNftMedia,  useValidDirectListings,
+  useValidEnglishAuctions } from "@thirdweb-dev/react";
 import Container from "../components/Container/Container";
 import NFTGrid from "../components/NFT/NFTGrid";
-import { NFT_COLLECTION_ADDRESS } from "../const/contractAddresses";
+import { NFT_COLLECTION_ADDRESS, MARKETPLACE_ADDRESS } from "../const/contractAddresses";
 import ProfilePage from "./profile/[address]";
 import styles from "../styles/Profile.module.css";
 import Link from "next/link";
@@ -14,29 +15,33 @@ import TokenPage from "./token/[contractAddress]/[tokenId]";
 import { color } from "web3uikit";
 import {Twitter, Discord, UserTeam, ArrowDown, Dapps, Checkmark } from '@web3uikit/icons'
 import Data from "./collections/data"
+import ListingWrapper from "../components/ListingWrapper/ListingWrapper";
 
 
 export default function Buy() {
   // Load all of the NFTs from the NFT Collection
   const verfied = true
-  const { contract } = useContract(NFT_COLLECTION_ADDRESS);
-  const { data: data, isLoading: isLoading } = useNFTs(contract, {
-    start: 0,
-    count: 50,
-  });
+  const address = useAddress();
+  const { contract: nftCollection } = useContract(NFT_COLLECTION_ADDRESS);
 
-   const address = useAddress();
-   const { data: owned } = useOwnedNFTs(contract, address);
- 
+  const { contract: marketplace } = useContract(
+    MARKETPLACE_ADDRESS,
+    "marketplace-v3",
+  );
+
+  const { data: ownedNfts, isLoading: isLoading } = useOwnedNFTs(
+    nftCollection,
+    address,
+  );
+  const { data: directListings, isLoading: loadingDirects } =
+    useValidDirectListings(marketplace);
+
+  const { data: auctionListings, isLoading: loadingAuctions } =
+    useValidEnglishAuctions(marketplace);
+
    const [selectedNft, setSelectedNft] = useState<NFTType>();
 
-  if (isLoading) {
-    return (
-<Container maxWidth="xl">
-LOADING...<Spinner size="md" />
-</Container>
-    );
-  }
+ 
 
   return (
     <Container maxWidth="lg">
@@ -52,16 +57,15 @@ LOADING...<Spinner size="md" />
           : (<></>)}</p>
           <Link href={`/collections/${"0x69d5dDE5aF1fa6Cf5b86EC9B907c9bA1879c717f"}`} style={{textAlign: "center", padding: "2%", border: "solid 1px gray", background: "rgba(0, 0, 50, 0.3)", fontSize: "14px", borderRadius: "8px", width: "40%", height: "60px"}}><p>VIEW ITEMS</p></Link>
         </div>
-        <NFTGrid
-              data={data}
-              isLoading={isLoading}
-              overrideOnclickBehavior={(nft) => {
-                setSelectedNft(nft);
-              }}
-              emptyText={
-                "Looks like you don't own any NFT in your Wallet. Head to the buy page to buy some!"
-              }
-            />
+        {loadingDirects ? (
+          <p> <Spinner  /></p>
+        ) : directListings && directListings.length === 0 ? (
+          <p>Nothing for sale yet! Head to the sell tab to list an NFT.</p>
+        ) : (
+          directListings?.map((listing) => (
+            <ListingWrapper listing={listing} key={listing.id} />
+          ))
+        )}
         </>
       ):(
 <>
