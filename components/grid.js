@@ -75,7 +75,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
     <ThemeProvider theme={theme}>
       <div className="home-container">
         <Head>
-          <title>RareBay | TESTNET</title>
+          <title>RareBay | MAINNET</title>
           <meta property="og:title" content="RareBay |  MAINNET" />
         </Head>
         <div className="home-container01">

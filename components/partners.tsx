@@ -46,7 +46,7 @@ const Patner = () => {
           <Link href="https://boredwhalesyachtclub,org">  <Image width="70" height="60" style={{borderRadius: "100%"}} src="/favicon.png" alt="BWYC" /></Link>
         </div>
         <div className="keen-slider__slide number-slide1">
-         <p className="home-heading1" >HOME OF THE RAREST ART</p>
+         <p className="home-heading1" >HOME OF THE RAREST</p>
         </div>
         <div className="keen-slider__slide number-slide1">
         <p className="home-heading1">RAR3BAY.xyz</p> 
