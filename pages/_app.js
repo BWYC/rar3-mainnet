@@ -52,7 +52,7 @@ export default function MyApp({ Component: Component, pageProps: pageProps }) {
   >
   
       <NextNProgress
-        color="skyblue"
+        color="white"
         startPosition={0.3}
         stopDelayMs={200}
         height={4.5}
