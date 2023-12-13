@@ -7,6 +7,9 @@ import styles from "../../styles/Buy.module.css";
 import NFT from "../NFT/NFT";
 import Skeleton from "../Skeleton/Skeleton";
 import Container from "../Container/Container";
+import { NFT as NFTType } from "@thirdweb-dev/sdk";
+import { useState } from "react";
+
 
 type Props = {
   listing: DirectListingV3 | EnglishAuction;
@@ -19,6 +22,10 @@ export default function ListingWrapper({ listing }: Props) {
   const { contract: nftContract } = useContract(NFT_COLLECTION_ADDRESS);
 
   const { data: nft, isLoading } = useNFT(nftContract, listing.asset.id);
+  const [selectedNft, setSelectedNft] = useState<NFTType>();
+
+ 
+
 
   if (isLoading) {
     return (
@@ -31,13 +38,15 @@ export default function ListingWrapper({ listing }: Props) {
   if (!nft) return null;
 
   return (
+    
     <Link
       href={`/token/0x9bA655328197b3fF54b9554294ef8017CdC09AC3/${nft.metadata.id}`}
       key={nft.metadata.id}
+      className={styles.nftContainer}
     >
-      <div className={styles.nftContainer}>
+  
       <NFT nft={nft} />
-      </div>
+    
     </Link>
   );
 }

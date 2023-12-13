@@ -784,8 +784,3 @@ border-width: 0.1px;
 }
 
 
-.activeTabContent {
-  display: flex;
-  flex-direction: row;
-  opacity: 1;
-}
