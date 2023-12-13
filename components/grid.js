@@ -26,8 +26,15 @@ import 'react-languages-select/scss/react-languages-select.scss';
 import { Token } from "web3uikit";
 import { Ref } from "react";
 import { useRouter } from "next/router";
+import randomColor from "../util/randomColor";
 
-
+  
+const [randomColor1, randomColor2, randomColor3, randomColor4] = [
+  randomColor(),
+  randomColor(),
+  randomColor(),
+  randomColor(),
+];
 
 
 
@@ -72,7 +79,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
   return (
     <>
     <ThemeProvider theme={theme}>
-      <div className="home-container">
+      <div className="home-container" >
         <Head>
           <title>RareBay | MAINNET</title>
           <meta property="og:title" content="RareBay |  MAINNET" />
@@ -525,12 +532,6 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             align-items: center;
             flex-direction: column;
             justify-content: center;
-            background: linear-gradient(
-              130deg,
-              rgb(0, 0, 0, 0.5),
-              rgba(0, 100, 200, 0.906),
-              rgba(0, 0, 0, 0.506)
-            );
           }
           .home-container01 {
             flex: 0 0 auto;

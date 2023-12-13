@@ -3,7 +3,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     height: auto;
-    gap: 2px;
+    gap: 1px;
     align-items: center;
     width: 100%;
   }

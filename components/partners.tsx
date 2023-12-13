@@ -43,7 +43,7 @@ const Patner = () => {
       <Link href="https://metamask.io">  <Image width="68" height="68" src="/mt.png" alt="" /></Link>
       <Link href="https://bitcoin.org">  <Image width="50" height="50" src="/btc2.png" alt="" /></Link>
           <Link href="https://nextjs.org">  <Image width="50" height="50" src="/px.png" alt="" /></Link>
-          <Link href="https://boredwhalesyachtclub,org">  <Image width="70" height="60" style={{borderRadius: "100%"}} src="/favicon.png" alt="BWYC" /></Link>
+          <Link href="https://boredwhalesyachtclub,org">  <Image width="70" height="70"  src="/favicon.png" alt="BWYC" /></Link>
         </div>
         <div className="keen-slider__slide number-slide1">
          <p className="home-heading1" >HOME OF THE RAREST</p>
@@ -57,7 +57,8 @@ const Patner = () => {
          .home-heading1 {
           color: rgb(140, 140, 140);
           height: 100%;
-          font-size: 35px;
+          width: 100%;
+          font-size: 30px;
           align-self: center;
           background: -webkit-linear-gradient(
             rgb(1, 12, 241),
@@ -69,15 +70,15 @@ const Patner = () => {
           font-family: "Pixel NES";
           text-decoration: none;
           background-image: linear-gradient(
-            rgb(0, 0, 255) 0%,
-            rgb(45, 45, 45) 49%,
+            rgb(100, 100, 155) 1%,
+            rgb(100, 100, 100) 49%,
             rgb(255, 100, 0) 98%
           );
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
         .home-heading1:hover {
-          font-size: 30px;
+          font-size: 40px;
           cursor: pointer;
         }
           .footer-container {
@@ -195,7 +196,7 @@ const Patner = () => {
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 50px;
+            font-size: 30px;
             font-weight: 900;
             height: 70px;
             max-height: 100vh;
@@ -203,7 +204,7 @@ const Patner = () => {
           }
           
           .number-slide1 {
-            background: rgba(0, 0, 0, 0.198);
+            background: rgba(0, 0, 0, 0.798);
             backdropfilter: blur(50px);
             width: 20px;
             padding: 1%;

@@ -782,3 +782,10 @@ border-width: 0.1px;
   outline: none;
   font-family: "Pixel_NES", Helvetica, Arial, sans-serif;
 }
+
+
+.activeTabContent {
+  display: flex;
+  flex-direction: row;
+  opacity: 1;
+}

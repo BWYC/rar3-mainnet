@@ -57,15 +57,19 @@ export default function Buy() {
           : (<></>)}</p>
           <Link href={`/collections"}`} style={{textAlign: "center", padding: "2%", border: "solid 1px gray", background: "rgba(0, 0, 50, 0.3)", fontSize: "14px", borderRadius: "8px", width: "40%", height: "60px"}}><p>VIEW ITEMS</p></Link>
         </div>
+        <div
+        className={styles.activeTabContent}
+      >
         {loadingDirects ? (
           <p>LOADING...</p>
         ) : directListings && directListings.length === 0 ? (
-          <Link className="button" href="/portfolio" style={{padding: "5%"}}>Nothing for sale yet! Head to the sell tab to list an NFT.</Link>
+          <p>Nothing for sale yet! Head to the sell tab to list an NFT.</p>
         ) : (
           directListings?.map((listing) => (
             <ListingWrapper listing={listing} key={listing.id} />
           ))
         )}
+      </div>
         </>
       ):(
 <>
