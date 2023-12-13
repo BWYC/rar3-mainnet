@@ -376,6 +376,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
   <ReactLanguageSelect
   onSelect={this.onSelectLanguage} 
   searchable={true}
+
   style={{
     backdropFilter: "blur(10px)",
     fontFamily: "Pixel Nes"
@@ -508,7 +509,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
      backdropFilter: "blur(10px)"
    },
   })}
-   style={{border: "solid", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px"}} /><div style={{width: "45px", height: "45px", padding: "3.8px", border: "solid", marginTop: "5px", borderRadius: "100%", marginLeft: "5px", color: "initial" }}><Blockie seed={address} />
+   style={{background: "black", color: "white", border: "solid", color: "white", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px"}} /><div style={{width: "45px", height: "45px", padding: "3.8px", border: "solid", marginTop: "5px", borderRadius: "100%", marginLeft: "5px", color: "initial" }}><Blockie seed={address} />
    </div>
    
           </section>
