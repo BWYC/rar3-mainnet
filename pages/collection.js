@@ -16,7 +16,7 @@ import { Blockie } from "web3uikit";
 import styles from "../styles/Home.module.css";
 import Buy from "./buy"
 import Listings from "./listing";
-import Collection from "./collections/0x69d5dDE5aF1fa6Cf5b86EC9B907c9bA1879c717f"
+import Collection from "./collections/0x9bA655328197b3fF54b9554294ef8017CdC09AC3"
 
 
 
