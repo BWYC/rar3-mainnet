@@ -40,9 +40,9 @@ const Patner = () => {
       <Link href="https://rarebay.xyz">  <Image width="60" height="60" src="/fav-200h.ico" alt="RARE" style={{borderRadius: "100%"}}/></Link>
      
       <Link href="https://thirdweb.com">  <Image width="100" height="30" src="/3rd.png" alt="ThirdWeb" style={{borderRadius: "8px", border: "solid 0px gray", boxShadow: "gray 1px 1px 3px"}} /></Link>
-      <Link href="https://metamask.io">  <Image width="68" height="68" src="/mt.png" alt="MetaMask" /></Link>
-      <Link href="https://bitcoin.org">  <Image width="50" height="50" src="/btc2.png" alt="Bitcoin" /></Link>
-          <Link href="https://nextjs.org">  <Image width="50" height="50" src="/px.png" alt="NextJS" /></Link>
+      <Link href="https://metamask.io">  <Image width="68" height="68" src="/mt.png" alt="" /></Link>
+      <Link href="https://bitcoin.org">  <Image width="50" height="50" src="/btc2.png" alt="" /></Link>
+          <Link href="https://nextjs.org">  <Image width="50" height="50" src="/px.png" alt="" /></Link>
           <Link href="https://boredwhalesyachtclub,org">  <Image width="70" height="60" style={{borderRadius: "100%"}} src="/favicon.png" alt="BWYC" /></Link>
         </div>
         <div className="keen-slider__slide number-slide1">
@@ -96,8 +96,7 @@ const Patner = () => {
             cursor: pointer;
             color: initial;
             font-size: 10px;
-            background: initial;
-            backdrop-filter: blur(50px);
+            backdrop-filter: blur(10px);
             justify-self: center;
           }
           .footer-container1 {
@@ -106,7 +105,6 @@ const Patner = () => {
             display: flex;
             align-items: center;
             justify-content: center;
-            background: rbga(0, 0, 0, 0.7);
             margin: 2%;
             cursor: pointer;
             gap: 20px;
@@ -118,7 +116,6 @@ const Patner = () => {
             display: flex;
             align-items: center;
             justify-content: center;
-            background: rbga(0, 0, 0, 0.7);
             color: lightgray;
           }
           .footer-text {
@@ -206,7 +203,7 @@ const Patner = () => {
           }
           
           .number-slide1 {
-            background: rgba(0, 0, 0, 0.498);
+            background: rgba(0, 0, 0, 0.198);
             backdropfilter: blur(50px);
             width: 20px;
             padding: 1%;

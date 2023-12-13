@@ -10,7 +10,7 @@ import tokenPageStyles from "../styles/Token.module.css";
 import { NFT as NFTType } from "@thirdweb-dev/sdk";
 import SaleInfo from "../components/SaleInfo/SaleInfo";
 import React, { useState } from "react";
-import TokenPage from "./tokenb/[contractAddress]/[tokenId]";
+import TokenPage from "./token/0xF6C2584850Fd1F50fc979F72888Fb67CFa39a2C2/[tokenId]";
 import { color } from "web3uikit";
 import {Twitter, Discord, UserTeam, ArrowDown, Dapps, Checkmark } from '@web3uikit/icons'
 import Data from "./collections/data1"
@@ -33,10 +33,10 @@ export default function Buy() {
     address,
   );
   const { data: directListings, isLoading: loadingDirects } =
-    useValidDirectListings(marketplace);
+    useValidDirectListings(marketplace, {seller: address});
 
   const { data: auctionListings, isLoading: loadingAuctions } =
-    useValidEnglishAuctions(marketplace);
+    useValidEnglishAuctions(marketplace, {seller: address});
 
    const [selectedNft, setSelectedNft] = useState<NFTType>();
 
@@ -72,7 +72,7 @@ export default function Buy() {
                 <Container maxWidth="lg">
               
                 <TokenPage contractMetadata={selectedNft.metadata} nft={selectedNft} />
-                <button
+                  <button
                   onClick={() => {
                     setSelectedNft(undefined);
                   }}

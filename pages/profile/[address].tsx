@@ -84,8 +84,8 @@ return(
       <div className={styles.profileHeader}>
    
          
-      <div style={{width: "100%", padding: "5%", height: "20px", marginBottom: "20px"}}></div>
-      <Container maxWidth="lg">
+      <div style={{width: "100%", padding: "5%", height: "50px", marginBottom: "20px"}}></div>
+      <Container maxWidth="xl">
         <div
           className={styles.coverImage}
           style={{
@@ -140,7 +140,7 @@ return(
    
          
       <div style={{width: "100%", padding: "5%", height: "20px", marginBottom: "20px"}}></div>
-      <Container maxWidth="lg">
+      <Container maxWidth="xl">
       <div
           className={styles.coverImage}
           style={{
@@ -212,11 +212,11 @@ return(
           tab === "nfts" ? styles.activeTabContent : styles.tabContent
         }`}
       >
-        <Container maxWidth="lg">
+        <Container maxWidth="xl">
           {isLoading ? (
-            <p> <Spinner size='md' /></p>
+            <p>LOADING..</p>
           ) : (
-            <Container maxWidth="lg">
+            <Container maxWidth="xl">
             <NFTGrid
             data={ownedNfts}
             isLoading={isLoading}
@@ -228,14 +228,14 @@ return(
         </Container>
      
       </div>
-      <Container maxWidth="lg">
+      <Container maxWidth="xl">
       <div
         className={`${
           tab === "listings" ? styles.activeTabContent : styles.tabContent
         }`}
       >
         {loadingDirects ? (
-          <p> <Spinner size='md' /></p>
+          <p>LOADING...</p>
         ) : directListings && directListings.length === 0 ? (
           <p>Nothing for sale yet! Head to the sell tab to list an NFT.</p>
         ) : (
@@ -245,7 +245,7 @@ return(
         )}
       </div>
      
-      <Container maxWidth="lg">
+      <Container maxWidth="xl">
       <div
         className={`${
           tab === "auctions" ? styles.activeTabContent : styles.tabContent
@@ -253,7 +253,7 @@ return(
       >
       
       {loadingAuctions ? (
-          <p> <Spinner size='md' /></p>
+          <p> LOADING..</p>
         ) : auctionListings && auctionListings.length === 0 ? (
           <p>Nothing for sale yet! Head to the sell tab to list an NFT.</p>
         ) : (
@@ -270,7 +270,7 @@ return(
           tab === "sell" ? styles.activeTabContent : styles.tabContent
         }`}
       >
-          <Container maxWidth="lg">
+          <Container maxWidth="xl">
 
        <Sell />
        </Container>

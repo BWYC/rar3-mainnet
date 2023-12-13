@@ -88,8 +88,6 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                 </Link>
                 <Link
                   href="/portfolio"
-                  target="_blank"
-                  rel="noreferrer noopener"
                   className="home-text"
                 >
                    <div  className="home-link01">
@@ -104,8 +102,6 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                 </svg>
                 <Link
                   href="/portfolio"
-                  target="_blank"
-                  rel="noreferrer noopener"
                   className="home-link"
                 >
                    <div  className="home-link01">

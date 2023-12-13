@@ -26,11 +26,7 @@ import { CoreBlockchain } from "@thirdweb-dev/chains";
 const Home = (props) => {
 
   const address = useAddress()
-  const { connect, connectors } = useConnect();
 
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  
- 
 
   useEffect(() => {
     if (!address) {
