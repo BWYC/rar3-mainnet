@@ -14,7 +14,7 @@ import React, { useState } from "react";
 import TokenPage from "./token/[contractAddress]/[tokenId]";
 import { color } from "web3uikit";
 import {Twitter, Discord, UserTeam, ArrowDown, Dapps, Checkmark } from '@web3uikit/icons'
-import Data from "./collections/data"
+import Data from "./collections/data1"
 import ListingWrapper from "../components/ListingWrapper/ListingWrapper1";
 
 
@@ -60,7 +60,7 @@ export default function Buy() {
         {loadingDirects ? (
           <p>LOADING...</p>
         ) : directListings && directListings.length === 0 ? (
-          <p style={{padding: "5%"}}>Nothing for sale yet! Head to the sell tab to list an NFT.</p>
+          <Link className="button" href="/portfolio" style={{padding: "5%"}}>Nothing for sale yet! Head to the sell tab to list an NFT.</Link>
         ) : (
           directListings?.map((listing) => (
             <ListingWrapper listing={listing} key={listing.id} />

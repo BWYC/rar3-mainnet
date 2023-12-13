@@ -60,7 +60,7 @@ export default function Buy() {
         {loadingDirects ? (
           <p>LOADING...</p>
         ) : directListings && directListings.length === 0 ? (
-          <p style={{padding: "5%"}}>Nothing for sale yet! Head to the sell tab to list an NFT.</p>
+          <Link className="button" href="/portfolio" style={{padding: "5%"}}>Nothing for sale yet! Head to the sell tab to list an NFT.</Link>
         ) : (
           directListings?.map((listing) => (
             <ListingWrapper listing={listing} key={listing.id} />
