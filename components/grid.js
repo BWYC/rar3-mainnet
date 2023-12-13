@@ -30,6 +30,7 @@ import { useRouter } from "next/router";
 
 
 
+
 const light = { background: "#d3d3d3" };
 const dark = { background: "black" };
 
@@ -50,7 +51,8 @@ const Grid = (props) => {
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
- 
+ const code = onSelectLanguage(languageCode)
+ this.refs.userLanguage.updateSelected("it")
 
   useEffect(() => {
     if (!address) {
@@ -373,7 +375,9 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
 />
 <div style={{height: "100px", margin: "20px", cursor: "pointer", fontSize: "20px"}}>
   <ReactLanguageSelect
+  onSelect={this.onSelectLanguage} 
   searchable={true}
+  ref="userLanguage"
   style={{
     backdropFilter: "blur(10px)",
     fontFamily: "Pixel Nes"
@@ -406,7 +410,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
    style={{background: "black", color: "white", border: "solid", color: "white", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px"}} />
 
 </section>
-<div style={{height: "100px", margin: "20px", cursor: "pointer", fontSize: "20px", background: "black"}}>
+<div style={{height: "100px", margin: "20px", cursor: "pointer", fontSize: "20px", fontStyle: "Pixel Nes"}}>
 <ReactLanguageSelect
   searchable={true}
   style={{
@@ -439,6 +443,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
     backdropFilter: "blur(10px)",
     fontFamily: "Pixel Nes"
   }}
+  
   showSelectedLabel={false}
   showOptionLabel={false}
   placeholder=""
