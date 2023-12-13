@@ -73,7 +73,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
       <div className="home-container">
         <Head>
           <title>RareBay | TESTNET</title>
-          <meta property="og:title" content="RareBay |  TESTNET" />
+          <meta property="og:title" content="RareBay |  MAINNET" />
         </Head>
         <div className="home-container01">
           <div className="home-container02">
