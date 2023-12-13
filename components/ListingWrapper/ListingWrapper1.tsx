@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { NFT_COLLECTION_ADDRESS2 } from "../../const/contractAddresses";
 import styles from "../../styles/Buy.module.css";
-import NFT from "../NFT/NFT";
+import NFT from "../NFT/bwyc";
 import Skeleton from "../Skeleton/Skeleton";
 
 type Props = {
