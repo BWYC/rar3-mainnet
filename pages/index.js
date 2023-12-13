@@ -28,13 +28,6 @@ const Home = (props) => {
   const address = useAddress()
 
 
-  useEffect(() => {
-    if (!address) {
-      setIsLoggedIn(true);
-    } else {
-      setIsLoggedIn(false);
-    }
-  }, [address]);
 
 
   return (

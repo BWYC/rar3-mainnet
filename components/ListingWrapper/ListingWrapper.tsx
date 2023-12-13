@@ -6,6 +6,7 @@ import { NFT_COLLECTION_ADDRESS } from "../../const/contractAddresses";
 import styles from "../../styles/Buy.module.css";
 import NFT from "../NFT/NFT";
 import Skeleton from "../Skeleton/Skeleton";
+import Container from "../Container/Container";
 
 type Props = {
   listing: DirectListingV3 | EnglishAuction;
@@ -30,12 +31,15 @@ export default function ListingWrapper({ listing }: Props) {
   if (!nft) return null;
 
   return (
-    <Link
+    <Container maxWidth="lg">
+       <Link
       href={`/token/0x9bA655328197b3fF54b9554294ef8017CdC09AC3/${nft.metadata.id}`}
       key={nft.metadata.id}
       className={styles.nftContainer}
     >
       <NFT nft={nft} />
     </Link>
+    </Container>
+   
   );
 }

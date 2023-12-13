@@ -7,6 +7,7 @@ import styles from "../../styles/Buy.module.css";
 import NFT from "../NFT/bwyc";
 import Skeleton from "../Skeleton/Skeleton";
 
+
 type Props = {
   listing: DirectListingV3 | EnglishAuction;
 };
