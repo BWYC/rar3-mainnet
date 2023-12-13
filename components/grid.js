@@ -413,6 +413,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
   searchable={true}
   style={{
     backdropFilter: "blur(10px)",
+    fontFamily: "Pixel Nes"
   }}
   showSelectedLabel={false}
   showOptionLabel={false}

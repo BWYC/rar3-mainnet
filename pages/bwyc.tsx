@@ -70,6 +70,8 @@ export default function Buy() {
 <>
 
                 <Container maxWidth="lg">
+              
+                <TokenPage contractMetadata={selectedNft.metadata} nft={selectedNft} />
                 <button
                   onClick={() => {
                     setSelectedNft(undefined);
@@ -78,7 +80,6 @@ export default function Buy() {
                 >
                   X
                 </button>
-                <TokenPage contractMetadata={selectedNft.metadata} nft={selectedNft} />
                 </Container>
 
 </>

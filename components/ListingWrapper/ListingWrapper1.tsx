@@ -29,13 +29,5 @@ export default function ListingWrapper1({ listing }: Props) {
 
   if (!nft) return null;
 
-  return (
-    <Link
-      href={`/token/${NFT_COLLECTION_ADDRESS2}/${nft.metadata.id}`}
-      key={nft.metadata.id}
-      className={styles.nftContainer}
-    >
-      <NFT nft={nft} />
-    </Link>
-  );
+  return (<NFT nft={nft} />);
 }
