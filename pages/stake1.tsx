@@ -149,7 +149,6 @@ import NFTCard from "../components/NFTCardb"
                         borderStyle: "solid",
                         borderColor: "Orange",
                         color: "Orange",
-                        alignItems: "center",
                       }}
                       contractAddress={stakingContractAddress2}
                       action={() => stakeNft(nft.metadata.id)}

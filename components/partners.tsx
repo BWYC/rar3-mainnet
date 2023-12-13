@@ -46,14 +46,40 @@ const Patner = () => {
           <Link href="https://boredwhalesyachtclub,org">  <Image width="70" height="60" style={{borderRadius: "100%"}} src="/favicon.png" alt="BWYC" /></Link>
         </div>
         <div className="keen-slider__slide number-slide1">
-         HOME OF RARE
+         <p className="home-heading1" >HOME OF RARE</p>
         </div>
         <div className="keen-slider__slide number-slide1">
-        <p style={{fontFamily: "arial", fontStyle: "italics"}}></p> RAR3BAY.xyz
+        <p className="home-heading1"></p> RAR3BAY.xyz
         </div>
       </div>
       <style jsx>
         {`
+         .home-heading1 {
+          color: rgb(140, 140, 140);
+          height: 100%;
+          font-size: 3em;
+          align-self: center;
+          background: -webkit-linear-gradient(
+            rgb(1, 12, 241),
+            rgb(0, 0, 100)
+          );
+          margin-top: 0px;
+          text-align: center;
+          transition: 0.3s;
+          font-family: "Pixel NES";
+          text-decoration: none;
+          background-image: linear-gradient(
+            180deg,
+            rgb(255, 255, 255) 0%,
+            rgb(45, 45, 45) 49%,
+            rgb(0, 0, 250) 98%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        .home-heading1:hover {
+          font-size: 2em;
+        }
           .footer-container {
             width: 100%;
             height: 60px;
