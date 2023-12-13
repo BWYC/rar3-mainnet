@@ -39,17 +39,17 @@ const Patner = () => {
  
       <Link href="https://rarebay.xyz">  <Image width="60" height="60" src="/fav-200h.ico" alt="RARE" style={{borderRadius: "100%"}}/></Link>
      
-      <Link href="https://thirdweb.com">  <Image width="100" height="30" src="/3rd.png" alt="ThirdWeb" style={{borderRadius: "8px", border: "solid 0px gray", boxShadow: "white 3px 3px 6px"}} /></Link>
+      <Link href="https://thirdweb.com">  <Image width="100" height="30" src="/3rd.png" alt="ThirdWeb" style={{borderRadius: "8px", border: "solid 0px gray", boxShadow: "gray 1px 1px 3px"}} /></Link>
       <Link href="https://metamask.io">  <Image width="68" height="68" src="/mt.png" alt="MetaMask" /></Link>
       <Link href="https://bitcoin.org">  <Image width="50" height="50" src="/btc2.png" alt="Bitcoin" /></Link>
           <Link href="https://nextjs.org">  <Image width="50" height="50" src="/px.png" alt="NextJS" /></Link>
           <Link href="https://boredwhalesyachtclub,org">  <Image width="70" height="60" style={{borderRadius: "100%"}} src="/favicon.png" alt="BWYC" /></Link>
         </div>
         <div className="keen-slider__slide number-slide1">
-         <p className="home-heading1" >HOME OF RARE</p>
+         <p className="home-heading1" >HOME OF THE RAREST ART</p>
         </div>
         <div className="keen-slider__slide number-slide1">
-        <p className="home-heading1"></p> RAR3BAY.xyz
+        <p className="home-heading1">RAR3BAY.xyz</p> 
         </div>
       </div>
       <style jsx>
@@ -57,11 +57,11 @@ const Patner = () => {
          .home-heading1 {
           color: rgb(140, 140, 140);
           height: 100%;
-          font-size: 3em;
+          font-size: 40px;
           align-self: center;
           background: -webkit-linear-gradient(
             rgb(1, 12, 241),
-            rgb(0, 0, 100)
+            rgb(250, 100, 100)
           );
           margin-top: 0px;
           text-align: center;
@@ -69,16 +69,16 @@ const Patner = () => {
           font-family: "Pixel NES";
           text-decoration: none;
           background-image: linear-gradient(
-            180deg,
-            rgb(255, 255, 255) 0%,
+            rgb(0, 0, 255) 0%,
             rgb(45, 45, 45) 49%,
-            rgb(0, 0, 250) 98%
+            rgb(255, 100, 0) 98%
           );
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
         .home-heading1:hover {
-          font-size: 2em;
+          font-size: 30;
+          cursor: pointer;
         }
           .footer-container {
             width: 100%;
@@ -200,11 +200,9 @@ const Patner = () => {
             justify-content: center;
             font-size: 50px;
             font-weight: 900;
-            text-shadow: lightblue 1px 2px 5px;
             height: 70px;
             max-height: 100vh;
-            color: white;
-            gap: 100px;
+            gap: 150px;
           }
           
           .number-slide1 {
