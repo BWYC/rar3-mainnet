@@ -81,7 +81,6 @@ const Home = (props) => {
                           <div className="home-container53">
                             <span className="home-text17">
                              3100 RAR3 COLLECTIBLES PIONEERING THE DECENTRALIZATION OF NFTS ON RAREBAY DEX
-
                             </span>
                           </div>
                           <div className="home-container54">
