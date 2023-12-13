@@ -34,7 +34,7 @@ export default function ListingWrapper1({ listing }: Props) {
     <Link
       href={`/token/0x9bA655328197b3fF54b9554294ef8017CdC09AC3/${nft.metadata.id}`}
       key={nft.metadata.id}
-      className={styles.nftContainer}
+      className={styles.nftGridContainer}
     >
       <NFT nft={nft} />
     </Link>

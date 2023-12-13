@@ -10,7 +10,7 @@
   
   .nftContainer {
     width: 15%;
-    margin: 8px;
+    margin: 2px;
     position: relative;
     overflow: hidden;
     border-radius: 8px;
@@ -18,7 +18,7 @@
     outline: 1px solid rgba(255, 157, 0, 0.624);
     transform: translate3d(0px, 0px, 0px);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     padding: 8px;
     max-height: 500px;
     margin-top: 5%;
