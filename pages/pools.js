@@ -82,15 +82,15 @@ const Pools = (props) => {
         <div className="pools-container02"></div>
         <div className="pools-container03">
           <div className="pools-pricing">
-            <div className="pools-pricing-card">
+            <div className="pools-pricing-card1">
             <Image src="/gfdgfhyu1-200h.png" alt="" width={40} height={40} style={{borderRadius: "100%"}}/>
               <span className="pools-text">RAR310NES POOL</span>
               <div className="pools-container04">
-                <span className="pools-text01">0.5 WHLS/DAY</span>
+                <span className="pools-text01">0.5 WHLS</span><Image src="/whls.png" alt='' width={20} height={20} style={{borderRadius: "100%", margin: "1%"}} /> / DAY
               </div>
               <div className="pools-container05">
                 <span className="pools-text02">
-                  <span>LOCK: 46 WEEKS </span>
+                  <span>LOCK🗝️: 46 WEEKS </span>
                   <br></br>
                 </span>
                 <span className="pools-text02">
@@ -120,12 +120,12 @@ const Pools = (props) => {
             <div className="pools-pricing-card1">
             <Image src="/bwyc.png" alt="" width={40} height={40} style={{borderRadius: "100%"}}/>
               <span className="pools-text08">BWYC POOL</span>
-              <div className="pools-container06">
-                <span className="pools-text09">1 WHLS/DAY</span>
+              <div className="pools-container04">
+                <span className="pools-text01">1.0 WHLS</span><Image src="/whls.png" alt='' width={20} height={20} style={{borderRadius: "100%", margin: "1%"}} /> / DAY
               </div>
               <div className="pools-container07">
                 <span className="pools-text10">
-                  <span>LOCK PERIOD: 1 MONTH</span>
+                  <span>LOCK🗝️: 1 MONTH</span>
                   <br></br>
                 </span>
                 <span className="pools-text13">
@@ -150,15 +150,15 @@ const Pools = (props) => {
       </Modal>
    
             </div>
-            <div className="pools-pricing-card2">
+            <div className="pools-pricing-card1">
             <Image src="/bwyc1.png" alt="" width={40} height={40} style={{borderRadius: "100%"}}/>
               <span className="pools-text16">BWYC II POOL</span>
-              <div className="pools-container08">
-                <span className="pools-text17">0.5 WHLS/DAY</span>
+              <div className="pools-container04">
+                <span className="pools-text01">0.5 WHLS</span><Image src="/whls.png" alt='' width={20} height={20} style={{borderRadius: "100%", margin: "1%"}} /> / DAY
               </div>
               <div className="pools-container09">
                 <span className="pools-text18">
-                  <span>LOCK: 1 MONTH</span>
+                  <span>LOCK🗝️: 1 MONTH</span>
                   <br></br>
                 </span>
                 <span className="pools-text21">
@@ -192,15 +192,15 @@ const Pools = (props) => {
    
   </div>
 </div>
-            <div className="pools-pricing-card3">
+            <div className="pools-pricing-card1">
             <Image src="/whls (1)-200h.jpg" alt="" width={40} height={40} style={{borderRadius: "100%"}}/>
               <span className="pools-text24">WHALECARD POOL</span>
-              <div className="pools-container10">
-                <span className="pools-text25">2 WHLS/DAY</span>
+              <div className="pools-container04">
+                <span className="pools-text01">2.0 WHLS</span><Image src="/whls.png" alt='' width={20} height={20} style={{borderRadius: "100%", margin: "1%"}} /> / DAY
               </div>
               <div className="pools-container11">
                 <span className="pools-text26">
-                  <span>LOCK: 1 MONTH</span>
+                  <span>LOCK🗝️: 1 MONTH</span>
                   <br></br>
                 </span>
                 <span className="pools-text29">
@@ -297,6 +297,7 @@ const Pools = (props) => {
             margin-bottom: var(--dl-space-space-unit);
             flex-direction: column;
             backdrop-filter: blur(50px);
+            background-color: rgba(39, 39, 39, 0.502);
           }
           .pools-pricing-card:hover {
             transform: scale(1.02);
@@ -318,11 +319,17 @@ const Pools = (props) => {
             align-items: center;
             margin-bottom: var(--dl-space-space-twounits);
             flex-direction: row;
+            border: solid 0.5px;
+            padding: 5%;
+            background: lightgray;
+            border-radius: 8px;
+            width: 100%;
           }
           .pools-text01 {
-            font-size: 1.5rem;
+            font-size: 16px;
             text-align: center;
-            font-weight: 700;
+            font-weight: 300;
+            text-align: center;
           }
           .pools-container05 {
             display: flex;
@@ -375,9 +382,11 @@ const Pools = (props) => {
             margin-bottom: var(--dl-space-space-unit);
             flex-direction: column;
             backdrop-filter: blur(50px);
+            background-color: rgba(39, 39, 39, 0.502);
           }
           .pools-pricing-card1:hover {
-            transform: scale(1.02);
+            transform: scale(1.08);
+            background-color: rgba(239, 239, 239, 0.502);
           }
           .pools-icon2 {
             width: 24px;
