@@ -58,9 +58,9 @@ export default function Buy() {
           <Link href={`/collections/${"0x69d5dDE5aF1fa6Cf5b86EC9B907c9bA1879c717f"}`} style={{textAlign: "center", padding: "2%", border: "solid 1px gray", background: "rgba(0, 0, 50, 0.3)", fontSize: "14px", borderRadius: "8px", width: "40%", height: "60px"}}><p>VIEW ITEMS</p></Link>
         </div>
         {loadingDirects ? (
-          <p> <Spinner  /></p>
+          <p>LOADING...</p>
         ) : directListings && directListings.length === 0 ? (
-          <p>Nothing for sale yet! Head to the sell tab to list an NFT.</p>
+          <p style={{padding: "5%"}}>Nothing for sale yet! Head to the sell tab to list an NFT.</p>
         ) : (
           directListings?.map((listing) => (
             <ListingWrapper listing={listing} key={listing.id} />
