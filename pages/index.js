@@ -69,8 +69,8 @@ const Home = (props) => {
                         <div className="home-container44">
                           <Image
                           style={{borderRadius: "100%"}}
-                          width={30}
-                          height={30}
+                          width={50}
+                          height={50}
                             alt="image"
                             src="/gfdgfhyu1-200h.png"
                             className="home-image2"
@@ -97,8 +97,8 @@ const Home = (props) => {
                         <div className="home-container51">
                           <Image
                           style={{borderRadius: "100%"}}
-                          width={30}
-                          height={30}
+                          width={50}
+                          height={50}
                             alt="image"
                             src="/bwyc1.png"
                             className="home-image3"
@@ -125,8 +125,8 @@ const Home = (props) => {
                         <div className="home-container58">
                           <Image
                           style={{borderRadius: "100%"}}
-                          width={30}
-                          height={30}
+                          width={50}
+                          height={50}
                             alt="image"
                             src="/bwyc.png"
                             className="home-image4"
@@ -153,8 +153,8 @@ const Home = (props) => {
                         <div className="home-container65">
                           <Image
                           style={{borderRadius: "100%"}}
-                          width={30}
-                          height={30}
+                          width={50}
+                          height={50}
                             alt="image"
                             src="/whls%20(1)-200h.jpg"
                             className="home-image5"
@@ -1221,7 +1221,7 @@ const Home = (props) => {
             justify-content: center;
           }
           .home-container42:hover {
-            color: initial;
+            color: lightgray;
             filter: opacity(1);
             font-size: 25px;
             backdrop-filter: blur(10px);
@@ -1247,6 +1247,8 @@ const Home = (props) => {
             border-color: #464646;
             border-width: 1px;
             border-radius: var(--dl-radius-radius-round);
+            align-items: center;
+            display: flex;
           }
           .home-text12 {
             width: 100%;
@@ -1358,7 +1360,7 @@ const Home = (props) => {
             justify-content: center;
           }
           .home-container49:hover {
-            color: initial;
+            color: lightgray;
             filter: opacity(1);
             font-size: 25px;
             backdrop-filter: blur(10px);
@@ -1495,10 +1497,11 @@ const Home = (props) => {
             justify-content: center;
           }
           .home-container56:hover {
-            color: initial;
+            color: lightgray;
             filter: opacity(1);
             font-size: 25px;
             backdrop-filter: blur(10px);
+            width: 100%;
           }
           .home-container57 {
             width: 200px;
