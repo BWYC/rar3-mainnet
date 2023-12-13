@@ -1979,7 +1979,7 @@ export async function getServerSideProps(context) {
   if (!user) {
     return {
       redirect: {
-        destination: "/",
+        destination: "/dex",
         permanent: false,
       },
     };
