@@ -13,10 +13,10 @@ import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 
 
-const animation = { duration: 40000, easing: (t) => t }
+const animation = { duration: 40000, easing: (t: any) => t }
 
 
-const Patner = (props) => {
+const Patner = () => {
   const [sliderRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
     renderMode: "performance",
