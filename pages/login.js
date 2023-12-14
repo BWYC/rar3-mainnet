@@ -18,8 +18,10 @@ import { IncomingMessage } from "http";
 import { NextApiRequest } from "next";
 import { NextRequest } from "next/server";
 import { CoreBlockchain } from "@thirdweb-dev/chains";
+import toastStyle from "../util/toastConfig";
 
 export default function Login() {
+  
   const { contract } = useContract(contractAddress);
   const { data: contractMetadata, isLoading: contractLoading } =
     useContractMetadata(contract);
@@ -45,14 +47,7 @@ export default function Login() {
 <style jsx>
     { `
   .body{
-    background: linear-gradient(
-        130deg,
-        rgb(0, 0, 0, 0.1),
-        rgba(0, 0, 50, 0.206),
-        rgba(0, 0, 0, 0.206)
-);
-      min-height: 700px;
-      background-size: cover;
+    
         }
     `
     }
@@ -97,7 +92,7 @@ export async function getServerSideProps(context) {
   if (!hasNft) {
     return {
       redirect: {
-        destination: "/",
+        destination: "/portfolio",
         permanent: false,
       },
     };
