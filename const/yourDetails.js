@@ -4,7 +4,7 @@ export const contractAddress1 = "0x9bA655328197b3fF54b9554294ef8017CdC09AC3";
 
 export const contractAddress2 = "0x9bA655328197b3fF54b9554294ef8017CdC09AC3";
 // Replace this with your domain name.
-export const domainName = "https://rarebay.xyz";
+export const domainName = "rarebay.xyz";
 
 // Minimum number of tokens required to access
 export const minimumBalance = 1;
