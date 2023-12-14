@@ -26,7 +26,7 @@ import React from "react";
 export default function MyApp({ Component: Component, pageProps: pageProps }) {
   return (
    
-
+    <ChakraProvider theme={{}}>
     <ThirdwebProvider
     clientId="678d5b0199cde588796872ea22804505"
     authConfig={{
@@ -48,7 +48,7 @@ export default function MyApp({ Component: Component, pageProps: pageProps }) {
         height={4.5}
         showOnShallow={true}
       />
-      <ChakraProvider theme={{}}>
+     
       <NextThemesProvider attribute="class" defaultTheme="dark">
         <Grid />
         
@@ -58,10 +58,10 @@ export default function MyApp({ Component: Component, pageProps: pageProps }) {
       <Footer />
       
       </NextThemesProvider>
-      </ChakraProvider>
+   
      
   </ThirdwebProvider>
-
+  </ChakraProvider>
 
 
   
