@@ -1,55 +1,46 @@
-import type { NFT as NFTType } from "@thirdweb-dev/sdk";
+import { useContract, useNFT } from "@thirdweb-dev/react";
+import { DirectListingV3, EnglishAuction } from "@thirdweb-dev/sdk";
 import Link from "next/link";
 import React from "react";
-import { NFT_COLLECTION_ADDRESS } from "../../const/contractAddresses";
-import Skeleton from "../Skeleton/Skeleton";
-import NFT from "../NFT/NFT";
+import { NFT_COLLECTION_ADDRESS2 } from "../../const/contractAddresses";
 import styles from "../../styles/Buy.module.css";
+import NFT from "../NFT/NFT";
+import Skeleton from "../Skeleton/Skeleton";
+import Container from "../Container/Container";
+
 
 type Props = {
-  isLoading: boolean;
-  data: NFTType[] | undefined;
-  overrideOnclickBehavior?: (nft: NFTType) => void;
-  emptyText?: string;
+  listing: DirectListingV3 | EnglishAuction;
 };
 
-export default function NFTGrid({
-  isLoading,
-  data,
-  overrideOnclickBehavior,
-  emptyText = "No NFTs found for this collection.",
-}: Props) {
+/**
+ * Accepts a listing and renders the associated NFT for it
+ */
+export default function ListingWrapper({ listing }: Props) {
+  const { contract: nftContract } = useContract(NFT_COLLECTION_ADDRESS2);
+
+  const { data: nft, isLoading } = useNFT(nftContract, listing.asset.id);
+  
+
+  if (isLoading) {
+    return (
+      <div className={styles.nftContainer}>
+        <Skeleton width={"100%"} height="312px" />
+      </div>
+    );
+  }
+
+  if (!nft) return null;
+
   return (
-    <div className={styles.nftGridContainer}>
-      {isLoading ? (
-        [].map((_, index) => (
-          <div key={index} className={styles.nftContainer}>
-            <Skeleton key={index} width={"100%"} height="312px" />
-          </div>
-        ))
-      ) : data && data.length > 0 ? (
-        data.map((nft) =>
-          !overrideOnclickBehavior ? (
-            <Link
-              href={`/token/${NFT_COLLECTION_ADDRESS}/${nft.metadata.id}`}
-              key={nft.metadata.id}
-              className={styles.nftContainer}
-            >
-              <NFT nft={nft} />
-            </Link>
-          ) : (
-            <div
-              key={nft.metadata.id}
-              className={styles.nftContainer}
-              onClick={() => overrideOnclickBehavior(nft)}
-            >
-              <NFT nft={nft} />
-            </div>
-          )
-        )
-      ) : (
-        <p>{emptyText}</p>
-      )}
-    </div>
+    <Link
+      href={`/token/0xF6C2584850Fd1F50fc979F72888Fb67CFa39a2C2/${nft.metadata.id}`}
+      key={nft.metadata.id}
+      className={styles.nftContainer}
+    >
+  
+      <NFT nft={nft} />
+    
+    </Link>
   );
 }
