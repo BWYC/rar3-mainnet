@@ -49,10 +49,12 @@ export default function Login() {
   .body{
     background: linear-gradient(
         130deg,
-        rgb(0, 0, 0, 0.5),
-        rgba(0, 100, 200, 0.906),
-        rgba(0, 0, 0, 0.506)
-      );
+        rgb(0, 0, 0, 0.1),
+        rgba(0, 0, 50, 0.206),
+        rgba(0, 0, 0, 0.206)
+);
+      min-height: 100hv;
+      background-size: cover;
         }
     `
     }

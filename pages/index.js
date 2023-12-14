@@ -22,7 +22,7 @@ import { useLogout, useUser} from "@thirdweb-dev/react";
 import { ThirdwebSDK } from "@thirdweb-dev/react";
 import { CoreBlockchain } from "@thirdweb-dev/chains";
 import { useRouter } from "next/router";
-
+import randomColor from "../util/randomColor";
 
 const Home = (props) => {
 
