@@ -11,7 +11,7 @@ import {useTheme} from "next-themes";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useAddress } from "@thirdweb-dev/react";
-import { useAccount, useConnect } from "wagmi";
+
 import { Blockie } from "web3uikit";
 import styles from "../styles/Home.module.css";
 import Profile from "./profile/[address]";
@@ -21,8 +21,7 @@ import Container from "../components/Container/Container";
 const Portfolio = (props) => {
 
   const address = useAddress()
-  const { connect, connectors } = useConnect();
-
+  
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
  
