@@ -10,7 +10,7 @@ import tokenPageStyles from "../styles/Token.module.css";
 import { NFT as NFTType } from "@thirdweb-dev/sdk";
 import SaleInfo from "../components/SaleInfo/SaleInfo";
 import React, { useState } from "react";
-import TokenPage from "./token/0xF6C2584850Fd1F50fc979F72888Fb67CFa39a2C2/[tokenId]";
+import TokenPage from "./token/[contractAddress]/[tokenId]";
 import { color } from "web3uikit";
 import {Twitter, Discord, UserTeam, ArrowDown, Dapps, Checkmark } from '@web3uikit/icons'
 import Data from "./collections/data1"
