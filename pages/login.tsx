@@ -14,6 +14,9 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { getUser } from "../auth.config";
 import { contractAddress } from "../const/yourDetails";
+import { IncomingMessage } from "http";
+import { NextApiRequest } from "next";
+import { NextRequest } from "next/server";
 
 export default function Login() {
   const { contract } = useContract(contractAddress);
@@ -58,7 +61,7 @@ export default function Login() {
 
     
 }
-export async function getServerSideProps(context) {
+export async function getServerSideProps(context: { req: NextApiRequest | NextRequest | (IncomingMessage & { cookies: Partial<{ [key: string]: string; }>; }); }) {
   const user = await getUser(context.req);
 
   if (!user) {
