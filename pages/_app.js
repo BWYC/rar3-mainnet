@@ -21,9 +21,6 @@ import Banner from "../components/banner"
 import Patner from "../components/partners";
 import ReactLanguageSelect from 'react-languages-select';
 
-this.props.defaultLanguage; en
-
-
 
 import React from "react";
 export default function MyApp({ Component: Component, pageProps: pageProps }) {
