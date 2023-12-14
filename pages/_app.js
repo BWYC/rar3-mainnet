@@ -21,22 +21,15 @@ import Banner from "../components/banner"
 import Patner from "../components/partners";
 import ReactLanguageSelect from 'react-languages-select';
 
-const { publicClient, webSocketPublicClient } = configureChains(
-  [mainnet],
-  [publicProvider()],
-)
- 
-const config = createConfig({
-  publicClient,
-  webSocketPublicClient,
-})
+this.props.defaultLanguage; en
+
 
 
 import React from "react";
 export default function MyApp({ Component: Component, pageProps: pageProps }) {
   return (
-    <WagmiConfig  config={config}>
- <ChakraProvider theme={{}}>
+   
+
     <ThirdwebProvider
     clientId="678d5b0199cde588796872ea22804505"
     authConfig={{
@@ -58,7 +51,7 @@ export default function MyApp({ Component: Component, pageProps: pageProps }) {
         height={4.5}
         showOnShallow={true}
       />
-     
+      <ChakraProvider theme={{}}>
       <NextThemesProvider attribute="class" defaultTheme="dark">
         <Grid />
         
@@ -68,11 +61,11 @@ export default function MyApp({ Component: Component, pageProps: pageProps }) {
       <Footer />
       
       </NextThemesProvider>
-    
+      </ChakraProvider>
      
   </ThirdwebProvider>
-  </ChakraProvider>
-  </WagmiConfig>
+
+
 
   
   )
