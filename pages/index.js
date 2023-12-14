@@ -1987,9 +1987,7 @@ return null;
   const PRIVATE_KEY = process.env.THIRDWEB_AUTH_PRIVATE_KEY;
   if (!PRIVATE_KEY) {
     throw new Error("");
-  }else {
-    return null;
-            }
+  }
 
   // Instantiate our SDK
   const sdk = ThirdwebSDK.fromPrivateKey(
