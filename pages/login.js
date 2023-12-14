@@ -62,7 +62,7 @@ export default function Login() {
 
     
 }
-export async function getServerSideProps(context: { req: NextApiRequest | NextRequest | (IncomingMessage & { cookies: Partial<{ [key: string]: string; }>; }); }) {
+export async function getServerSideProps(context) {
   const user = await getUser(context.req);
 
   if (!user) {
