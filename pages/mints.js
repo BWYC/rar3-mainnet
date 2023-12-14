@@ -53,8 +53,8 @@ body{
 `;
 
 
-const Mints = (_props: any)  => {
-  let subtitle: HTMLHeadingElement | null;
+const Mints = (props)  => {
+  let subtitle;
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [modalIsOpen1, setIsOpen1] = React.useState(false);
   const [modalIsOpen2, setIsOpen2] = React.useState(false);

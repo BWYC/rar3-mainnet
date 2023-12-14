@@ -5,7 +5,7 @@ import {
   useValidEnglishAuctions,
 } from "@thirdweb-dev/react";
 import { NFT } from "@thirdweb-dev/sdk";
-import React from "react";
+import React from "react";      
 import {
   MARKETPLACE_ADDRESS,
   NFT_COLLECTION_ADDRESS2,
@@ -14,6 +14,7 @@ import Skeleton from "../Skeleton/Skeleton";
 import styles from "./NFT.module.css";
 import truncateEthAddress from "truncate-eth-address";
 import { Tooltip } from "web3uikit";
+import Image from "next/image";
 
 
 type Props = {
@@ -43,7 +44,7 @@ export default function NFTComponent({ nft }: Props) {
 
   return (
     <>
-<Tooltip content={"Buy"} position="bottom">
+<Tooltip content={"VIEW"} position="bottom">
       <ThirdwebNftMedia metadata={nft.metadata} style={{width: "100%", height: "100%", borderRadius: "16px", overflow: "hidden"}} />
 
       <p className={styles.nftName}>
@@ -55,8 +56,7 @@ export default function NFTComponent({ nft }: Props) {
         ) : directListing && directListing[0] ? (
           <div className={styles.nftPriceContainer}>
             <div>
-              <p className={styles.nftPriceLabel}>Price💲</p>
-
+              <p className={styles.nftPriceLabel}>Price </p>
               <p
                 className={styles.nftPriceValue}>
                 {`${directListing[0]?.currencyValuePerToken.displayValue}
@@ -91,7 +91,7 @@ export default function NFTComponent({ nft }: Props) {
         ) : (
           <div className={styles.nftPriceContainer}>
             <div>
-              <p className={styles.nftPriceLabel}>Price💲</p>
+              <p className={styles.nftPriceLabel}>Price</p>
               <p
                 className={styles.nftPriceValue}>
                 unListed
