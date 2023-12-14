@@ -107,8 +107,9 @@ import NFTCard from "../components/NFTCard"
             style={{
               backgroundColor: "black",
               borderStyle: "solid",
-              borderColor: "Orange",
-              color: "Orange",
+              border: "solid 0.5px red",
+              color: "red",
+              textShadow: "red 1px 1px 10px"
             }}
             action={(contract) => contract.call("claimRewards")}
             contractAddress={stakingContractAddress}

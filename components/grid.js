@@ -4,7 +4,7 @@ import Head from "next/head";
 
 import Search from "./search";
 import Footer from "../components/footer";
-import { ConnectWallet } from "@thirdweb-dev/react";
+import { ConnectWallet, useConnect } from "@thirdweb-dev/react";
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 import ReactThemeToggleButton from "../components/toggle"
 import {useTheme} from "next-themes";
@@ -16,6 +16,7 @@ import styles from "../styles/Home.module.css";
 import Banner from "../components/banner";
 import {Testnet} from '@web3uikit/icons'
 import ReactLanguageSelect from 'react-languages-select';
+
  
 //import css module
 import 'react-languages-select/css/react-languages-select.css';
@@ -55,6 +56,7 @@ const Grid = (props) => {
   const address = useAddress()
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { connectors } = useState();
 
 
 
@@ -340,7 +342,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           {isLoggedIn ? (
           <section>
                    <div style={{margin: "50px"}}></div>
-            {connectors.map((connector) => (
+            (
               <>
  <ConnectWallet
 
@@ -378,7 +380,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
      <img src="https://img.icons8.com/?size=48&id=31016&format=png"  width={"25px"} style={{marginTop: "-15px"}}/>
   </div>
 </>
-            ))}
+            )
           </section>
         ) : (
           <>
@@ -435,8 +437,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                   </div>
                   {isLoggedIn ? (
           <section style={{fontFamily: "Pixel NES"}}>
-            {connectors.map((connector) => (
-              <>
+          
  <ConnectWallet
 
  style={{border: "solid", borderColor: "initial", borderWidth: "0.5px", fontFamily: "Pixel NES"}}
@@ -458,8 +459,6 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
    "https://bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a.ipfs.nftstorage.link/ipfs/bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a/xcxczxz.png"
  }
 />
-</>
-            ))}
           </section>
         ) : (
           <section className={styles.loggedIn_section}  style={{fontFamily: "Pixel NES"}}>
