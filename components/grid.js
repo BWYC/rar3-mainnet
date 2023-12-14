@@ -81,8 +81,8 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
     <ThemeProvider theme={theme}>
       <div className="home-container" >
         <Head>
-          <title>RareBay | MAINNET</title>
-          <meta property="og:title" content="RareBay |  MAINNET" />
+          <title>RareBay | DEX</title>
+          <meta property="og:title" content="RareBay |  HOME OR THE RAREST" />
         </Head>
         <div className="home-container01">
           <div className="home-container02">
