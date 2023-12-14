@@ -51,10 +51,12 @@ const Portfolio = (props) => {
             
             <div className="home-container35">
 
-          <div style={{marginTop: "0%"}}>
-                  <Profile /> 
+      <Container maxWidth="lg">
+      <Profile /> 
+      </Container>
+                 
                   
-          </div>
+     
                   
                 
               
