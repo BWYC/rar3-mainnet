@@ -32,9 +32,9 @@ const customStyles = {
     height: "80%",
     overflow: "scroll",
     borderRadius: "16px",
-    background: "rgba(0, 0, 0, 0.54)",
+    background: "rgba(0, 0, 0, 0.84)",
     border: "solid 2px",
-    backdropFilter: "blur(10px)",
+    backdropFilter: "blur(50px)",
     color:  "white",
     overflowX: "hidden",
     textAlign: "center"
