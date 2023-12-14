@@ -38,7 +38,7 @@ export default function MyApp({ Component: Component, pageProps: pageProps }) {
     <WagmiConfig  config={config}>
  <ChakraProvider theme={{}}>
     <ThirdwebProvider
-    clientId={process.env.NEXT_PUBLIC_TEMPLATE_CLIENT_ID}
+    clientId="678d5b0199cde588796872ea22804505"
     authConfig={{
       domain: "rarebay.xyz",
       authUrl: "/api/auth",
