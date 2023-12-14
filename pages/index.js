@@ -21,13 +21,21 @@ import checkBalance from "../util/checkBalance";
 import { useLogout, useUser} from "@thirdweb-dev/react";
 import { ThirdwebSDK } from "@thirdweb-dev/react";
 import { CoreBlockchain } from "@thirdweb-dev/chains";
+import { useRouter } from "next/router";
 
 
 const Home = (props) => {
 
   const address = useAddress()
 
-
+  const { isLoggedIn, isLoading } = useUser();
+  const router = useRouter();
+  
+  useEffect(() => {
+    if (!isLoading && !isLoggedIn) {
+      router.push("/login");
+    }
+  }, [isLoading, isLoggedIn, router]);
 
 
   return (
@@ -1973,19 +1981,32 @@ export async function getServerSideProps(context) {
   const user = await getUser(context.req);
 
   if (!user) {
-   console.log("");
+    return {
+      redirect: {
+        destination: "/login",
+        permanent: false,
+      },
+    };
+  }
+
+  const secretKey = process.env.TW_SECRET_KEY;
+
+  if (!secretKey) {
+    console.log("Missing env var: TW_SECRET_KEY");
+    throw new Error("Missing env var: TW_SECRET_KEY");
   }
 
   // Ensure we are able to generate an auth token using our private key instantiated SDK
   const PRIVATE_KEY = process.env.THIRDWEB_AUTH_PRIVATE_KEY;
   if (!PRIVATE_KEY) {
-    console.log("");
+    throw new Error("You need to add an PRIVATE_KEY environment variable.");
   }
 
   // Instantiate our SDK
   const sdk = ThirdwebSDK.fromPrivateKey(
     process.env.THIRDWEB_AUTH_PRIVATE_KEY,
     CoreBlockchain,
+    { secretKey }
   );
 
   // Check to see if the user has an NFT
@@ -1993,7 +2014,12 @@ export async function getServerSideProps(context) {
 
   // If they don't have an NFT, redirect them to the login page
   if (!hasNft) {
-    console.log("");
+    return {
+      redirect: {
+        destination: "/login",
+        permanent: false,
+      },
+    };
   }
 
   // Finally, return the props
