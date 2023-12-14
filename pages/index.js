@@ -1973,13 +1973,13 @@ export async function getServerSideProps(context) {
   const user = await getUser(context.req);
 
   if (!user) {
-   throw new Error("");
+   console.log("");
   }
 
   // Ensure we are able to generate an auth token using our private key instantiated SDK
   const PRIVATE_KEY = process.env.THIRDWEB_AUTH_PRIVATE_KEY;
   if (!PRIVATE_KEY) {
-    throw new Error("");
+    console.log("");
   }
 
   // Instantiate our SDK
@@ -1993,7 +1993,7 @@ export async function getServerSideProps(context) {
 
   // If they don't have an NFT, redirect them to the login page
   if (!hasNft) {
-    throw new Error("");
+    console.log("");
   }
 
   // Finally, return the props
