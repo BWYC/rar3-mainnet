@@ -92,7 +92,7 @@ export async function getServerSideProps(context) {
   if (!hasNft) {
     return {
       redirect: {
-        destination: "/portfolio",
+        destination: "/login",
         permanent: false,
       },
     };
