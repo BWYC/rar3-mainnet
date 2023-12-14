@@ -1979,8 +1979,9 @@ export async function getServerSideProps(context) {
         permanent: false,
       },
     }
+
   } else {
-return null;
+    throw new Error("ERROR");
         }
 
   // Ensure we are able to generate an auth token using our private key instantiated SDK
@@ -2007,10 +2008,9 @@ return null;
         permanent: false,
       },
     };
+  } else {
+    throw new Error("");
   }
-  else {
-    return null;
-            }
 
   // Finally, return the props
   return {
