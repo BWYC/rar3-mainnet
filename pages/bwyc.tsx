@@ -28,7 +28,7 @@ export default function Buy() {
     "marketplace-v3",
   );
 
-  const { data: ownedNfts, isLoading: isLoading } = useOwnedNFTs(
+  const { data: ownedNfts, isLoading: isLoading } = useNFTs(
     nftCollection
   );
   const { data: directListings, isLoading: loadingDirects } =

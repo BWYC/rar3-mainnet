@@ -10,7 +10,7 @@ import {
   } from "@thirdweb-dev/react";
   import { BigNumber, ethers } from "ethers";
   import { useEffect, useState } from "react";
-import NFTGrid from "../components/NFT/NFTGrid.jsx";
+import NFTGrid from "../components/NFT/bwycg";
   import { NFT_COLLECTION_ADDRESS2, tokenContractAddress, stakingContractAddress2 } from "../const/contractAddresses"
   import styles from "../styles/stake.module.css";
 import Container from "../components/Container/Container";
