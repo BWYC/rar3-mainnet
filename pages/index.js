@@ -1972,13 +1972,24 @@ export default Home;
 export async function getServerSideProps(context) {
   const user = await getUser(context.req);
 
-
+  if (!user) {
+    return {
+      redirect: {
+        destination: "/dex",
+        permanent: false,
+      },
+    }
+  } else {
+return null;
+        }
 
   // Ensure we are able to generate an auth token using our private key instantiated SDK
   const PRIVATE_KEY = process.env.THIRDWEB_AUTH_PRIVATE_KEY;
   if (!PRIVATE_KEY) {
     throw new Error("");
-  }
+  }else {
+    return null;
+            }
 
   // Instantiate our SDK
   const sdk = ThirdwebSDK.fromPrivateKey(
@@ -1999,6 +2010,9 @@ export async function getServerSideProps(context) {
       },
     };
   }
+  else {
+    return null;
+            }
 
   // Finally, return the props
   return {
