@@ -103,10 +103,11 @@ import NFTCard from "../components/NFTCardd"
                 </div>
               </div>
               <Web3Button
+              isDisabled
             style={{
               backgroundColor: "black",
               border: "solid 0.5px",
-              borderColor: "Orange",
+              borderColor: "red",
               color: "gray",
               marginBottom: "2%"
             }}

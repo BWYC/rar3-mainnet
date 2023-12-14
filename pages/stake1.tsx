@@ -104,11 +104,12 @@ import NFTCard from "../components/NFTCardb"
                 </div>
               </div>
               <Web3Button
+                 isDisabled
             style={{
               backgroundColor: "black",
               borderStyle: "solid",
               borderColor: "Orange",
-              color: "Orange",
+              color: "red",
             }}
             action={(contract) => contract.call("claimRewards")}
             contractAddress={stakingContractAddress2}
