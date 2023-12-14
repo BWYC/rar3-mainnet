@@ -16,6 +16,7 @@ import { color } from "web3uikit";
 import {Twitter, Discord, UserTeam, ArrowDown, Dapps, Checkmark } from '@web3uikit/icons'
 import Data from "./collections/data"
 import ListingWrapper from "../components/ListingWrapper/ListingWrapper";
+import Skeleton from "../components/Skeleton/Skeleton";
 
 
 export default function Buy() {
@@ -60,7 +61,9 @@ export default function Buy() {
         className={styles.activeTabContent}
       >
         {loadingDirects ? (
-         <>LOADING..</>
+         <div>
+          <Skeleton width="100%" height="100" />
+         </div>
         ) : directListings && directListings.length === 0 ? (
           <p>Nothing for sale yet! Head to the sell tab to list an NFT.</p>
         ) : (
