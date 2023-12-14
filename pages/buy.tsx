@@ -30,8 +30,7 @@ export default function Buy() {
   );
 
   const { data: data, isLoading: isLoading } = useNFTs(
-    nftCollection,
-    address,
+    nftCollection
   );
   const { data: directListings, isLoading: loadingDirects } =
     useValidDirectListings(marketplace);
