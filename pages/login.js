@@ -17,6 +17,7 @@ import { contractAddress } from "../const/yourDetails";
 import { IncomingMessage } from "http";
 import { NextApiRequest } from "next";
 import { NextRequest } from "next/server";
+import { CoreBlockchain } from "@thirdweb-dev/chains";
 
 export default function Login() {
   const { contract } = useContract(contractAddress);
