@@ -67,10 +67,7 @@ export async function getServerSideProps(context) {
 
   if (!user) {
     return {
-      redirect: {
-        destination: "/login",
-        permanent: false,
-      },
+      props: {},
     };
   }
 
@@ -80,7 +77,6 @@ export async function getServerSideProps(context) {
     console.log("Missing env var: TW_SECRET_KEY");
     throw new Error("Missing env var: TW_SECRET_KEY");
   }
-
   // Ensure we are able to generate an auth token using our private key instantiated SDK
   const PRIVATE_KEY = process.env.THIRDWEB_AUTH_PRIVATE_KEY;
   if (!PRIVATE_KEY) {
@@ -101,7 +97,7 @@ export async function getServerSideProps(context) {
   if (!hasNft) {
     return {
       redirect: {
-        destination: "/login",
+        destination: "/",
         permanent: false,
       },
     };
