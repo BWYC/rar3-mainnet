@@ -204,7 +204,7 @@ const Patner = () => {
           }
           
           .number-slide1 {
-            background: rgba(0, 0, 0, 0.798);
+            background: transparent;
             backdropfilter: blur(50px);
             width: 20px;
             padding: 1%;
