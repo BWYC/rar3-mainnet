@@ -60,7 +60,7 @@ export default function Buy() {
         className={styles.activeTabContent}
       >
         {loadingDirects ? (
-          <p>LOADING...</p>
+         <></>
         ) : directListings && directListings.length === 0 ? (
           <p>Nothing for sale yet! Head to the sell tab to list an NFT.</p>
         ) : (
