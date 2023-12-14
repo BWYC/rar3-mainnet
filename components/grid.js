@@ -345,7 +345,18 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             (
               <>
  <ConnectWallet
-
+   theme={({
+    colors: {
+      modalBg: "rbga(0, 0, 0, 0.9)",
+      dropdownBg: "black",
+      accentText: "grey",
+      accentButtonBg: "#0064fa",
+      borderColor: "initial",
+      primaryText: "grey",
+      background: "initial",
+      backdropFilter: "blur(10px)"
+    },
+   })}
  style={{border: "solid", borderColor: "initial", borderWidth: "0.5px", fontFamily: "Pixel NES"}}
  modalSize={"compact"}
  btnTitle={"CONNECT"}
@@ -386,6 +397,18 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           <>
           <section className={styles.loggedIn_section}>
 <ConnectWallet 
+   theme={({
+    colors: {
+      modalBg: "rbga(0, 0, 0, 0.9)",
+      dropdownBg: "black",
+      accentText: "grey",
+      accentButtonBg: "#0064fa",
+      borderColor: "initial",
+      primaryText: "grey",
+      background: "initial",
+      backdropFilter: "blur(10px)"
+    },
+   })}
    style={{background: "black", color: "white", border: "solid", color: "white", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px"}} />
 
 </section>
@@ -439,7 +462,18 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           <section style={{fontFamily: "Pixel NES"}}>
           
  <ConnectWallet
-
+   theme={({
+    colors: {
+      modalBg: "rbga(0, 0, 0, 0.9)",
+      dropdownBg: "black",
+      accentText: "grey",
+      accentButtonBg: "#0064fa",
+      borderColor: "initial",
+      primaryText: "grey",
+      background: "initial",
+      backdropFilter: "blur(10px)"
+    },
+   })}
  style={{border: "solid", borderColor: "initial", borderWidth: "0.5px", fontFamily: "Pixel NES"}}
  modalSize={"compact"}
  btnTitle={"CONNECT"}
@@ -463,6 +497,18 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
         ) : (
           <section className={styles.loggedIn_section}  style={{fontFamily: "Pixel NES"}}>
 <ConnectWallet 
+   theme={({
+    colors: {
+      modalBg: "rbga(0, 0, 0, 0.9)",
+      dropdownBg: "black",
+      accentText: "grey",
+      accentButtonBg: "#0064fa",
+      borderColor: "initial",
+      primaryText: "grey",
+      background: "initial",
+      backdropFilter: "blur(10px)"
+    },
+   })}
    style={{background: "black", color: "white", border: "solid", color: "white", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px"}} /><div style={{width: "45px", height: "45px", padding: "3.8px", border: "solid", marginTop: "5px", borderRadius: "100%", marginLeft: "5px", color: "initial" }}><Blockie seed={address} />
    </div>
    

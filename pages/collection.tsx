@@ -16,10 +16,11 @@ import { Blockie } from "web3uikit";
 import styles from "../styles/Home.module.css";
 import Buy from "./buy"
 import Listings from "./listing";
-import Collection from "./collections/0xF6C2584850Fd1F50fc979F72888Fb67CFa39a2C2"
+import Collection from "./collections/0x9bA655328197b3fF54b9554294ef8017CdC09AC3"
 
 
-const Bwyc= (props) => {
+
+const Rare= (_props: any) => {
 
   const address = useAddress()
   const { connect, connectors } = useConnect();
@@ -41,11 +42,11 @@ const Bwyc= (props) => {
 
   return (
     <>
-  
+ 
       <div className="home-container">
         <Head>
           <title>RareBay | DEX</title>
-          <meta property="og:title" content="RareBay | DEX1" />
+          <meta property="og:title" content="RareBay | DEX" />
         </Head>
 
             
@@ -54,7 +55,7 @@ const Bwyc= (props) => {
             </div>
           
           </div>
-      
+    
       <div style={{height: "400px"}}></div>
   
      
@@ -1829,9 +1830,9 @@ const Bwyc= (props) => {
           }
         `}
       </style>
-     
+    
     </>
   );
 };
 
-export default Bwyc;
+export default Rare;
