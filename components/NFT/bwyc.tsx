@@ -44,7 +44,7 @@ import {
     return (
       <>
        <Tooltip content={"VIEW"} position="bottom">
-        <ThirdwebNftMedia metadata={nft.metadata} style={{width: "100%", height: "100%", borderRadius: "16px", overflow: "hidden"}} />
+        <ThirdwebNftMedia metadata={nft.metadata} style={{width: "100%", height: "250px", borderRadius: "16px", overflow: "hidden"}} />
   
         <p className={styles.nftName}>
           {nft.metadata.id}: {truncateEthAddress(owner)}
