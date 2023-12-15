@@ -351,7 +351,6 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
    theme={({
     colors: {
       modalBg: "rbga(0, 0, 0, 0.9)",
-      dropdownBg: "black",
       accentText: "white",
       accentButtonBg: "#0064fa",
       borderColor: "gray",
@@ -403,16 +402,14 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
  theme={({
   colors: {
     modalBg: "rbga(0, 0, 0, 0.9)",
-    dropdownBg: "black",
     accentText: "white",
     accentButtonBg: "#0064fa",
     borderColor: "gray",
     primaryText: "white",
     background: "initial",
-    backdropFilter: "blur(100px)"
   },
  })}
-   style={{fontFamily: "Pixel Nes", border: "solid", color: "white", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px"}} />
+   style={{fontFamily: "Pixel Nes", border: "solid", color: "white", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px", backdropFilter: "blur(100px)"}} />
 
 </section>
 <div style={{height: "100px", margin: "20px", cursor: "pointer", fontSize: "20px", fontStyle: "Pixel Nes"}}>

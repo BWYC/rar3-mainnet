@@ -129,7 +129,7 @@ import NFTCard from "../components/NFTCard"
                   ))}
               </div>
               <div style={{height: "50px"}}></div>
-              <h1 style={{ textAlign: "center", color: "lightred" }}>Unstaked Tokens</h1>
+              <h1 style={{ textAlign: "center", fontSize: "30px",  textShadow: "orange 1px 1px 5px", }}>Unstaked</h1>
               <div className={styles.nftBoxGrid}>
                 {ownedNfts?.map((nft) => (
                   <div key={nft.metadata.id.toString()}>

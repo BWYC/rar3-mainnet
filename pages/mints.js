@@ -208,7 +208,7 @@ const Mints = (props)  => {
         style={customStyles}
         contentLabel="STAKE"
       >
-        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>BWYC ii STAKING POOL</h2>
+        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>BWYC ii POOL</h2>
         <div><Stake1 />
         <div style={{height: "10px"}}></div>
         <button className='button' onClick={closeModal2}>EXIT</button>

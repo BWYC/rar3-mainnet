@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 1%;
+  gap: 2px;
   width: 100%;
 }
 .coverImage {
@@ -29,14 +29,16 @@
 }
 
 .tabs {
+  font-size: 14px;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   padding: 1%;
+  height: 50px;
 }
 
 .tab {
@@ -57,7 +59,7 @@
   color: rgba(255, 255, 255, 1);
   border-bottom: 2px solid #0294fe;
   color: oldlace;
-  padding: 10px;
+  padding: 5px;
   background: #272a2d;
 }
 
