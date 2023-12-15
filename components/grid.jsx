@@ -389,7 +389,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           <section className={styles.loggedIn_section}>
 <ConnectWallet 
   theme="system"
-   style={{fontFamily: "Pixel Nes", border: "solid", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px", backdropFilter: "blur(10px)"}} />
+   style={{fontFamily: "Pixel Nes", border: "solid", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px"}} />
 
 </section>
 <div style={{height: "100px", margin: "20px", cursor: "pointer", fontSize: "20px", fontStyle: "Pixel Nes"}}>
@@ -465,7 +465,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           <section className={styles.loggedIn_section}  style={{fontFamily: "Pixel NES"}}>
 <ConnectWallet 
   theme="system"
-   style={{fontFamily: "Pixel Nes", border: "solid", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px", backdropFilter: "blur(10px)"}} />
+   style={{fontFamily: "Pixel Nes", border: "solid", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px"}} />
 <div style={{width: "45px", height: "45px", padding: "3.8px", border: "solid", marginTop: "5px", borderRadius: "100%", marginLeft: "5px", color: "initial" }}><Blockie seed={address} />
    </div>
    
