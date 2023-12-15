@@ -119,7 +119,7 @@ import NFTCard from "../components/NFTCardb"
             Claim Rewards
           </Web3Button>
               <div style={{height: "50px"}}></div>
-              <h1 style={{ textAlign: "center", color: "lightgreen" }}>Staked Tokens</h1>
+              <h1 style={{ textAlign: "center", fontSize: "30px",  textShadow: "orange 1px 1px 5px", }}>staked</h1>
               <div className={styles.nftBoxGrid}>
                 {stakedTokens &&
                   stakedTokens[0]?.map((stakedToken: BigNumber) => (
@@ -130,7 +130,7 @@ import NFTCard from "../components/NFTCardb"
                   ))}
               </div>
               <div style={{height: "50px"}}></div>
-              <h2 style={{ textAlign: "center", color: "red" }}>Unstaked Tokens</h2>
+              <h1 style={{ textAlign: "center", fontSize: "30px",  textShadow: "orange 1px 1px 5px", }}>Unstaked</h1>
               <div className={styles.nftBoxGrid}>
                 {ownedNfts?.map((nft) => (
                   <div key={nft.metadata.id.toString()}>

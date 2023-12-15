@@ -174,7 +174,7 @@ const Pools = (props) => {
         style={customStyles}
         contentLabel="STAKE"
       >
-      <h1 style={{ textAlign: "center", fontSize: "30px",  textShadow: "orange 1px 1px 5px", }}>BWYC I POOLS</h1>
+      <h1 style={{ textAlign: "center", fontSize: "30px",  textShadow: "orange 1px 1px 5px", }}>BWYC II POOLS</h1>
         <div><Stake1 />
         <div style={{height: "10px"}}></div>
         <button className='button' onClick={closeModal1}>EXIT</button>
