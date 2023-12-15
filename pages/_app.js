@@ -45,7 +45,7 @@ export default function MyApp({ Component: Component, pageProps: pageProps }) {
         color="white"
         startPosition={0.3}
         stopDelayMs={200}
-        height={4.5}
+        height={2.5}
         showOnShallow={true}
       />
      
