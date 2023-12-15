@@ -143,7 +143,7 @@ export default function SaleInfo({ nft }: Props) {
 
   return (
     <>
-      <Toaster position="bottom-center" reverseOrder={false} />
+      <Toaster position="top-center" reverseOrder={false} />
       <div className={styles.saleInfoContainer}>
         <div className={profileStyles.tabs}>
           <h3
@@ -208,12 +208,12 @@ export default function SaleInfo({ nft }: Props) {
             }}
             onSuccess={(txResult) => {
               toast("Listed Successfully!", {
-                icon: "🥳",
+                icon: "⚡",
                 style: toastStyle,
                 position: "bottom-center",
               });
               router.push(
-                `/token/${NFT_COLLECTION_ADDRESS}/${nft.metadata.id}`,
+                "/dex",
               );
             }}
           >
@@ -276,12 +276,12 @@ export default function SaleInfo({ nft }: Props) {
             }}
             onSuccess={(txResult) => {
               toast("Listed Successfully!", {
-                icon: "🥳",
+                icon: "⚡",
                 style: toastStyle,
                 position: "bottom-center",
               });
               router.push(
-                `/token/${NFT_COLLECTION_ADDRESS}/${nft.metadata.id}`,
+               "/dex",
               );
             }}
           >
