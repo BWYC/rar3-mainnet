@@ -4,34 +4,28 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 100%;
-  gap: 1px;
-  align-items: center;
+  gap: 1%;
+  width: 100%;
 }
 .coverImage {
   width: 100%;
   background-color: #272a2d;
-  height: 400px;
+  height: 300px;
   border-radius: 16px;
 }
 
 .profilePicture {
-  width: 133px;
-  height: 133px;
-  border-radius: 100%;
+  width: 132px;
+  height: 132px;
+  border-radius: 132px;
   vertical-align: inherit;
-  outline: 3px solid rgba(255, 255, 255, 0.549);
+  outline: 3px solid rgba(255, 255, 255, 0.1);
   margin-top: -72px;
   margin-left: 5%;
 }
 
 .profileName {
-  margin: 3%;
-  width: 100%;
-  color: #aaaaaa;
-  font: 900;
-  font-size: 14px;
-  display: flex;
+  margin-left: 2.5%;
 }
 
 .tabs {
@@ -39,37 +33,32 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  margin-top: 30px;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  font-size: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding: 1%;
 }
 
 .tab {
   padding: 16px;
+  font-size: 14px;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.6);
   cursor: pointer;
   transition: color 0.1s ease-in-out;
-  backdrop-filter: blur(10px);
+  background: #1818186b;
 }
 
 .tab:hover {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 15px;
-  background-color: #272a2d5b;
-  border-radius: 16px;
-  justify-content: center;
-  text-align: center;
 }
 
 .activeTab {
   color: rgba(255, 255, 255, 1);
-  border-bottom: 2px solid #ffffff;
-  color: #aaaaaa;
-  background: rgba(73, 73, 73, 0.567);
-  border-radius: 8px;
-  margin: 10px;
+  border-bottom: 2px solid #0294fe;
+  color: oldlace;
+  padding: 10px;
+  background: #272a2d;
 }
 
 .tabContent {
@@ -83,9 +72,4 @@
   display: flex;
   flex-direction: row;
   opacity: 1;
-}
-@media only screen and (max-width: 600px) {
-  .verify{
-display: none !important;
-  }
 }

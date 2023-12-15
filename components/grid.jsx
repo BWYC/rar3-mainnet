@@ -3,19 +3,21 @@ import Link from "next/link";
 import Head from "next/head";
 
 import Search from "./search";
-import Footer from "../components/footer";
+import Footer from "./footer";
 import { ConnectWallet, useConnect } from "@thirdweb-dev/react";
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
-import ReactThemeToggleButton from "../components/toggle"
+import ReactThemeToggleButton from "./toggle"
 import {useTheme} from "next-themes";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useAddress } from "@thirdweb-dev/react";
 import { Blockie } from "web3uikit";
 import styles from "../styles/Home.module.css";
-import Banner from "../components/banner";
+import Banner from "./banner";
 import {Testnet} from '@web3uikit/icons'
 import ReactLanguageSelect from 'react-languages-select';
+import { NFT, ThirdwebSDK } from "@thirdweb-dev/sdk";
+
 
  
 //import css module
@@ -28,7 +30,9 @@ import { Ref } from "react";
 import { useRouter } from "next/router";
 import randomColor from "../util/randomColor";
 
-  
+ 
+
+
 const [randomColor1, randomColor2, randomColor3, randomColor4] = [
   randomColor(),
   randomColor(),
@@ -49,7 +53,7 @@ const GlobalStyle = createGlobalStyle`
 }
 `;
 
-const Grid = (props) => {
+const Grid = (nft, props) => {
 
 
   
@@ -94,7 +98,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                 </svg>
                 </Link>
                 <Link
-                  href="/portfolio"
+                 href="/portfolio"
                   className="home-text"
                 >
                    <div  className="home-link01">
@@ -108,7 +112,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                   <path d="M920.571 475.429c0 19.429-8 38.286-21.143 51.429l-372 372.571c-13.714 13.143-32.571 21.143-52 21.143s-38.286-8-51.429-21.143l-372-372.571c-13.714-13.143-21.714-32-21.714-51.429s8-38.286 21.714-52l42.286-42.857c13.714-13.143 32.571-21.143 52-21.143s38.286 8 51.429 21.143l168 168v-402.286c0-40 33.143-73.143 73.143-73.143h73.143c40 0 73.143 33.143 73.143 73.143v402.286l168-168c13.143-13.143 32-21.143 51.429-21.143s38.286 8 52 21.143l42.857 42.857c13.143 13.714 21.143 32.571 21.143 52z"></path>
                 </svg>
                 <Link
-                  href="/portfolio"
+                   href="/portfolio"
                   className="home-link"
                 >
                    <div  className="home-link01">
@@ -146,12 +150,12 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                     <path d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
                   </svg>
                 </div>
-                <Link legacyBehavior href="/#">
+                <Link legacyBehavior href="/">
                   <a className="home-link02">
                     <Image
                     style={{borderRadius: "100%"}}
-                    width={30}
-                    height={30}
+                    width={50}
+                    height={50}
                       alt="logo"
                       src="/fav-200h.ico"
                       className="home-image"
@@ -182,7 +186,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                           src="/fav-200h.ico"
                           className="home-image1"
                         />
-                        <Link legacyBehavior href="#">
+                        <Link legacyBehavior href="/">
                           <a className="home-link03">
                             <h1 className="home-heading">RAR3BAY</h1>
                           </a>
@@ -863,9 +867,9 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             font-family: "Pixel NES";
             text-decoration: none;
             background-image: linear-gradient(
-              rgb(255, 255, 255) 0%,
-              rgb(45, 45, 45) 49%,
-              rgb(255, 0, 0) 98%
+              rgb(100, 100, 155) 1%,
+              rgb(100, 100, 100) 49%,
+              rgb(255, 100, 0) 98%
             );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;

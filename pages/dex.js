@@ -413,9 +413,9 @@ const Dex = (props) => {
             font-family: "Pixel NES";
             text-decoration: none;
             background-image: linear-gradient(
-              rgb(255, 255, 255) 0%,
-              rgb(45, 45, 45) 49%,
-              rgb(255, 0, 0) 98%
+              rgb(100, 100, 155) 1%,
+              rgb(100, 100, 100) 49%,
+              rgb(255, 100, 0) 98%
             );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;

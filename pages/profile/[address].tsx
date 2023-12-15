@@ -106,24 +106,41 @@ return(
             
           }}
        / >
-        <hr style={{margin: "3%"}} />
-        <ConnectWallet />
+        <ConnectWallet
+   theme={({
+    colors: {
+      modalBg: "rbga(0, 0, 0, 0.9)",
+      dropdownBg: "black",
+      accentText: "white",
+      accentButtonBg: "#0064fa",
+      borderColor: "gray",
+      primaryText: "white",
+      background: "initial",
+      backdropFilter: "blur(100px)"
+    },
+   })}
+ style={{border: "solid", borderColor: "initial", borderWidth: "0.5px", fontFamily: "Pixel NES"}}
+ modalSize={"compact"}
+ btnTitle={"CONNECT"}
+ modalTitle={"RAREBAY"}
+ switchToActiveChain={true}
+ welcomeScreen={{
+   title: "WELCOME TO THE HOME OF RAR3",
+   Image: {
+     src: "https://bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a.ipfs.nftstorage.link/ipfs/bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a/xcxczxz.png",
+     width: 150,
+     height: 150,
+   },
+   subtitle:
+     "Connect wallet to get started.",
+ }}
+ modalTitleIconUrl={
+   "https://bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a.ipfs.nftstorage.link/ipfs/bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a/xcxczxz.png"
+ }
+/>
   </Container>
 
       </div>
-    <section className={styles.CollectionHeroSection}>
-     
-      <section>
-        <section className={styles.collection_marketplace_title_icons}>
-          <section>
-      
-          </section>
-        </section>
-      </section>
-      <section>
-       
-      </section>
-    </section>
     </section>
       </section>
     </section>
@@ -173,7 +190,6 @@ return(
        </Container>
 
       </div>
-      <hr style={{margin: "4%"}} />
     <div className={styles.tabs}>
     
         <h3
@@ -220,7 +236,7 @@ return(
             <NFTGrid
             data={ownedNfts}
             isLoading={isLoading}
-            emptyText="Looks like you don't have any NFTs from this collection. Head to the buy page to buy some!"
+            emptyText="Looks like you don't have any NFTs from this collection. Head to DEX and buy page to buy some!"
           />
              </Container>
           )}
@@ -266,6 +282,7 @@ return(
       </div>
       </Container>
       <div
+
         className={`${
           tab === "sell" ? styles.activeTabContent : styles.tabContent
         }`}
