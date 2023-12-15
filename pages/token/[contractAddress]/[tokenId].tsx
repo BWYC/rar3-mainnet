@@ -198,6 +198,10 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
           <div className={styles.listingContainer}>
             {contractMetadata && (
               <div className={styles.contractMetadataContainer}>
+                <MediaRenderer
+                  src={contractMetadata.image}
+                  className={styles.collectionImage}
+                />
                 <p className={styles.collectionName}>{contractMetadata.name}</p>
               </div>
             )}
@@ -283,7 +287,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
                 <Web3Button
                   contractAddress={MARKETPLACE_ADDRESS}
                   action={async () => await buyListing()}
-                 style={{background: "black", color: "gray"}}
+                  className={styles.btn}
                   onSuccess={() => {
                     toast(`Purchase success!`, {
                       icon: "✅",
@@ -323,7 +327,6 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
                   contractAddress={MARKETPLACE_ADDRESS}
                   action={async () => await createBidOrOffer()}
                   className={styles.btn}
-                  style={{background: "black", color: "gray"}}
                   onSuccess={() => {
                     toast(`Bid success!`, {
                       icon: "✅",
