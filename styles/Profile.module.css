@@ -37,8 +37,8 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
   margin-top: 5px;
   margin-bottom: 5px;
-  padding: 1%;
-  height: 50px;
+  padding: 2px;
+  height: auto;
 }
 
 .tab {
@@ -52,14 +52,13 @@
 }
 
 .tab:hover {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(94, 94, 94, 0.8);
 }
 
 .activeTab {
   color: rgba(255, 255, 255, 1);
-  border-bottom: 2px solid #0294fe;
+  border-bottom: 4px solid #ffffff;
   color: oldlace;
-  padding: 5px;
   background: #272a2d;
 }
 
