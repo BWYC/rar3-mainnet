@@ -28,7 +28,7 @@ export default function MyApp({ Component: Component, pageProps: pageProps }) {
    
     <ChakraProvider theme={{}}>
     <ThirdwebProvider
-    clientId="678d5b0199cde588796872ea22804505"
+    clientId="cc3b7731ad9935953abe4a625abea530"
     authConfig={{
       domain: "rarebay.xyz",
       authUrl: "/api/auth",
