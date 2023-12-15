@@ -350,7 +350,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
  <ConnectWallet
    theme={({
     colors: {
-      modalBg: "rbga(0, 0, 0, 0.9)",
+      modalBg: "rbga(0, 0, 0, 0.1)",
       accentText: "white",
       accentButtonBg: "#0064fa",
       borderColor: "gray",
@@ -401,7 +401,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
 <ConnectWallet 
  theme={({
   colors: {
-    modalBg: "rbga(0, 0, 0, 0.9)",
+    modalBg: "rbga(0, 0, 0, 0.1)",
     accentText: "white",
     accentButtonBg: "#0064fa",
     borderColor: "gray",
