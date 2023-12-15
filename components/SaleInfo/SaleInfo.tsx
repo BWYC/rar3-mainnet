@@ -213,7 +213,7 @@ export default function SaleInfo({ nft }: Props) {
                 position: "bottom-center",
               });
               router.push(
-                "/portfolio",
+                "/dex",
               );
             }}
           >
@@ -281,7 +281,7 @@ export default function SaleInfo({ nft }: Props) {
                 position: "bottom-center",
               });
               router.push(
-               "/portfolio",
+               "/dex",
               );
             }}
           >
