@@ -42,12 +42,12 @@ export default function Login() {
 <ConnectWallet 
  theme={({
   colors: {
-    modalBg: "#3385FF",
+    modalBg: "#26262672",
     accentText: "#3385FF",
     accentButtonBg: "#0064fa",
     borderColor: "gray",
     primaryText: "white",
-    background: "#131418",
+    background: "#26262672",
   },
  })}
    style={{fontFamily: "Pixel Nes", border: "solid", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px", backdropFilter: "blur(10px)"}} 
