@@ -23,7 +23,7 @@ import {
     if (isLoading) {
       return (
         <div
-          style={{ marginTop: "20%", marginLeft: "10%", fontFamily: "monospace" }}
+          style={{ marginTop: "10%", marginLeft: "10%", fontFamily: "monospace" }}
         >
           LOADING NFTs..
         </div>
@@ -34,7 +34,7 @@ import {
       <Container maxWidth="lg">
       
        {!selectedNft ? (     <>
-            <p style={{ marginTop: "1%", fontFamily: "monospace" }}>
+            <p style={{ marginTop: "1%", fontFamily: "Pixel Nes" }}>
               Select which NFT you&rsquo;d like to sell below.
             </p>
             <NFTGrid
