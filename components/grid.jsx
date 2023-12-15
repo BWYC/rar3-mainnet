@@ -400,15 +400,15 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
 <ConnectWallet 
  theme={({
   colors: {
-    modalBg: "rbga(0, 0, 0, 0.5)",
-    accentText: "white",
+    modalBg: "#3385FF",
+    accentText: "#3385FF",
     accentButtonBg: "#0064fa",
     borderColor: "gray",
     primaryText: "white",
-    background: "unset",
+    background: "#131418",
   },
  })}
-   style={{fontFamily: "Pixel Nes", border: "solid", color: "white", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px", backdropFilter: "blur(100px)"}} />
+   style={{fontFamily: "Pixel Nes", border: "solid", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px", backdropFilter: "blur(10px)"}} />
 
 </section>
 <div style={{height: "100px", margin: "20px", cursor: "pointer", fontSize: "20px", fontStyle: "Pixel Nes"}}>
@@ -463,17 +463,15 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
  <ConnectWallet
    theme={({
     colors: {
-      modalBg: "rbga(0, 0, 0, 0.5)",
-      dropdownBg: "black",
-      accentText: "white",
+      modalBg: "#3385FF",
+      accentText: "#3385FF",
       accentButtonBg: "#0064fa",
       borderColor: "gray",
       primaryText: "white",
-      background: "initial",
-      backdropFilter: "blur(100px)"
+      background: "#131418",
     },
    })}
- style={{border: "solid", borderColor: "initial", borderWidth: "0.5px", fontFamily: "Pixel NES"}}
+     style={{fontFamily: "Pixel Nes", border: "solid", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px", backdropFilter: "blur(10px)"}}   
  modalSize={"compact"}
  btnTitle={"CONNECT"}
  modalTitle={"RAREBAY"}
@@ -496,19 +494,18 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
         ) : (
           <section className={styles.loggedIn_section}  style={{fontFamily: "Pixel NES"}}>
 <ConnectWallet 
-    theme={({
-      colors: {
-        modalBg: "rbga(0, 0, 0, 0.5)",
-        dropdownBg: "black",
-        accentText: "white",
-        accentButtonBg: "#0064fa",
-        borderColor: "gray",
-        primaryText: "white",
-        background: "initial",
-        backdropFilter: "blur(100px)"
-      },
-     })}
-   style={{color: "white", border: "solid", color: "white", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px"}} /><div style={{width: "45px", height: "45px", padding: "3.8px", border: "solid", marginTop: "5px", borderRadius: "100%", marginLeft: "5px", color: "initial" }}><Blockie seed={address} />
+ theme={({
+  colors: {
+    modalBg: "#3385FF",
+    accentText: "#3385FF",
+    accentButtonBg: "#0064fa",
+    borderColor: "gray",
+    primaryText: "white",
+    background: "#131418",
+  },
+ })}
+   style={{fontFamily: "Pixel Nes", border: "solid", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px", backdropFilter: "blur(10px)"}} />
+<div style={{width: "45px", height: "45px", padding: "3.8px", border: "solid", marginTop: "5px", borderRadius: "100%", marginLeft: "5px", color: "initial" }}><Blockie seed={address} />
    </div>
    
           </section>
