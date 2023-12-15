@@ -4,7 +4,6 @@
   flex-direction: row;
   gap: 20px;
   padding: 100px;
-  margin-top: 4%;
 }
 
 .metadataContainer {
@@ -30,7 +29,7 @@
 
 .image {
   border-radius: 16px;
-  width: 100% !important;
+  width: 80% !important;
   height: auto !important;
   background-color: rgba(255, 255, 255, 0.04);
 }
@@ -68,10 +67,11 @@
   font-size: 16px;
   color: white;
   padding: 0.5%;
-  background-color: rgb(0, 0, 0);
-  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.103);
   z-index: 1;
   text-align: center;
+  padding: 2%;
+  border: solid 1px;
 }
 
 .crossButton:hover {

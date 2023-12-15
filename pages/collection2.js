@@ -11,7 +11,7 @@ import {useTheme} from "next-themes";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useAddress } from "@thirdweb-dev/react";
-import { useAccount, useConnect } from "wagmi";
+
 import { Blockie } from "web3uikit";
 import styles from "../styles/Home.module.css";
 import Buy from "./buy"
@@ -22,7 +22,6 @@ import Collection from "./collections/0xF6C2584850Fd1F50fc979F72888Fb67CFa39a2C2
 const Bwyc= (props)  => {
 
   const address = useAddress()
-  const { connect, connectors } = useConnect();
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
