@@ -39,18 +39,9 @@ export default function Login() {
         <Container maxWidth="lg">
 
 <div style={{height: "250px"}}></div>
-<ConnectWallet 
- theme={({
-  colors: {
-    modalBg: "#26262672",
-    accentText: "#3385FF",
-    accentButtonBg: "#0064fa",
-    borderColor: "gray",
-    primaryText: "white",
-    background: "#26262672",
-  },
- })}
-   style={{fontFamily: "Pixel Nes", border: "solid", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px", backdropFilter: "blur(10px)"}} 
+<ConnectWallet
+  theme="system"
+     style={{fontFamily: "Pixel Nes", border: "solid", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px", backdropFilter: "blur(10px)"}}   
  modalSize={"compact"}
  btnTitle={"CONNECT"}
  modalTitle={"RAREBAY"}
