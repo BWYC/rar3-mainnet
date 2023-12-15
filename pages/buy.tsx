@@ -12,11 +12,13 @@ import { NFT as NFTType } from "@thirdweb-dev/sdk";
 import SaleInfo from "../components/SaleInfo/SaleInfo";
 import React, { useState } from "react";
 import TokenPage from "./token/[contractAddress]/[tokenId]";
-import { color } from "web3uikit";
+import { NFT, color } from "web3uikit";
 import {Twitter, Discord, UserTeam, ArrowDown, Dapps, Checkmark } from '@web3uikit/icons'
 import Data from "./collections/data"
 import ListingWrapper from "../components/ListingWrapper/ListingWrapper";
 import Skeleton from "../components/Skeleton/Skeleton";
+import { Eye } from "web3uikit";
+
 
 
 export default function Buy() {
@@ -48,7 +50,7 @@ export default function Buy() {
     
       {!selectedNft ? (
         <>
-        <div  style={{color: "white", height: "80px", width: "100%", padding: "1%", backdropFilter: "blur(100px)", borderRadius: "8px", fontSize: "20px", background: "rbg(0, 0, 0, 0.7)", display: "flex", flexDirection: "row", gap: "10px" }}>
+        <div  style={{color: "white", height: "80px", width: "100%", padding: "1%", backdropFilter: "blur(100px)", borderRadius: "8px", fontSize: "16px", background: "rbg(0, 0, 0, 0.7)", display: "flex", flexDirection: "row", gap: "10px" }}>
         <Data />
         <p className={styles.verify}  style={{color: "white", width: "100%",  padding: "2%", borderRadius: "8px", display: "flex"}}>
         RAR31ONES
@@ -56,10 +58,10 @@ export default function Buy() {
         <Checkmark fontSize={20} style={{background: "green", padding: "1px", border: "dashed 1px", borderRadius: "100%"}} />
        </>)
           : (<></>)}</p>
-          <Link href="/collection" style={{textAlign: "center", padding: "2%", border: "solid 1px gray", background: "rgba(0, 0, 50, 0.3)", fontSize: "14px", borderRadius: "8px", width: "40%", height: "60px"}}><p>VIEW ITEMS</p></Link>
+          <Link href="/collection" style={{textAlign: "center", padding: "1%", border: "solid 0.5px gray", background: "rgba(0, 0, 0, 0.1)", fontSize: "16px", borderRadius: "8px", width: "auto", height: "auto", boxShadow: "lightgreen 1px 1px 5px"}}><Eye fontSize={30} /></Link>
         </div>
         <div
-        className={styles.activeTabContent}
+        className={styles.nftGridContainer}
       >
         {loadingDirects ? (
          <Container maxWidth="lg">
@@ -69,7 +71,9 @@ export default function Buy() {
           <p>Nothing for sale yet! Head to the sell tab to list an NFT.</p>
         ) : (
           directListings?.map((listing) => (
+            <>
             <ListingWrapper listing={listing} key={listing.id} />
+            </>
           ))
         )}
       </div>

@@ -2,8 +2,8 @@
   max-width: 100%;
   display: flex;
   flex-direction: row;
-  gap: 20px;
-  padding: 100px;
+  gap:10px;
+  margin-top: 128px;
 }
 
 .metadataContainer {
@@ -24,7 +24,6 @@
   max-width: 450px;
   margin-top: 16px;
   margin-right: 16px;
-  height: 150px;
 }
 
 .image {
@@ -64,14 +63,6 @@
   top: 10px;
   right: 10px;
   transition: background-color 0.2s ease-in-out;
-  font-size: 16px;
-  color: white;
-  padding: 0.5%;
-  background-color: rgba(0, 0, 0, 0.103);
-  z-index: 1;
-  text-align: center;
-  padding: 2%;
-  border: solid 1px;
 }
 
 .crossButton:hover {
@@ -100,7 +91,7 @@
 
 .title {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 32px;
   hyphens: auto;
   overflow-wrap: break-word;
   margin-bottom: 4px;
@@ -145,7 +136,7 @@
 }
 
 .label {
-  color: initial;
+  color: rgba(255, 255, 255, 0.6);
   margin: 0px;
   margin-bottom: 4px;
 }
@@ -153,7 +144,7 @@
 .nftOwnerAddress {
   font-weight: 600;
   margin: 0px;
-  color:initial;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .descriptionContainer {
@@ -202,13 +193,13 @@
 .traitValue {
   font-weight: 600;
   margin: 0px;
-  color: initial;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .traitName {
   font-weight: 400;
   margin: 0px;
-  color: initial;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .eventContainer {
@@ -233,8 +224,8 @@
   background: transparent;
   border-radius: 16px;
   overflow: hidden;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 32px;
+  margin-bottom: 24px;
 }
 
 .pricingInfo {
@@ -242,16 +233,16 @@
   border-radius: 14px;
   background-color: rgba(255, 255, 255, 0.04);
   width: 100%;
-  margin: 10px;
+  margin: 0px;
   margin-bottom: 12px;
 }
 
 .pricingValue {
-  font-size: 14px;
-  line-height: 15px;
+  font-size: 18px;
+  line-height: 24px;
   font-weight: 600;
-  color: initial;
-  margin: 10px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0px;
   border-radius: 8px;
 }
 
@@ -266,14 +257,13 @@
   align-items: center;
   justify-content: center;
   margin: 0px;
-  height: 100%;
 }
 
 .listingTime {
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
-  color: initial;
+  color: rgba(255, 255, 255, 0.6);
   margin: 0px;
 }
 
@@ -304,5 +294,4 @@
 .btn {
   /* fill remainin width */
   width: 100% !important;
-  background-color: black;
 }

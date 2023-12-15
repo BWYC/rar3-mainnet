@@ -29,17 +29,18 @@ import {
             )}
       
   
-            <h5 style={{ textAlign: "center" }}>{nft.metadata.name}</h5>
+            <h5 style={{ textAlign: "center" }}>#{nft.metadata.id}</h5>
       
             <Web3Button
               isDisabled
               style={{
-                backgroundColor: "black",
-                borderStyle: "solid",
-                borderColor: "Orange",
-                color: "Orange",
+                backgroundColor: "transparent",
+                border: " solid 1px grey",
+                color: "white",
+                textShadow: "white 1px 1px 5px",
                 display: "flex",
-                alignItems: "center"
+                alignItems: "center",
+                margin: "5%"
               }}
               action={(contract) =>
                 contract?.call("withdraw", [[nft.metadata.id]])
