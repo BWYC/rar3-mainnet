@@ -70,12 +70,6 @@ const Rare= (props) => {
             align-items: center;
             flex-direction: column;
             justify-content: center;
-            background: linear-gradient(
-              120deg,
-              rgb(0, 0, 0, 0.3),
-              rgba(0, 50, 250, 0.906),
-              rgba(0, 0, 0, 0.306)
-            );
           }
           .home-container01 {
             flex: 0 0 auto;
