@@ -118,7 +118,7 @@ import NFTCard from "../components/NFTCard"
           >
             Claim Rewards
           </Web3Button>
-              <h2 style={{ textAlign: "center", color: "lightgreen" }}>Staked Tokens</h2>
+          <h1 style={{ textAlign: "center", fontSize: "30px",  textShadow: "orange 1px 1px 5px", }}>Staked</h1>
               <div className={styles.nftBoxGrid}>
                 {stakedTokens &&
                   stakedTokens[0]?.map((stakedToken: BigNumber) => (

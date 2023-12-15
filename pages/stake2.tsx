@@ -108,7 +108,7 @@ import NFTCard from "../components/NFTCardc"
               backgroundColor: "transparent",
               border: " solid 1px grey",
               color: "gray",
-              textShadow: "white 1px 1px 5px",
+              textShadow: "lightgreen 1px 1px 5px",
               alignItems: "center",
               margin: "5%"
             }}

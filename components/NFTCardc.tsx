@@ -22,7 +22,7 @@ import {
           <div style={{alignItems: "center"}}>
             {nft.metadata && (
               <ThirdwebNftMedia
-                style={{ borderRadius: "32px", width: "100%", height: "200px"  }}
+                style={{ borderRadius: "32px", width: "100%", height: "250px"  }}
                 metadata={nft.metadata}
                 className={styles.nftMedia}
               />
