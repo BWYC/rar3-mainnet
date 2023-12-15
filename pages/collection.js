@@ -11,7 +11,7 @@ import {useTheme} from "next-themes";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useAddress } from "@thirdweb-dev/react";
-import { useAccount, useConnect } from "wagmi";
+
 import { Blockie } from "web3uikit";
 import styles from "../styles/Home.module.css";
 import Buy from "./buy"
@@ -23,7 +23,7 @@ import Collection from "./collections/0x9bA655328197b3fF54b9554294ef8017CdC09AC3
 const Rare= (props) => {
 
   const address = useAddress()
-  const { connect, connectors } = useConnect();
+
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 

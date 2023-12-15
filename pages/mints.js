@@ -15,7 +15,7 @@ import {useTheme} from "next-themes";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useAddress } from "@thirdweb-dev/react";
-import { useAccount, useConnect } from "wagmi";
+
 import Modal from 'react-modal';
 import Container from "../components/Container/Container";
 
@@ -79,7 +79,6 @@ const Mints = (props)  => {
     setIsOpen2(false);
   }
   const address = useAddress()
-  const { connect, connectors } = useConnect();
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
