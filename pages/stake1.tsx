@@ -114,7 +114,7 @@ import NFTCard from "../components/NFTCardb"
               margin: "2%"
             }}
             action={(contract) => contract.call("claimRewards")}
-            contractAddress={stakingContractAddress}
+            contractAddress={stakingContractAddress2}
           >
             Claim Rewards
           </Web3Button>
