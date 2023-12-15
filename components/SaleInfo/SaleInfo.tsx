@@ -208,12 +208,12 @@ export default function SaleInfo({ nft }: Props) {
             }}
             onSuccess={(txResult) => {
               toast("Listed Successfully!", {
-                icon: "🥳",
+                icon: "⚡",
                 style: toastStyle,
                 position: "bottom-center",
               });
               router.push(
-                `/token/${NFT_COLLECTION_ADDRESS}/${nft.metadata.id}`,
+                "/portfolio",
               );
             }}
           >
@@ -276,12 +276,12 @@ export default function SaleInfo({ nft }: Props) {
             }}
             onSuccess={(txResult) => {
               toast("Listed Successfully!", {
-                icon: "🥳",
+                icon: "⚡",
                 style: toastStyle,
                 position: "bottom-center",
               });
               router.push(
-                `/token/${NFT_COLLECTION_ADDRESS}/${nft.metadata.id}`,
+               "/portfolio",
               );
             }}
           >
