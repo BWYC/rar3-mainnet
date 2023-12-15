@@ -17,8 +17,8 @@
   transform: translate3d(0px, 0px, 0px);
   display: flex;
   flex-direction: column;
-  padding: 8px;
-  max-height: 382px;
+  padding: 1px;
+  max-height: 384px;
   transition: all 0.25s ease-in-out;
 }
 
