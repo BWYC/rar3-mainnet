@@ -93,7 +93,7 @@ export default function SaleInfo({ nft }: Props) {
 
       if (txResult) {
         toast.success("Marketplace approval granted", {
-          icon: "👍",
+          icon: "⚡",
           style: toastStyle,
           position: "bottom-center",
         });
@@ -144,7 +144,7 @@ export default function SaleInfo({ nft }: Props) {
   return (
     <>
       <Toaster position="bottom-center" reverseOrder={false} />
-      <div className={styles.saleInfoContainer} style={{ marginTop: -42 }}>
+      <div className={styles.saleInfoContainer}>
         <div className={profileStyles.tabs}>
           <h3
             className={`${profileStyles.tab} 
