@@ -14,7 +14,7 @@ import TokenPage from "./token/[contractAddress]/[tokenId]";
 import { color } from "web3uikit";
 import {Twitter, Discord, UserTeam, ArrowDown, Dapps, Checkmark } from '@web3uikit/icons'
 import Data from "./collections/data1"
-import ListingWrapper1 from "../components/ListingWrapper/ListingWrapper1";
+import ListingWrapper1 from "../components/ListingWrapper/ListingWrapper";
 
 
 export default function Buy() {

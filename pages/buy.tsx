@@ -61,9 +61,9 @@ export default function Buy() {
         className={styles.activeTabContent}
       >
         {loadingDirects ? (
-         <div>
-          <Skeleton width="100%" height="100" />
-         </div>
+         <Container maxWidth="lg">
+          <Skeleton width="100%" height="100%" />
+         </Container>
         ) : directListings && directListings.length === 0 ? (
           <p>Nothing for sale yet! Head to the sell tab to list an NFT.</p>
         ) : (

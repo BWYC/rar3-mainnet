@@ -15,20 +15,21 @@
     overflow: hidden;
     border-radius: 8px;
     backface-visibility: hidden;
-    outline: 1px solid rgba(255, 157, 0, 0.624);
     transform: translate3d(0px, 0px, 0px);
     display: flex;
     flex-direction: row;
-    padding: 8px;
+    padding: 3px;
     max-height: 500px;
     margin-top: 5%;
     transition: all 0.25s ease-in-out;
+    border: 0.1px solid rgba(55, 55, 55, 0.624);
   }
   
   .nftContainer:hover {
     cursor: pointer;
-    transform: translate3d(0px, -4px, 0px);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translate3d(0px, -10px, 0px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+    outline: 1px solid rgba(55, 55, 55, 0.624);
   }
   
   .title {

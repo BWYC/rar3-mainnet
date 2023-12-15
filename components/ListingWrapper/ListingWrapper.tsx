@@ -6,8 +6,6 @@ import { NFT_COLLECTION_ADDRESS } from "../../const/contractAddresses";
 import styles from "../../styles/Buy.module.css";
 import NFT from "../NFT/NFT";
 import Skeleton from "../Skeleton/Skeleton";
-import Container from "../Container/Container";
-
 
 type Props = {
   listing: DirectListingV3 | EnglishAuction;
@@ -20,7 +18,6 @@ export default function ListingWrapper({ listing }: Props) {
   const { contract: nftContract } = useContract(NFT_COLLECTION_ADDRESS);
 
   const { data: nft, isLoading } = useNFT(nftContract, listing.asset.id);
-  
 
   if (isLoading) {
     return (
@@ -38,9 +35,7 @@ export default function ListingWrapper({ listing }: Props) {
       key={nft.metadata.id}
       className={styles.nftContainer}
     >
-  
       <NFT nft={nft} />
-    
     </Link>
   );
 }
