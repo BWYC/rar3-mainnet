@@ -150,12 +150,12 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                     <path d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
                   </svg>
                 </div>
-                <Link legacyBehavior href="/#">
+                <Link legacyBehavior href="/">
                   <a className="home-link02">
                     <Image
                     style={{borderRadius: "100%"}}
-                    width={30}
-                    height={30}
+                    width={50}
+                    height={50}
                       alt="logo"
                       src="/fav-200h.ico"
                       className="home-image"
@@ -186,7 +186,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                           src="/fav-200h.ico"
                           className="home-image1"
                         />
-                        <Link legacyBehavior href="#">
+                        <Link legacyBehavior href="/">
                           <a className="home-link03">
                             <h1 className="home-heading">RAR3BAY</h1>
                           </a>
@@ -867,9 +867,9 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             font-family: "Pixel NES";
             text-decoration: none;
             background-image: linear-gradient(
-              rgb(255, 255, 255) 0%,
-              rgb(45, 45, 45) 49%,
-              rgb(255, 0, 0) 98%
+              rgb(100, 100, 155) 1%,
+              rgb(100, 100, 100) 49%,
+              rgb(255, 100, 0) 98%
             );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;

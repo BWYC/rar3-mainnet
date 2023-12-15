@@ -1,6 +1,12 @@
 .profileHeader {
 }
-
+.nftGridContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1%;
+  width: 100%;
+}
 .coverImage {
   width: 100%;
   background-color: #272a2d;
