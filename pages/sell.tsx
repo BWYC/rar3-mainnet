@@ -32,8 +32,8 @@ import {
   
     return (
       <Container maxWidth="lg">
-        {!selectedNft ? (
-          <>
+      
+       {!selectedNft ? (     <>
             <p style={{ marginTop: "1%", fontFamily: "monospace" }}>
               Select which NFT you&rsquo;d like to sell below.
             </p>
