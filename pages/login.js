@@ -41,7 +41,7 @@ export default function Login() {
 <div style={{height: "250px"}}></div>
 <ConnectWallet 
  theme="system"
-   style={{fontFamily: "Pixel Nes", border: "solid", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px"}} 
+   style={{fontFamily: "Pixel Nes", border: "solid", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px", background: "transparent"}} 
  modalSize={"compact"}
  btnTitle={"CONNECT"}
  modalTitle={"RAREBAY"}
