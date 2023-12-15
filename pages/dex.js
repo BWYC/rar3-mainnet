@@ -73,8 +73,8 @@ const Dex = (props) => {
             justify-content: center;
             background-image: linear-gradient(
               45deg,
-              rgba(0, 0, 0, 0.55) 0%,
-              rgb(0, 25, 49) 100%
+              rgba(0, 0, 0, 0.55) 2%,
+              rgb(0, 25, 49) 60%
             );
           }
           .home-container01 {
@@ -997,10 +997,9 @@ const Dex = (props) => {
             font-family: "Pixel NES";
             text-decoration: none;
             background-image: linear-gradient(
-              180deg,
-              rgb(255, 255, 255) 0%,
-              rgb(45, 45, 45) 49%,
-              rgb(0, 0, 220) 98%
+              rgb(100, 100, 155) 1%,
+              rgb(100, 100, 100) 49%,
+              rgb(255, 100, 0) 98%
             );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;

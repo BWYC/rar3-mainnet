@@ -47,7 +47,7 @@ export default function NFTComponent({ nft }: Props) {
   return (
     <>
 <Container maxWidth="xs">
-      <ThirdwebNftMedia metadata={nft.metadata} style={{width: "100%", height: "90%", borderRadius: "16px", overflow: "hidden"}} />
+      <ThirdwebNftMedia metadata={nft.metadata} style={{width: "", height: "", borderRadius: "16px", overflow: "hidden"}} />
 
       <p className={styles.nftName}>
       <Blockie seed={owner} scale={2} />    {nft.metadata.id}: {truncateEthAddress(owner)}
