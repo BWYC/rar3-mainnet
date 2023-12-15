@@ -348,17 +348,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                    <div style={{margin: "50px", fontFamily: "Pixel Nes"}}></div>
               <>
  <ConnectWallet
-   theme={({
-    colors: {
-      modalBg: "#26262672",
-      accentText: "white",
-      accentButtonBg: "#0064fa",
-      borderColor: "gray",
-      primaryText: "white",
-      background: "#26262672",
-      backdropFilter: "blur(100px)"
-    },
-   })}
+   theme="system"
  style={{border: "solid", borderColor: "initial", borderWidth: "0.5px", fontFamily: "Pixel NES"}}
  modalSize={"compact"}
  btnTitle={"CONNECT"}
@@ -398,16 +388,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           <>
           <section className={styles.loggedIn_section}>
 <ConnectWallet 
- theme={({
-  colors: {
-    modalBg: "#26262672",
-    accentText: "#3385FF",
-    accentButtonBg: "#0064fa",
-    borderColor: "gray",
-    primaryText: "white",
-    background: "#26262672",
-  },
- })}
+  theme="system"
    style={{fontFamily: "Pixel Nes", border: "solid", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px", backdropFilter: "blur(10px)"}} />
 
 </section>
@@ -449,8 +430,6 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
   showSelectedLabel={false}
   showOptionLabel={false}
   placeholder=""
-    languages={["en", "ch"]} 
-    customLabels={{"en": "EN-US"}}
     ></ReactLanguageSelect>
      <img src="https://img.icons8.com/?size=48&id=31016&format=png"  width={"25px"} style={{marginTop: "-15px"}}/>
   </div>
@@ -461,16 +440,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           <section style={{fontFamily: "Pixel NES"}}>
           
  <ConnectWallet
-   theme={({
-    colors: {
-      modalBg: "#26262672",
-      accentText: "#3385FF",
-      accentButtonBg: "#0064fa",
-      borderColor: "gray",
-      primaryText: "white",
-      background: "#26262672",
-    },
-   })}
+  theme="system"
      style={{fontFamily: "Pixel Nes", border: "solid", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px", backdropFilter: "blur(10px)"}}   
  modalSize={"compact"}
  btnTitle={"CONNECT"}
@@ -494,16 +464,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
         ) : (
           <section className={styles.loggedIn_section}  style={{fontFamily: "Pixel NES"}}>
 <ConnectWallet 
- theme={({
-  colors: {
-    modalBg: "#26262672",
-    accentText: "#3385FF",
-    accentButtonBg: "#0064fa",
-    borderColor: "gray",
-    primaryText: "white",
-    background: "#26262672",
-  },
- })}
+  theme="system"
    style={{fontFamily: "Pixel Nes", border: "solid", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px", backdropFilter: "blur(10px)"}} />
 <div style={{width: "45px", height: "45px", padding: "3.8px", border: "solid", marginTop: "5px", borderRadius: "100%", marginLeft: "5px", color: "initial" }}><Blockie seed={address} />
    </div>
