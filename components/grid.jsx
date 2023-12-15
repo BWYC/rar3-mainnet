@@ -98,7 +98,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                 </svg>
                 </Link>
                 <Link
-                 href={`/profile/${nft.owner}/#owned`}
+                 href="/portfolio"
                   className="home-text"
                 >
                    <div  className="home-link01">
@@ -112,7 +112,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                   <path d="M920.571 475.429c0 19.429-8 38.286-21.143 51.429l-372 372.571c-13.714 13.143-32.571 21.143-52 21.143s-38.286-8-51.429-21.143l-372-372.571c-13.714-13.143-21.714-32-21.714-51.429s8-38.286 21.714-52l42.286-42.857c13.714-13.143 32.571-21.143 52-21.143s38.286 8 51.429 21.143l168 168v-402.286c0-40 33.143-73.143 73.143-73.143h73.143c40 0 73.143 33.143 73.143 73.143v402.286l168-168c13.143-13.143 32-21.143 51.429-21.143s38.286 8 52 21.143l42.857 42.857c13.143 13.714 21.143 32.571 21.143 52z"></path>
                 </svg>
                 <Link
-                    href={`/profile/${nft.owner}/#sell`}
+                   href="/portfolio"
                   className="home-link"
                 >
                    <div  className="home-link01">
