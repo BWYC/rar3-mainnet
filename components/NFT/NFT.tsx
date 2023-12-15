@@ -47,14 +47,14 @@ export default function NFTComponent({ nft }: Props) {
   return (
     <>
 <Container maxWidth="xs">
-      <ThirdwebNftMedia metadata={nft.metadata} style={{width: "100%", height: "100%", borderRadius: "16px", overflow: "hidden"}} />
+      <ThirdwebNftMedia metadata={nft.metadata} style={{width: "", height: "", borderRadius: "16px", overflow: "hidden"}} />
 
       <p className={styles.nftName}>
       <Blockie seed={owner} scale={2} />    {nft.metadata.id}: {truncateEthAddress(owner)}
       </p>
       <div className={styles.priceContainer}>
         {loadingContract || loadingDirect || loadingAuction ? (
-          <Skeleton width="100%" height="50px" />
+          <Skeleton width="100%" height="30px" />
         ) : directListing && directListing[0] ? (
           <div className={styles.nftPriceContainer}>
             <div>

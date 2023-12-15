@@ -105,11 +105,12 @@ import NFTCard from "../components/NFTCardc"
               </div>
               <Web3Button
              style={{
-              backgroundColor: "black",
-              border: "solid 0.5px",
-              borderColor: "Orange",
-              color: "gray",
-              marginBottom: "2%"
+              backgroundColor: "transparent",
+              border: " solid 1px grey",
+              color: "green",
+              textShadow: "white 1px 1px 5px",
+              alignItems: "center",
+              margin: "5%"
             }}
             action={(contract) => contract.call("claimRewards")}
             contractAddress={stakingContractAddress3}
@@ -141,7 +142,7 @@ import NFTCard from "../components/NFTCardc"
                       className={styles.nftMedia}
                     />
                 
-                    <h5 style={{ textAlign: "center" }}>{nft.metadata.name}</h5>
+                    <h5 style={{ textAlign: "center" }}>#{nft.metadata.name}</h5>
                  
                     <Web3Button
                         style={{

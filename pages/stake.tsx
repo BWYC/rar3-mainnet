@@ -104,12 +104,14 @@ import NFTCard from "../components/NFTCard"
                 </div>
               </div>
               <Web3Button
+              isDisabled
             style={{
               backgroundColor: "black",
               borderStyle: "solid",
               border: "solid 0.5px red",
               color: "red",
-              textShadow: "red 1px 1px 10px"
+              textShadow: "red 1px 1px 10px",
+              margin: "2%"
             }}
             action={(contract) => contract.call("claimRewards")}
             contractAddress={stakingContractAddress}
@@ -133,7 +135,7 @@ import NFTCard from "../components/NFTCard"
                   <div key={nft.metadata.id.toString()}>
                     <ThirdwebNftMedia
                       style={{
-                        borderRadius: "32px",
+                        borderRadius: "16px",
                         width: "100%",
                         height: "250px",
                       }}
@@ -141,14 +143,17 @@ import NFTCard from "../components/NFTCard"
                       className={styles.nftMedia}
                     />
                 
-                    <h5 style={{ textAlign: "center" }}>{nft.metadata.name}</h5>
+                    <h5 style={{ textAlign: "center" }}>#{nft.metadata.id}</h5>
                  
                     <Web3Button
                       style={{
-                        backgroundColor: "black",
-                        borderStyle: "solid",
-                        borderColor: "Orange",
-                        color: "Orange",
+                        backgroundColor: "transparent",
+                        border: " solid 1px grey",
+                        color: "white",
+                        textShadow: "white 1px 1px 5px",
+                        display: "flex",
+                        alignItems: "center",
+                        margin: "5%"
                       }}
                       contractAddress={stakingContractAddress}
                       action={() => stakeNft(nft.metadata.id)}

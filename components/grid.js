@@ -408,7 +408,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
     backdropFilter: "blur(100px)"
   },
  })}
-   style={{background: "black", color: "white", border: "solid", color: "white", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px"}} />
+   style={{fontFamily: "Pixel Nes", border: "solid", color: "white", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px"}} />
 
 </section>
 <div style={{height: "100px", margin: "20px", cursor: "pointer", fontSize: "20px", fontStyle: "Pixel Nes"}}>

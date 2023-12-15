@@ -109,7 +109,7 @@ const Pools = (props) => {
         style={customStyles}
         contentLabel="STAKE"
       >
-        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>STAKING POOL</h2>
+        <h1 style={{ textAlign: "center", fontSize: "30px",  textShadow: "orange 1px 1px 5px", }}>RAR3 POOL</h1>
         <div><Stake />
         <div style={{height: "10px"}}></div>
         <button className='button' onClick={closeModal}>EXIT</button>
@@ -141,7 +141,7 @@ const Pools = (props) => {
         style={customStyles}
         contentLabel="STAKE"
       >
-        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>STAKING POOL</h2>
+        <h1 style={{ textAlign: "center", fontSize: "30px",  textShadow: "orange 1px 1px 5px", }}>BWYC I POOL</h1>
         <div><Stake3 />
         <div style={{height: "10px"}}></div>
         <button className='button' onClick={closeModal3}>EXIT</button>
@@ -174,7 +174,7 @@ const Pools = (props) => {
         style={customStyles}
         contentLabel="STAKE"
       >
-        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>STAKING POOL</h2>
+      <h1 style={{ textAlign: "center", fontSize: "30px",  textShadow: "orange 1px 1px 5px", }}>BWYC I POOLS</h1>
         <div><Stake1 />
         <div style={{height: "10px"}}></div>
         <button className='button' onClick={closeModal1}>EXIT</button>
@@ -216,7 +216,7 @@ const Pools = (props) => {
         style={customStyles}
         contentLabel="STAKE"
       >
-        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>STAKING POOL</h2>
+        <h1 style={{ textAlign: "center", fontSize: "30px",  textShadow: "orange 1px 1px 5px", }}>CARD POOL</h1>
         <div><Stake2 />
         <div style={{height: "10px"}}></div>
         <button className='button' onClick={closeModal2}>EXIT</button>
