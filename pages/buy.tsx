@@ -44,7 +44,8 @@ export default function Buy() {
  
 
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="xl">
+    <div className={styles.nftGridContainer}>
       {!selectedNft ? (
         <>
         <div  style={{color: "white", height: "80px", width: "100%", padding: "1%", backdropFilter: "blur(100px)", borderRadius: "8px", fontSize: "20px", background: "rbg(0, 0, 0, 0.7)", display: "flex", flexDirection: "row", gap: "10px" }}>
@@ -90,6 +91,7 @@ export default function Buy() {
 
 </>
       )}
+      </div>
       </Container>
   );
 }
