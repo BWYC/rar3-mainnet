@@ -111,19 +111,6 @@ return(
   </Container>
 
       </div>
-    <section className={styles.CollectionHeroSection}>
-     
-      <section>
-        <section className={styles.collection_marketplace_title_icons}>
-          <section>
-      
-          </section>
-        </section>
-      </section>
-      <section>
-       
-      </section>
-    </section>
     </section>
       </section>
     </section>
@@ -220,7 +207,7 @@ return(
             <NFTGrid
             data={ownedNfts}
             isLoading={isLoading}
-            emptyText="Looks like you don't have any NFTs from this collection. Head to the buy page to buy some!"
+            emptyText="Looks like you don't have any NFTs from this collection. Head to DEX and buy page to buy some!"
           />
              </Container>
           )}
@@ -266,6 +253,7 @@ return(
       </div>
       </Container>
       <div
+
         className={`${
           tab === "sell" ? styles.activeTabContent : styles.tabContent
         }`}
