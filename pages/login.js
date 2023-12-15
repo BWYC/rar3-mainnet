@@ -40,7 +40,6 @@ export default function Login() {
 
 <div style={{height: "250px"}}></div>
 <ConnectWallet
-  <ConnectWallet 
   theme={({
    colors: {
      modalBg: "#3385FF",
@@ -51,7 +50,7 @@ export default function Login() {
      background: "#131418",
    },
   })}
-    style={{fontFamily: "Pixel Nes", border: "solid", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px", backdropFilter: "blur(10px)"}}  
+    style={{fontFamily: "Pixel Nes", border: "solid", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px", backdropFilter: "blur(10px)"}} /> 
  modalSize={"compact"}
  btnTitle={"CONNECT"}
  modalTitle={"RAREBAY"}
