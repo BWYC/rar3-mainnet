@@ -23,7 +23,7 @@ import {
     if (isLoading) {
       return (
         <div
-          style={{ marginTop: "10%", marginLeft: "10%", fontFamily: "monospace" }}
+          style={{ margin: "10%"}}
         >
           LOADING NFTs..
         </div>
