@@ -18,6 +18,9 @@ import Data from "./collections/data"
 import ListingWrapper from "../components/ListingWrapper/ListingWrapper";
 import Skeleton from "../components/Skeleton/Skeleton";
 import { Eye } from "web3uikit";
+import {Grid} from '@web3uikit/icons'
+
+
 
 
 
@@ -50,15 +53,16 @@ export default function Buy() {
     
       {!selectedNft ? (
         <>
-        <div  style={{color: "white", height: "80px", width: "100%", padding: "1%", backdropFilter: "blur(100px)", borderRadius: "8px", fontSize: "16px", background: "rbg(0, 0, 0, 0.7)", display: "flex", flexDirection: "row", gap: "10px" }}>
+        <div  style={{color: "white", height: "80px", width: "80%", padding: "1%", backdropFilter: "blur(10px)", borderRadius: "8px", fontSize: "16px", display: "flex", flexDirection: "row", gap: "5px" }}>
         <Data />
-        <p className={styles.verify}  style={{color: "white", width: "100%",  padding: "2%", borderRadius: "8px", display: "flex"}}>
+        <p className={styles.verify}  style={{color: "white", width: "100%", fontSize: "14px",  padding: "2%", borderRadius: "8px", display: "flex"}}>
         RAR31ONES
        {verfied ? ( <>
-        <Checkmark fontSize={20} style={{background: "green", padding: "1px", border: "dashed 1px", borderRadius: "100%"}} />
+        <Checkmark fontSize={16} style={{background: "green", padding: "1px", border: "dashed 1px", borderRadius: "100%"}} />
        </>)
           : (<></>)}</p>
-          <Link href="/collection" style={{textAlign: "center", padding: "1%", border: "solid 0.5px gray", background: "rgba(0, 0, 0, 0.1)", fontSize: "16px", borderRadius: "8px", width: "auto", height: "auto", boxShadow: "lightgreen 1px 1px 5px"}}><Eye fontSize={30} /></Link>
+          <Link href="/collection" style={{textAlign: "center", padding: "1%", border: "solid 0px gray", fontSize: "16px", borderRadius: "8px", width: "50px", height: "100%"}}><Eye fontSize={30} /></Link>
+          <Link href="#" style={{textAlign: "center", padding: "1%", border: "solid 0px gray", fontSize: "16px", borderRadius: "8px", width: "50px", height: "100%"}}><Grid fontSize='30px'/></Link>
         </div>
         <div
         className={styles.nftGridContainer}
