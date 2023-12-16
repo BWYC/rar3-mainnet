@@ -242,13 +242,12 @@
 }
 
 .pricingValue {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 24px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
   margin: 0px;
   border-radius: 8px;
-  background: rgba(128, 128, 128, 0.749);
+  display: flex;
 }
 
 .buyButton:hover {

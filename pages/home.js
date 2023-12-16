@@ -41,15 +41,10 @@ const Rare = (props) => {
               <div className="home-container36">
                 <div className="home-container37">
                   <Link className="home-link12" href="#">
-                    
-                      <h1 className="home-heading1">RAR3BAY | HOME OF RAR3</h1>
                   </Link>
-                  <div style={{fontFamily: "Arial", color: "lightgray", textAlign: "center", width: "70%", padding: "3%", fontStyle: "italic", justifyItems: "center", borderBottom: "solid 1px"}}></div>
+                  <div style={{fontFamily: "Arial", color: "lightgray", textAlign: "center", width: "70%", padding: "3%", fontStyle: "italic", justifyItems: "center"}}></div>
                 </div>
               </div>
-              <div className="home-container38">         
-              </div>
-              <div className="home-container39">
                 <div className="home-container40">
                   <div className="home-container41">
                     <div className="home-container42">
@@ -75,7 +70,6 @@ const Rare = (props) => {
                             <span className="home-text18">FLOOR: 0.0</span>
                             <a href={`/collection`} className="home-text15">VIEW ITEMS</a>
                           </div>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -1061,7 +1055,7 @@ const Rare = (props) => {
           }
           .home-container35 {
             width: 100%;
-            height: 100%;
+            height: auto;
             display: flex;
             align-items: center;
             flex-direction: column;
@@ -1072,7 +1066,7 @@ const Rare = (props) => {
             display: flex;
             position: inherit;
             align-self: center;
-            margin-top: 115px;
+            margin-top: 5px;
             align-items: center;
             padding-top: 0px;
             flex-direction: column;
@@ -1143,7 +1137,7 @@ const Rare = (props) => {
             flex: 0 0 auto;
             width: 100%;
             display: flex;
-            margin-top: var(--dl-space-space-twounits);
+            margin-top: var(--dl-space-space-oneunit);
             align-items: flex-start;
            
           }

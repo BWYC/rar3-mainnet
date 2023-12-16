@@ -1,9 +1,12 @@
 import { useContract, useContractEvents, useContractRead, useTotalCirculatingSupply, useAddress, useValidDirectListings, useValidEnglishAuctions, useClaimedNFTs } from "@thirdweb-dev/react";
-import {Link, Twitter, Discord, UserTeam, ArrowDown, Dapps, Checkmark } from '@web3uikit/icons'
+import {Twitter, Discord, UserTeam, ArrowDown, Dapps, Checkmark } from '@web3uikit/icons'
 import CollectionPurchaseSection from "../../components/collectionPurchaseSection"
 import Image from "next/image";
 import { useNFTs } from "@thirdweb-dev/react";
 import { MARKETPLACE_ADDRESS, NFT_COLLECTION_ADDRESS } from "../../const/contractAddresses";
+import { Eye } from "web3uikit";
+import {Grid, User} from '@web3uikit/icons'
+import Link from "next/link";
 
 
 export default function Data() {
@@ -31,11 +34,10 @@ export default function Data() {
 
     return(
         <>
-        <div style={{display: "flex", outline: "solid 0.5px gray", padding: "2%", borderRadius: "8px", backdropFilter: "blur(100px)", filter: "opacity(1)", background: "rgba(0, 0, 0, 0.1)", fontSize: "12px", gap: "10px", color: "", width: "100%", height: "60px", justifyItems: "center" }}>
-<ArrowDown fontSize='20px'/>  ITEMS: <p style={{color: "orange"}}>{NFTs?.toNumber()}</p><hr style={{margin: "5px"}} />
-FLOOR: {}<hr style={{margin: "5px"}} /><Image alt="" src="/core.png" height={40} width={40} />
-VOLUME: {}<hr style={{margin: "5px"}} /><Image alt="" src="/core.png" height={40} width={40} />
-
+        <div style={{display: "flex", padding: "1%", backdropFilter: "blur(100px)", filter: "opacity(1)", fontSize: "20px", gap: "10px", color: "", width: "90%", height: "40px", justifyItems: "center" }}>
+<User fontSize={25} style={{color: "orange"}} />{NFTs?.toNumber()}<hr style={{margin: "5px"}} />
+<Link href="/collection" style={{textAlign: "center", padding: "1%", border: "solid 0px gray", fontSize: "16px", borderRadius: "8px", width: "50px", height: "100%"}}><Eye fontSize={25} /></Link>
+          <Link href="#" style={{textAlign: "center", padding: "1%", border: "solid 0px gray", fontSize: "16px", borderRadius: "8px", width: "50px", height: "100%"}}><Grid fontSize='25px'/></Link>
 </div>
 
         </>

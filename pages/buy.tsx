@@ -17,8 +17,6 @@ import {Twitter, Discord, UserTeam, ArrowDown, Dapps, Checkmark } from '@web3uik
 import Data from "./collections/data"
 import ListingWrapper from "../components/ListingWrapper/ListingWrapper";
 import Skeleton from "../components/Skeleton/Skeleton";
-import { Eye } from "web3uikit";
-import {Grid} from '@web3uikit/icons'
 
 
 
@@ -53,7 +51,7 @@ export default function Buy() {
     
       {!selectedNft ? (
         <>
-        <div  style={{color: "white", height: "80px", width: "80%", padding: "1%", backdropFilter: "blur(10px)", borderRadius: "8px", fontSize: "16px", display: "flex", flexDirection: "row", gap: "5px" }}>
+        <div  style={{color: "white", height: "80px", width: "60%", padding: "1%", backdropFilter: "blur(10px)", borderRadius: "8px", fontSize: "16px", display: "flex", flexDirection: "row", gap: "5px" }}>
         <Data />
         <p className={styles.verify}  style={{color: "white", width: "100%", fontSize: "14px",  padding: "2%", borderRadius: "8px", display: "flex"}}>
         RAR31ONES
@@ -61,8 +59,6 @@ export default function Buy() {
         <Checkmark fontSize={16} style={{background: "green", padding: "1px", border: "dashed 1px", borderRadius: "100%"}} />
        </>)
           : (<></>)}</p>
-          <Link href="/collection" style={{textAlign: "center", padding: "1%", border: "solid 0px gray", fontSize: "16px", borderRadius: "8px", width: "50px", height: "100%"}}><Eye fontSize={30} /></Link>
-          <Link href="#" style={{textAlign: "center", padding: "1%", border: "solid 0px gray", fontSize: "16px", borderRadius: "8px", width: "50px", height: "100%"}}><Grid fontSize='30px'/></Link>
         </div>
         <div
         className={styles.nftGridContainer}
