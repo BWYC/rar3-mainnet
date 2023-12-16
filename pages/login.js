@@ -31,7 +31,7 @@ export default function Login() {
 
   useEffect(() => {
     if (nfts?.length) {
-      router.push("/portfolio");
+      router.push("/home");
     }
   }, [nfts, router, address]);
     return (

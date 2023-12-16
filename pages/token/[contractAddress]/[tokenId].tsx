@@ -23,6 +23,7 @@ import randomColor from "../../../util/randomColor";
 import Skeleton from "../../../components/Skeleton/Skeleton";
 import toast, { Toaster } from "react-hot-toast";
 import toastStyle from "../../../util/toastConfig";
+import { Blockie } from "web3uikit";
 
 type Props = {
   nft: NFT;
@@ -213,12 +214,12 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
               className={styles.nftOwnerContainer}
             >
               {/* Random linear gradient circle shape */}
-              <div
-                className={styles.nftOwnerImage}
+              <div  className={styles.nftOwnerImage}
                 style={{
                   background: `linear-gradient(90deg, ${randomColor1}, ${randomColor2})`,
-                }}
-              />
+                }}>
+              <Blockie seed={nft.owner} scale={5.5} />
+              </div>
               <div className={styles.nftOwnerInfo}>
                 <p className={styles.label}>Current Owner</p>
                 <p className={styles.nftOwnerAddress}>
@@ -343,7 +344,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
                     });
                   }}
                 >
-                  Place bid
+                  MAKE OFFER
                 </Web3Button>
               </>
             )}

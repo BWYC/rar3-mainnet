@@ -1,8 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import Head from "next/head";
-
-import Search from "../components/search";
 import Footer from "../components/footer";
 import { ConnectWallet } from "@thirdweb-dev/react";
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
@@ -11,50 +9,179 @@ import {useTheme} from "next-themes";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useAddress } from "@thirdweb-dev/react";
-
 import { Blockie } from "web3uikit";
 import styles from "../styles/Home.module.css";
-import Buy from "./buy"
-import Listings from "./listing";
-import Buy1 from "./bwyc"
+import Banner from "../components/banner";
+import Container from "../components/Container/Container"
+import toast, { Toaster } from "react-hot-toast";
+import toastStyle from "../util/toastConfig";
+import checkBalance from "../util/checkBalance";
+import { useLogout, useUser} from "@thirdweb-dev/react";
+import { ThirdwebSDK } from "@thirdweb-dev/react";
+import { CoreBlockchain } from "@thirdweb-dev/chains";
+import { useRouter } from "next/router";
+import randomColor from "../util/randomColor";
 
-
-
-const Dex = (props) => {
+const Rare = (props) => {
 
   const address = useAddress()
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
- 
-
-  useEffect(() => {
-    if (!address) {
-      setIsLoggedIn(true);
-    } else {
-      setIsLoggedIn(false);
-    }
-  }, [address]);
-
-
+  
 
 
   return (
     <>
-  
+ 
       <div className="home-container">
         <Head>
-          <title>RareBay | DEX</title>
+          <title>RareBay | HOME OF RAR3</title>
           <meta property="og:title" content="RareBay | DEX" />
         </Head>
-       
-            <div style={{height: "20px"}}></div>
-            <Buy/>
+            <div className="home-container35">
+              <div className="home-container36">
+                <div className="home-container37">
+                  <Link className="home-link12" href="#">
+                    
+                      <h1 className="home-heading1">RAR3BAY | HOME OF RAR3</h1>
+                  </Link>
+                  <div style={{fontFamily: "Arial", color: "lightgray", textAlign: "center", width: "70%", padding: "3%", fontStyle: "italic", justifyItems: "center", borderBottom: "solid 1px"}}></div>
+                </div>
+              </div>
+              <div className="home-container38">         
+              </div>
+              <div className="home-container39">
+                <div className="home-container40">
+                  <div className="home-container41">
+                    <div className="home-container42">
+                      <div className="home-container43">
+                        <div className="home-container44">
+                          <Image
+                          style={{borderRadius: "100%"}}
+                          width={50}
+                          height={50}
+                            alt="image"
+                            src="/gfdgfhyu1-200h.png"
+                            className="home-image2"
+                          />
+                          <span className="home-text12">rar31oneS</span>
+                          </div>
+                        <div className="home-container52">
+                          <div className="home-container53">
+                            <span className="home-text17">
+                             3100 RAR3 COLLECTIBLES PIONEERING THE DECENTRALIZATION OF NFTS ON RAREBAY DEX
+                            </span>
+                          </div>
+                          <div className="home-container54">
+                            <span className="home-text18">FLOOR: 0.0</span>
+                            <a href={`/collection`} className="home-text15">VIEW ITEMS</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="home-container48">
+                    <div className="home-container49">
+                      <div className="home-container50">
+                        <div className="home-container51">
+                          <Image
+                          style={{borderRadius: "100%"}}
+                          width={50}
+                          height={50}
+                            alt="image"
+                            src="/bwyc1.png"
+                            className="home-image3"
+                          />
+                          <span className="home-text16">BWYC II</span>
+                        </div>
+                        <div className="home-container52">
+                          <div className="home-container53">
+                            <span className="home-text17">
+                             BoredWhalesYachtClub Season 2
+                            </span>
+                          </div>
+                          <div className="home-container54">
+                            <span className="home-text18">FLOOR: 0.0</span>
+                            <a href={`/collection2`} className="home-text15">VIEW ITEMS</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="home-container55">
+                    <div className="home-container56">
+                      <div className="home-container57">
+                        <div className="home-container58">
+                          <Image
+                          style={{borderRadius: "100%"}}
+                          width={50}
+                          height={50}
+                            alt="image"
+                            src="/bwyc.png"
+                            className="home-image4"
+                          />
+                          <span className="home-text20">BWYC I</span>
+                        </div>
+                        <div className="home-container59">
+                          <div className="home-container60">
+                            <span className="home-text21">
+                           BoredWhalesYachtClub
+                            </span>
+                          </div>
+                          <div className="home-container61">
+                            <span className="home-text22">FLOOR: 0.0</span>
+                            <span className="home-text23">VIEW ITEMS</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="home-container62">
+                    <div className="home-container63">
+                      <div className="home-container64">
+                        <div className="home-container65">
+                          <Image
+                          style={{borderRadius: "100%"}}
+                          width={50}
+                          height={50}
+                            alt="image"
+                            src="/whls%20(1)-200h.jpg"
+                            className="home-image5"
+                          />
+                          <span className="home-text24">WHALECARDS</span>
+                        </div>
+                        <div className="home-container66">
+                          <div className="home-container67">
+                            <span className="home-text25">
+                              Collection Description
+                            </span>
+                          </div>
+                          <div className="home-container68">
+                            <span className="home-text26">FLOOR: 0.0</span>
+                            <span className="home-text27">VIEW ITEMS</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <Container maxWidth="lg">
+        <div className="home-container69">
+          <div className="home-feature-card">
+            <h2 className="home-text28">HOME OF RARE</h2>
+            <span className="home-text28">discover, track, collect, OWN</span>
+            <Link legacyBehavior href="/dex">
+              <a className="home-link13">GET STARTED</a>
+            </Link>
           </div>
-    
+        </div>
+        </Container>
+          </div>
+     
       <style jsx>
         {`
           .home-container {
-            font-family: Pixel NES;
             width: 100%;
             display: flex;
             overflow: auto;
@@ -62,11 +189,6 @@ const Dex = (props) => {
             align-items: center;
             flex-direction: column;
             justify-content: center;
-            background-image: linear-gradient(
-              145deg,
-              rgba(0, 0, 0, 0.35) 2%,
-              rgba(0, 20, 50, 0.90) 100%
-            ); 
           }
           .home-container01 {
             flex: 0 0 auto;
@@ -119,8 +241,7 @@ const Dex = (props) => {
             border-bottom-width: 1px;
           }
           .home-container04:hover {
-            background: rgba(100, 100, 100, 0.39);
-            backdrop-filter: blur(10px);
+            background: rgba(100, 100, 100, 0.69);
           }
           .home-icon {
             fill: #008aff;
@@ -274,12 +395,12 @@ const Dex = (props) => {
             align-items: center;
             margin-left: var(--dl-space-space-unit);
             justify-content: center;
+            cursor: pointer;
           }
           .home-burger-menu:hover{
             background: gray;
             border-radius: 16px;
             cursor: pointer;
-
           }
           .home-icon06 {
             fill: #606060;
@@ -404,9 +525,9 @@ const Dex = (props) => {
             font-family: "Pixel NES";
             text-decoration: none;
             background-image: linear-gradient(
-              rgb(100, 100, 155) 1%,
-              rgb(100, 100, 100) 49%,
-              rgb(255, 100, 0) 98%
+              rgb(255, 255, 255) 0%,
+              rgb(45, 45, 45) 49%,
+              rgb(255, 0, 0) 98%
             );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -939,16 +1060,15 @@ const Dex = (props) => {
             margin-top: 5px;
           }
           .home-container35 {
-            width: 80%;
+            width: 100%;
             height: 100%;
             display: flex;
             align-items: center;
             flex-direction: column;
-            margin-top: 2%;
           }
           .home-container36 {
             width: 100%;
-            height: 100%;
+            height: auto;
             display: flex;
             position: inherit;
             align-self: center;
@@ -960,11 +1080,11 @@ const Dex = (props) => {
           }
           .home-container37 {
             width: 100%;
-            height: 100%;
+            height: auto;
             display: flex;
             position: relative;
             align-self: center;
-            margin-top: 100px;
+            margin-top: var(--dl-space-space-unit);
             align-items: center;
             margin-bottom: var(--dl-space-space-unit);
             flex-direction: column;
@@ -980,7 +1100,7 @@ const Dex = (props) => {
             align-self: center;
             background: -webkit-linear-gradient(
               rgb(1, 12, 241),
-              rgb(250, 100, 100)
+              rgb(0, 0, 100)
             );
             margin-top: 0px;
             text-align: center;
@@ -988,9 +1108,10 @@ const Dex = (props) => {
             font-family: "Pixel NES";
             text-decoration: none;
             background-image: linear-gradient(
-              rgb(100, 100, 155) 1%,
-              rgb(100, 100, 100) 49%,
-              rgb(255, 100, 0) 98%
+              180deg,
+              rgb(255, 255, 255) 0%,
+              rgb(45, 45, 45) 49%,
+              rgb(0, 0, 250) 98%
             );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -1009,7 +1130,7 @@ const Dex = (props) => {
             justify-content: center;
           }
           .home-video {
-            width: 100%;
+            width: 70%;
             filter: opacity(1);
             height: auto;
             margin-left: var(--dl-space-space-oneandhalfunits);
@@ -1024,6 +1145,7 @@ const Dex = (props) => {
             display: flex;
             margin-top: var(--dl-space-space-twounits);
             align-items: flex-start;
+           
           }
           .home-container40 {
             width: 100%;
@@ -1040,6 +1162,7 @@ const Dex = (props) => {
           }
           .home-container40:hover {
             width: 90%;
+            color: lightgray;
           }
           .home-container41 {
             width: 250px;
@@ -1081,7 +1204,7 @@ const Dex = (props) => {
             justify-content: center;
           }
           .home-container42:hover {
-            color: initial;
+            color: lightgray;
             filter: opacity(1);
             font-size: 25px;
             backdrop-filter: blur(10px);
@@ -1107,6 +1230,8 @@ const Dex = (props) => {
             border-color: #464646;
             border-width: 1px;
             border-radius: var(--dl-radius-radius-round);
+            align-items: center;
+            display: flex;
           }
           .home-text12 {
             width: 100%;
@@ -1195,7 +1320,7 @@ const Dex = (props) => {
             flex-direction: column;
             background-size: cover;
             justify-content: center;
-            background-image: url("/1080x360-1200w.jpeg");
+            background-image: url("/w.jpeg");
             background-position: center;
           }
           .home-container48:hover {
@@ -1218,7 +1343,7 @@ const Dex = (props) => {
             justify-content: center;
           }
           .home-container49:hover {
-            color: initial;
+            color: lightgray;
             filter: opacity(1);
             font-size: 25px;
             backdrop-filter: blur(10px);
@@ -1332,7 +1457,7 @@ const Dex = (props) => {
             flex-direction: column;
             background-size: cover;
             justify-content: center;
-            background-image: url("/adhsilzs%3Bl-1200w.png");
+            background-image: url("/k.png");
             background-position: center;
           }
           .home-container55:hover {
@@ -1355,10 +1480,11 @@ const Dex = (props) => {
             justify-content: center;
           }
           .home-container56:hover {
-            color: initial;
+            color: lightgray;
             filter: opacity(1);
             font-size: 25px;
             backdrop-filter: blur(10px);
+            width: 100%;
           }
           .home-container57 {
             width: 200px;
@@ -1451,6 +1577,7 @@ const Dex = (props) => {
           .home-text23:hover {
             background: rgba(119, 119, 119, 0.68);
             backdrop-filter: blur(50px);
+            color: lightgray;
           }
           .home-container62 {
             width: 250px;
@@ -1590,12 +1717,13 @@ const Dex = (props) => {
             backdrop-filter: blur(50px);
           }
           .home-container69 {
-            width: 90%;
+            width: 100%;
             font-family: Pixel NES;
             height: 375px;
             display: flex;
             align-items: center;
             flex-direction: column;
+            color: lightgray;
           }
           .home-feature-card {
             width: 100%;
@@ -1608,10 +1736,16 @@ const Dex = (props) => {
             border-width: 1px;
             border-radius: var(--dl-radius-radius-radius8);
             flex-direction: column;
-            background-color: rgba(217, 217, 217, 0.49);
+            background-image: linear-gradient(
+              45deg,
+              rgba(0, 0, 0, 0.55) 0%,
+              rgb(0, 50, 60) 60%
+            );
           }
           .home-feature-card:hover {
             font-size: larger;
+            width: 100%;
+            color: lightgray;
           }
           .home-icon32 {
             width: 68px;
@@ -1763,7 +1897,7 @@ const Dex = (props) => {
             }
             .home-container35 {
               height: 100%;
-              margin-top: 150px;
+              margin-top: 135px;
             }
             .home-container36 {
               height: auto;
@@ -1821,8 +1955,11 @@ const Dex = (props) => {
           }
         `}
       </style>
+    
     </>
   );
 };
 
-export default Dex;
+export default Rare;
+
+
