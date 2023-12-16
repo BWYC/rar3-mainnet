@@ -46,17 +46,6 @@ const Home = (props) => {
           <meta property="og:title" content="RareBay | DEX" />
         </Head>
             <div className="home-container35">
-              <div className="home-container36">
-                <div className="home-container37">
-                  <Link className="home-link12" href="#">
-                    
-                      <h1 className="home-heading1">RAR3BAY | HOME OF RAR3</h1>
-                  </Link>
-                  <div style={{fontFamily: "Arial", color: "lightgray", textAlign: "center", width: "70%", padding: "3%", fontStyle: "italic", justifyItems: "center", borderBottom: "solid 1px"}}></div>
-                </div>
-              </div>
-              <div className="home-container38">         
-              </div>
               <div className="home-container39">
                 <div className="home-container40">
                   <div className="home-container41">
@@ -1085,7 +1074,7 @@ const Home = (props) => {
             display: flex;
             position: inherit;
             align-self: center;
-            margin-top: 115px;
+            margin-top: 60px;
             align-items: center;
             padding-top: 0px;
             flex-direction: column;

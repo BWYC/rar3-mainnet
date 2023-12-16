@@ -24,6 +24,7 @@ import Skeleton from "../../../components/Skeleton/Skeleton";
 import toast, { Toaster } from "react-hot-toast";
 import toastStyle from "../../../util/toastConfig";
 import { Blockie } from "web3uikit";
+import Image from "next/image";
 
 type Props = {
   nft: NFT;
@@ -221,7 +222,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
               <Blockie seed={nft.owner} scale={5.5} />
               </div>
               <div className={styles.nftOwnerInfo}>
-                <p className={styles.label}>Current Owner</p>
+                <p className={styles.label}>Owner</p>
                 <p className={styles.nftOwnerAddress}>
                   {nft.owner.slice(0, 8)}...{nft.owner.slice(-4)}
                 </p>
@@ -240,12 +241,12 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
                       {directListing && directListing[0] ? (
                         <>
                           {directListing[0]?.currencyValuePerToken.displayValue}
-                          {" " + directListing[0]?.currencyValuePerToken.symbol}
+                          {" " + directListing[0]?.currencyValuePerToken.symbol}<Image alt="" src="/core.png" width={25} height={30} />
                         </>
                       ) : auctionListing && auctionListing[0] ? (
                         <>
                           {auctionListing[0]?.buyoutCurrencyValue.displayValue}
-                          {" " + auctionListing[0]?.buyoutCurrencyValue.symbol}
+                          {" " + auctionListing[0]?.buyoutCurrencyValue.symbol}<Image alt="" src="/core.png" width={25} height={30} />
                         </>
                       ) : (
                         "Not for sale"
@@ -286,6 +287,9 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
             ) : (
               <>
                 <Web3Button
+                   style={{
+                    background: "rbga(0, 0, 0, 0.5)"
+                  }}
                   contractAddress={MARKETPLACE_ADDRESS}
                   action={async () => await buyListing()}
                   className={styles.btn}
@@ -325,6 +329,9 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
                 />
 
                 <Web3Button
+                   style={{
+                    background: "rbga(0, 0, 0, 0.5)"
+                  }}
                   contractAddress={MARKETPLACE_ADDRESS}
                   action={async () => await createBidOrOffer()}
                   className={styles.btn}
