@@ -26,6 +26,7 @@ import toastStyle from "../../../util/toastConfig";
 import { Blockie } from "web3uikit";
 import Image from "next/image";
 
+
 type Props = {
   nft: NFT;
   contractMetadata: any;

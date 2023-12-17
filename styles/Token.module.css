@@ -299,4 +299,97 @@
 .btn {
   /* fill remainin width */
   width: 100% !important;
+  background: rgba(0, 0, 0, 0.406);
+  .tabs {
+  font-size: 14px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 2px;
+  height: auto;
+}
+
+.tab {
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: color 0.1s ease-in-out;
+  background: #1818186b;
+}
+
+.tab:hover {
+  color: rgba(94, 94, 94, 0.8);
+}
+
+.activeTab {
+  color: rgba(255, 255, 255, 1);
+  border-bottom: 4px solid #ffffff;
+  color: oldlace;
+  background: #272a2d;
+}
+
+.tabContent {
+  display: none;
+  height: 0px;
+  opacity: 0;
+  transition: all 0.1s linear;
+}
+
+.activeTabContent {
+  display: flex;
+  flex-direction: row;
+  opacity: 1;
+}
+.tabs {
+  font-size: 14px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 2px;
+  height: auto;
+}
+
+.tab {
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: color 0.1s ease-in-out;
+  background: #1818186b;
+}
+
+.tab:hover {
+  color: rgba(94, 94, 94, 0.8);
+}
+
+.activeTab {
+  color: rgba(255, 255, 255, 1);
+  border-bottom: 4px solid #ffffff;
+  color: oldlace;
+  background: #272a2d;
+}
+
+.tabContent {
+  display: none;
+  height: 0px;
+  opacity: 0;
+  transition: all 0.1s linear;
+}
+
+.activeTabContent {
+  display: flex;
+  flex-direction: row;
+  opacity: 1;
+}
 }

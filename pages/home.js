@@ -16,19 +16,12 @@ import Container from "../components/Container/Container"
 import toast, { Toaster } from "react-hot-toast";
 import toastStyle from "../util/toastConfig";
 import checkBalance from "../util/checkBalance";
-import { useLogout, useUser} from "@thirdweb-dev/react";
 import { ThirdwebSDK } from "@thirdweb-dev/react";
 import { CoreBlockchain } from "@thirdweb-dev/chains";
 import { useRouter } from "next/router";
 import randomColor from "../util/randomColor";
 
-const Rare = (props) => {
-
-  const address = useAddress()
-
-  
-
-
+const Home = (props) => {
   return (
     <>
  
@@ -37,14 +30,8 @@ const Rare = (props) => {
           <title>RareBay | HOME OF RAR3</title>
           <meta property="og:title" content="RareBay | DEX" />
         </Head>
-            <div className="home-container35">
-              <div className="home-container36">
-                <div className="home-container37">
-                  <Link className="home-link12" href="#">
-                  </Link>
-                  <div style={{fontFamily: "Arial", color: "lightgray", textAlign: "center", width: "70%", padding: "3%", fontStyle: "italic", justifyItems: "center"}}></div>
-                </div>
-              </div>
+          
+              <div className="home-container39">
                 <div className="home-container40">
                   <div className="home-container41">
                     <div className="home-container42">
@@ -70,6 +57,7 @@ const Rare = (props) => {
                             <span className="home-text18">FLOOR: 0.0</span>
                             <a href={`/collection`} className="home-text15">VIEW ITEMS</a>
                           </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -171,7 +159,6 @@ const Rare = (props) => {
           </div>
         </div>
         </Container>
-          </div>
      
       <style jsx>
         {`
@@ -183,6 +170,11 @@ const Rare = (props) => {
             align-items: center;
             flex-direction: column;
             justify-content: center;
+            background-image: linear-gradient(
+              45deg,
+              rgba(0, 0, 0, 0.55) 0%,
+              rgb(0, 25, 50) 100%
+            );
           }
           .home-container01 {
             flex: 0 0 auto;
@@ -1055,7 +1047,7 @@ const Rare = (props) => {
           }
           .home-container35 {
             width: 100%;
-            height: auto;
+            height: 100%;
             display: flex;
             align-items: center;
             flex-direction: column;
@@ -1066,7 +1058,7 @@ const Rare = (props) => {
             display: flex;
             position: inherit;
             align-self: center;
-            margin-top: 5px;
+            margin-top: 60px;
             align-items: center;
             padding-top: 0px;
             flex-direction: column;
@@ -1137,7 +1129,7 @@ const Rare = (props) => {
             flex: 0 0 auto;
             width: 100%;
             display: flex;
-            margin-top: var(--dl-space-space-oneunit);
+            margin-top: var(--dl-space-space-twounits);
             align-items: flex-start;
            
           }
@@ -1954,6 +1946,6 @@ const Rare = (props) => {
   );
 };
 
-export default Rare;
+export default Home;
 
 
