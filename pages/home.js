@@ -170,11 +170,6 @@ const Home = (props) => {
             align-items: center;
             flex-direction: column;
             justify-content: center;
-            background-image: linear-gradient(
-              45deg,
-              rgba(0, 0, 0, 0.55) 0%,
-              rgb(0, 25, 50) 100%
-            );
           }
           .home-container01 {
             flex: 0 0 auto;
