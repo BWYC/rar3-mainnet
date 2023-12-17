@@ -1,15 +1,13 @@
 import React from 'react'
 
 import PropTypes from 'prop-types'
-import Image from 'next/image'
 
-const Footer = (props) => {
+const Announement = (props) => {
   return (
     <>
       <div className={`footer-container ${props.rootClassName} `}>
         <div className="footer-container1">
-          <span className="footer-text">{props.text11}</span>
-         <a href=""> <Image alt='' src="/dis.png" width={30} height={30} /> </a>
+          <span className="footer-text">⚠️MAINTANACE ONGOING, SOME BUTTONS MAY NOT WORK⚠️</span>
         </div>
       </div>
       <style jsx>
@@ -27,12 +25,11 @@ const Footer = (props) => {
             flex-direction: row;
             padding-bottom: 6px;
             justify-content: center;
-            background-color: #121212;
+            background: rbga(0, 0, 0, 0.30);
             border-top-width: 1px;
             border-left-width: 0px;
             border-right-width: 0px;
             border-bottom-width: 0px;
-            gap: 1%;
           }
           .footer-container1 {
             width: auto;
@@ -42,7 +39,6 @@ const Footer = (props) => {
             justify-content: center;
           }
           .footer-text {
-            color: #969696;
             width: auto;
             text-align: center;
           }
@@ -110,16 +106,6 @@ const Footer = (props) => {
   )
 }
 
-Footer.defaultProps = {
-  text1: 'TERMS AND SERVICE',
-  text11: 'RAREBAY ALL RIGHTS RESERVED  ©️ 2023',
-  rootClassName: '',
-}
 
-Footer.propTypes = {
-  text1: PropTypes.string,
-  text11: PropTypes.string,
-  rootClassName: PropTypes.string,
-}
 
-export default Footer
+export default Announement

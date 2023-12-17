@@ -86,19 +86,15 @@ const Pools = (props) => {
             <Image src="/gfdgfhyu1-200h.png" alt="" width={40} height={40} style={{borderRadius: "100%"}}/>
               <span className="pools-text">RAR310NES POOL</span>
               <div className="pools-container04">
-                <span className="pools-text01">0.5 WHLS</span><Image src="/whls.png" alt='' width={20} height={20} style={{borderRadius: "100%", margin: "1%"}} /> / DAY
+                <span className="pools-text01">0.5 WHLS</span><Image src="/whls.png" alt='' width={20} height={20} style={{borderRadius: "100%", margin: "1%"}} /> 24HRS
               </div>
               <div className="pools-container05">
                 <span className="pools-text02">
                   <span>LOCK🗝️: 46 WEEKS </span>
                   <br></br>
                 </span>
-                <span className="pools-text02">
-                  <br></br>
-                </span>
                 <span className="pools-text05">
                   <span>UNCLAIMABLE</span>
-                  <br></br>
                 </span>
               </div>
               <button className="pools-button button" onClick={openModal}>STAKE</button>
@@ -109,7 +105,7 @@ const Pools = (props) => {
         style={customStyles}
         contentLabel="STAKE"
       >
-        <h1 style={{ textAlign: "center", fontSize: "30px",  textShadow: "orange 1px 1px 5px", }}>RAR3 POOL</h1>
+        <h1 style={{ textAlign: "center", fontSize: "18x",  textShadow: "orange 1px 1px 5px", }}>RAR3 POOL</h1>
         <div><Stake />
         <div style={{height: "10px"}}></div>
         <button className='button' onClick={closeModal}>EXIT</button>
@@ -121,7 +117,7 @@ const Pools = (props) => {
             <Image src="/bwyc.png" alt="" width={40} height={40} style={{borderRadius: "100%"}}/>
               <span className="pools-text08">BWYC POOL</span>
               <div className="pools-container04">
-                <span className="pools-text01">1.0 WHLS</span><Image src="/whls.png" alt='' width={20} height={20} style={{borderRadius: "100%", margin: "1%"}} /> / DAY
+                <span className="pools-text01">1.0 WHLS</span><Image src="/whls.png" alt='' width={20} height={20} style={{borderRadius: "100%", margin: "1%"}} /> 24HRS
               </div>
               <div className="pools-container07">
                 <span className="pools-text10">
@@ -141,7 +137,7 @@ const Pools = (props) => {
         style={customStyles}
         contentLabel="STAKE"
       >
-        <h1 style={{ textAlign: "center", fontSize: "30px",  textShadow: "orange 1px 1px 5px", }}>BWYC I POOL</h1>
+        <h1 style={{ textAlign: "center", fontSize: "18x",  textShadow: "orange 1px 1px 5px", }}>BWYC I POOL</h1>
         <div><Stake3 />
         <div style={{height: "10px"}}></div>
         <button className='button' onClick={closeModal3}>EXIT</button>
@@ -154,7 +150,7 @@ const Pools = (props) => {
             <Image src="/bwyc1.png" alt="" width={40} height={40} style={{borderRadius: "100%"}}/>
               <span className="pools-text16">BWYC II POOL</span>
               <div className="pools-container04">
-                <span className="pools-text01">0.5 WHLS</span><Image src="/whls.png" alt='' width={20} height={20} style={{borderRadius: "100%", margin: "1%"}} /> / DAY
+                <span className="pools-text01">0.5 WHLS</span><Image src="/whls.png" alt='' width={20} height={20} style={{borderRadius: "100%", margin: "1%"}} /> 24HRS
               </div>
               <div className="pools-container09">
                 <span className="pools-text18">
@@ -174,7 +170,7 @@ const Pools = (props) => {
         style={customStyles}
         contentLabel="STAKE"
       >
-      <h1 style={{ textAlign: "center", fontSize: "30px",  textShadow: "orange 1px 1px 5px", }}>BWYC II POOLS</h1>
+      <h1 style={{ textAlign: "center", fontSize: "18x",  textShadow: "orange 1px 1px 5px", }}>BWYC II POOLS</h1>
         <div><Stake1 />
         <div style={{height: "10px"}}></div>
         <button className='button' onClick={closeModal1}>EXIT</button>
@@ -196,7 +192,7 @@ const Pools = (props) => {
             <Image src="/whls (1)-200h.jpg" alt="" width={40} height={40} style={{borderRadius: "100%"}}/>
               <span className="pools-text24">WHALECARD POOL</span>
               <div className="pools-container04">
-                <span className="pools-text01">2.0 WHLS</span><Image src="/whls.png" alt='' width={20} height={20} style={{borderRadius: "100%", margin: "1%"}} /> / DAY
+                <span className="pools-text01">2.0 WHLS</span><Image src="/whls.png" alt='' width={20} height={20} style={{borderRadius: "100%", margin: "1%"}} /> 24HRS
               </div>
               <div className="pools-container11">
                 <span className="pools-text26">
@@ -216,7 +212,7 @@ const Pools = (props) => {
         style={customStyles}
         contentLabel="STAKE"
       >
-        <h1 style={{ textAlign: "center", fontSize: "30px",  textShadow: "orange 1px 1px 5px", }}>CARD POOL</h1>
+        <h1 style={{ textAlign: "center", fontSize: "18x",  textShadow: "orange 1px 1px 5px", }}>CARD POOL</h1>
         <div><Stake2 />
         <div style={{height: "10px"}}></div>
         <button className='button' onClick={closeModal2}>EXIT</button>

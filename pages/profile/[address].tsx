@@ -168,7 +168,6 @@ return(
           : (<></>)}
            
         </h3>
-        <Data /> 
        </div>
        </Container>
 
