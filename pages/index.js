@@ -45,6 +45,7 @@ const Home = (props) => {
           <title>RareBay | HOME OF RAR3</title>
           <meta property="og:title" content="RareBay | DEX" />
         </Head>
+        
             <div className="home-container35">
               <div className="home-container39">
                 <div className="home-container40">

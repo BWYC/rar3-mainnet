@@ -7,7 +7,7 @@ const Announement = (props) => {
     <>
       <div className={`footer-container ${props.rootClassName} `}>
         <div className="footer-container1">
-          <span className="footer-text">⚠️MAINTANACE ONGOING, SOME BUTTONS MAY NOT WORK⚠️</span>
+          <span className="footer-text">⚠️maintenance ONGOING, SOME BUTTONS MAY NOT WORK⚠️</span>
         </div>
       </div>
       <style jsx>

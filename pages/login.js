@@ -60,7 +60,7 @@ export default function Login() {
    "https://bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a.ipfs.nftstorage.link/ipfs/bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a/xcxczxz.png"
  }
 />
-   <p style={{color: "inital", margin: "5%", textShadow: "currentColor 2px 2px 8px"}}>Connect and sign your wallet</p>
+   <p style={{color: "inital", margin: "2%", textShadow: "currentColor 2px 2px 8px"}}></p>
    <Link className="button" href="/dex">ENTR DEX</Link> 
 </Container>
 <style jsx>
