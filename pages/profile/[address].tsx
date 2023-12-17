@@ -9,6 +9,9 @@ import { Blockie } from "web3uikit"
 import NFTGrid from "../../components/NFT/NFTGrid";
 import Sell from "../sell"
 import Container from "../../components/Container/Container";
+import {NftCat} from '@web3uikit/icons'
+import {List} from '@web3uikit/icons'
+
 
 
 import RR from "../../public/favicon.ico";
@@ -173,7 +176,7 @@ return(
 
       </div>
     <div className={styles.tabs}>
-    
+    <NftCat fontSize='30px'/>
         <h3
           className={`${styles.tab} 
         ${tab === "nfts" ? styles.activeTab : ""}`}
@@ -181,6 +184,7 @@ return(
         >
           NFTs
         </h3>
+        <List fontSize='30px'/>
         <h3
           className={`${styles.tab} 
         ${tab === "listings" ? styles.activeTab : ""}`}
