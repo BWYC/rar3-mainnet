@@ -176,7 +176,6 @@ return(
 
       </div>
     <div className={styles.tabs}>
-    <NftCat fontSize='30px'/>
         <h3
           className={`${styles.tab} 
         ${tab === "nfts" ? styles.activeTab : ""}`}
@@ -184,7 +183,6 @@ return(
         >
           NFTs
         </h3>
-        <List fontSize='30px'/>
         <h3
           className={`${styles.tab} 
         ${tab === "listings" ? styles.activeTab : ""}`}
