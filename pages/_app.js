@@ -20,6 +20,7 @@ import Footer from "../components/footer";
 import Banner from "../components/banner"
 import Patner from "../components/partners";
 import ReactLanguageSelect from 'react-languages-select';
+import Announement from "../components/anncounement.";
 
 
 import React from "react";
@@ -50,11 +51,13 @@ export default function MyApp({ Component: Component, pageProps: pageProps }) {
       />
      
       <NextThemesProvider attribute="class" defaultTheme="dark">
+   
         <Grid />
         
       <Component className="body" {...pageProps} />
     
       <Patner />
+      <Announement />
       <Footer />
       
       </NextThemesProvider>
