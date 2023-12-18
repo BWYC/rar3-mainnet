@@ -27,6 +27,8 @@ export default function Buy() {
   const verfied = true
   const address = useAddress();
   const { contract: nftCollection } = useContract(NFT_COLLECTION_ADDRESS);
+  const [tab, setTab] = useState<"Direct Listings" | "Auctions">("Direct Listings");
+
 
   const { contract: marketplace } = useContract(
     MARKETPLACE_ADDRESS,
@@ -48,10 +50,7 @@ export default function Buy() {
 
   return (
     <Container maxWidth="lg">
-    
-      {!selectedNft ? (
-        <>
-        <div  style={{color: "white", height: "80px", width: "60%", padding: "1%", backdropFilter: "blur(10px)", borderRadius: "8px", fontSize: "16px", display: "flex", flexDirection: "row", gap: "5px" }}>
+        <div  style={{color: "white", height: "80px", width: "60%", padding: "1%", backdropFilter: "blur(10px)", borderRadius: "8px", fontSize: "16px", display: "flex", flexDirection: "row", gap: "5px", marginTop: "7%" }}>
         <Data />
         <p className={styles.verify}  style={{color: "white", width: "100%", fontSize: "14px",  padding: "2%", borderRadius: "8px", display: "flex"}}>
         RAR31ONES
@@ -60,8 +59,25 @@ export default function Buy() {
        </>)
           : (<></>)}</p>
         </div>
+        <div className={styles.tabs}>
+    <h3
+      className={`${styles.tab} 
+    ${tab === "Direct Listings" ? styles.activeTab : ""}`}
+      onClick={() => setTab("Direct Listings")}
+    >
+      Direct Listings
+    </h3>
+    <h3
+      className={`${styles.tab} 
+    ${tab === "Auctions" ? styles.activeTab : ""}`}
+      onClick={() => setTab("Auctions")}
+    >
+      Auctions
+    </h3>
+  </div>
         <div
-        className={styles.nftGridContainer}
+              className={`${
+                tab === "Direct Listings" ? styles.activeTabContent : styles.tabContent}`}
       >
         {loadingDirects ? (
          <Container maxWidth="lg">
@@ -77,25 +93,22 @@ export default function Buy() {
           ))
         )}
       </div>
-        </>
-      ):(
-<>
-
-                <Container maxWidth="lg">
-                <button
-                  onClick={() => {
-                    setSelectedNft(undefined);
-                  }}
-                  className={tokenPageStyles.crossButton}
-                >
-                  X
-                </button>
-                <TokenPage contractMetadata={selectedNft.metadata} nft={selectedNft} />
-                </Container>
-
-</>
-      )}
-      
-      </Container>
+      <div
+              className={`${
+                tab === "Auctions" ? styles.activeTabContent : styles.tabContent}`}
+      >
+        {loadingAuctions ? (
+         <Container maxWidth="lg">
+         <Skeleton width="100%" height="100%" />
+        </Container>
+        ) : auctionListings && auctionListings.length === 0 ? (
+          <p style={{display: "flex", color: "initial"}}>Nothing for sale yet! Head to the sell tab to list an NFT.</p>
+        ) : (
+          auctionListings?.map((listing) => (
+            <ListingWrapper listing={listing} key={listing.id} />
+          ))
+        )}
+      </div>
+    </Container>
   );
 }

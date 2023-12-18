@@ -9,8 +9,8 @@ const Footer = (props) => {
       <div className={`footer-container ${props.rootClassName} `}>
         <div className="footer-container1">
           <span className="footer-text">{props.text11}</span>
-         <a href=""> <Image alt='' src="/dis.png" width={30} height={30} /> </a>
         </div>
+        <a href=""> <Image alt='' src="/dis.png" width={30} height={30} /> </a>
       </div>
       <style jsx>
         {`

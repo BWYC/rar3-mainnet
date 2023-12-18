@@ -53,10 +53,6 @@ const Pools = (props) => {
     setIsOpen3(true);
   }
 
-  function afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    subtitle.style.color = 'orange';
-  }
 
   function closeModal() {
     setIsOpen(false);
@@ -100,7 +96,6 @@ const Pools = (props) => {
               <button className="pools-button button" onClick={openModal}>STAKE</button>
               <Modal
         isOpen={modalIsOpen}
-        onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="STAKE"
@@ -132,7 +127,6 @@ const Pools = (props) => {
               <button className="pools-button button" onClick={openModal3}>STAKE</button>
               <Modal
         isOpen={modalIsOpen3}
-        onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="STAKE"
@@ -165,7 +159,6 @@ const Pools = (props) => {
               <button className="pools-button button" onClick={openModal1}>STAKE</button>
               <Modal
         isOpen={modalIsOpen1}
-        onAfterOpen={afterOpenModal}
         onRequestClose={closeModal1}
         style={customStyles}
         contentLabel="STAKE"
@@ -197,17 +190,14 @@ const Pools = (props) => {
               <div className="pools-container11">
                 <span className="pools-text26">
                   <span>LOCK🗝️: 1 MONTH</span>
-                  <br></br>
                 </span>
                 <span className="pools-text29">
                   <span>CLAIMABLE</span>
-                  <br></br>
                 </span>
               </div>
               <button className="pools-button button" onClick={openModal2}>STAKE</button>
               <Modal
         isOpen={modalIsOpen2}
-        onAfterOpen={afterOpenModal}
         onRequestClose={closeModal2}
         style={customStyles}
         contentLabel="STAKE"
