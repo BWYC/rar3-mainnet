@@ -253,7 +253,7 @@ return(
       >
       
       {loadingAuctions ? (
-          <p> LOADING..</p>
+          <p style={{padding: "5%", textAlign: "center", display: "flex"}}> LOADING..</p>
         ) : auctionListings && auctionListings.length === 0 ? (
           <p>Nothing for sale yet! Head to the sell tab to list an NFT.</p>
         ) : (
