@@ -175,6 +175,7 @@ return(
        </Container>
 
       </div>
+      <Container maxWidth="lg">
     <div className={styles.tabs}>
         <h3
           className={`${styles.tab} 
@@ -206,7 +207,7 @@ return(
         </h3>
      
       </div>
-
+      </Container>
       <div
         className={`${
           tab === "nfts" ? styles.activeTabContent : styles.tabContent
