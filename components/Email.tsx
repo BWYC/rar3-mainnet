@@ -1,6 +1,10 @@
 import { useEmbeddedWallet } from "@thirdweb-dev/react";
 import { useState } from "react";
 import styles from "../styles/login.module.css";
+import ReCAPTCHA from "react-google-recaptcha";
+import React from "react";
+
+
 
 export default function EmailSignIn() {
     const [state, setState] = useState<
@@ -10,6 +14,26 @@ export default function EmailSignIn() {
     const [email, setEmail] = useState<string>("");
     const [verificationCode, setVerificationCode] = useState<string>("");
     const { connect, sendVerificationEmail } = useEmbeddedWallet();
+  const recaptchaRef = React.createRef();
+  const handleSubmit = (event: { preventDefault: () => void; }) => {
+    event.preventDefault();
+    // Execute the reCAPTCHA when the form is submitted
+    recaptchaRef.current.execute();
+  };
+  
+  const onReCAPTCHAChange = (captchaCode: any) => {
+    // If the reCAPTCHA code is null or undefined indicating that
+    // the reCAPTCHA was expired then return early
+    if(!captchaCode) {
+      return;
+    }
+    // Else reCAPTCHA was executed successfully so proceed with the 
+    // alert
+    alert(`Hey, ${email}`);
+    // Reset the reCAPTCHA so that it can be executed again if user 
+    // submits another email.
+    recaptchaRef.current.reset();
+  }
 
     const handleEmailEntered = async () => {
         if (!email) {
@@ -37,6 +61,7 @@ export default function EmailSignIn() {
         return (
             <>
             <p style={{ color: "#333"}}>Enter the verification code sent to your email</p>
+     
             <input
                 placeholder="Enter verification code"
                 value={verificationCode}
@@ -77,6 +102,13 @@ export default function EmailSignIn() {
 
     return (
         <>
+               <form onSubmit={handleSubmit}>
+	  <ReCAPTCHA
+	    ref={recaptchaRef}
+	    size="invisible"
+	    sitekey="6LeDuzYpAAAAABk1Ci3bRCRl_YtgeWbwGYzILeKr"
+      onChange={onReCAPTCHAChange}
+	  />
             <input 
                 type="text" 
                 style={{
@@ -92,6 +124,7 @@ export default function EmailSignIn() {
                 onChange={(e) => setEmail(e.target.value)}
             />
             <button
+            type="submit"
             className={styles.emailSignInBtn}
                 style={{
                     width: "100%",
@@ -107,6 +140,7 @@ export default function EmailSignIn() {
                 }}
                 onClick={handleEmailEntered}
             >Sign In</button>
+            </form>
         </>
     );
 }

@@ -26,7 +26,6 @@ import EmailSignIn from "../components/Email";
 import { NFT_COLLECTION_ADDRESS } from "../const/contractAddresses";
 
 export default function Login() {
-  
   const { contract } = useContract(contractAddress);
   const { data: contractMetadata, isLoading: contractLoading } =
     useContractMetadata(contract);
@@ -41,7 +40,7 @@ export default function Login() {
   }, [nfts, router, address]);
     return (
         <div className="body">
-<div style={{height: "250px"}}></div>
+<div style={{height: "150px"}}></div>
 {address ? (
         <div style={{
           display: 'flex',
@@ -77,12 +76,12 @@ export default function Login() {
               alignItems: 'center',
               padding: '0.5rem 1rem',
               borderBottom: '1px solid #EEE',
-              height: '100%'
+              height: 'auto'
             }}>
               <div style={{
                 minWidth: "80%"
               }}>
-                 <p style={{ textAlign: "center",  textShadow: "lightblue 1px 1px 5px", margin: "3%", color: "lightgray" }}>RAREBAY SIGN IN</p>
+                 <p style={{ textAlign: "center",  textShadow: "lightblue 1px 1px 5px", margin: "1%", color: "lightgray" }}>RAREBAY SIGN IN</p>
                 <EmailSignIn />
                 <div style={{
                   display: 'flex',
