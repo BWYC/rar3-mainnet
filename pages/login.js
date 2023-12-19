@@ -48,14 +48,10 @@ export default function Login() {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          height: '100vh',
+          height: '50vh',
         }}>
           <ConnectWallet/>
-          <Web3Button
-            contractAddress={NFT_COLLECTION_ADDRESS}
-            action={(contract) => contract.erc721.claim(1)}
-            style={{ marginTop: '1rem'}}
-          >Claim NFT</Web3Button>
+        <Link className="button" style={{margin: "5%"}} href="">ENTER DEX</Link>
         </div>
       ) : (
         <div style={{
