@@ -47,6 +47,6 @@ export const SocialLoginButton = ({ strategy }: SocialLoginProps) => {
                 fontStyle: "14px"
             }}
             onClick={signInWithSocial}
-        ><span style={{ marginRight: "10px" }}><Image src={`/${strategy}Icon.png`} height={24} width={24} alt=""/></span> Sign in with {strategyName}</button>
+        ><span style={{ marginRight: "10px" }}><Image src={`/${strategy}Icon.png`} height={24} width={24} alt=""/></span>SIGN IN WITH {strategyName}</button>
     );
 };
