@@ -19,6 +19,11 @@ import { NextApiRequest } from "next";
 import { NextRequest } from "next/server";
 import { CoreBlockchain } from "@thirdweb-dev/chains";
 import toastStyle from "../util/toastConfig";
+import { Web3Button } from "@thirdweb-dev/react";
+import { NextPage } from "next";
+import { SocialLoginButton } from "../components/social";
+import EmailSignIn from "../components/Email";
+import { NFT_COLLECTION_ADDRESS } from "../const/contractAddresses";
 
 export default function Login() {
   
@@ -36,33 +41,70 @@ export default function Login() {
   }, [nfts, router, address]);
     return (
         <div className="body">
-        <Container maxWidth="lg">
-
 <div style={{height: "250px"}}></div>
-<ConnectWallet 
- theme="system"
-   style={{fontFamily: "Pixel Nes", border: "solid", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px", background: "rbga(0, 0, 0, 0.89)"}} 
- modalSize={"compact"}
- btnTitle={"CONNECT"}
- modalTitle={"RAREBAY"}
- switchToActiveChain={true}
- welcomeScreen={{
-   title: "WELCOME TO THE HOME OF RAR3",
-   Image: {
-     src: "https://bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a.ipfs.nftstorage.link/ipfs/bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a/xcxczxz.png",
-     width: 150,
-     height: 150,
-   },
-   subtitle:
-     "Connect wallet to get started.",
- }}
- modalTitleIconUrl={
-   "https://bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a.ipfs.nftstorage.link/ipfs/bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a/xcxczxz.png"
- }
-/>
-   <p style={{color: "inital", margin: "2%", textShadow: "currentColor 2px 2px 8px"}}></p>
-   <Link className="button" href="/dex">ENTR DEX</Link> 
-</Container>
+{address ? (
+        <div style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '50vh',
+        }}>
+          <ConnectWallet/>
+        <Link className="button" style={{margin: "5%"}} href="">ENTER DEX</Link>
+        </div>
+      ) : (
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '50vh'
+        }}>
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            width: '50%',
+            height: '50vh',
+          }}>
+            <div style={{
+              padding: '0.5rem 1rem',
+            }}>
+            </div>
+            <div style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              padding: '0.5rem 1rem',
+              borderBottom: '1px solid #EEE',
+              height: '100%'
+            }}>
+              <div style={{
+                minWidth: "80%"
+              }}>
+                 <p style={{ textAlign: "center",  textShadow: "lightblue 1px 1px 5px", margin: "3%", color: "lightgray" }}>RAREBAY SIGN IN</p>
+                <EmailSignIn />
+                <div style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  width: '100%',
+                  height: '2rem',
+                  marginBottom: '1rem',
+                  color: '#CCC'
+                }}>
+                  <hr style={{ width: "45%", borderTop: "1px solid #CCC" }}/>
+                  <p>or</p>
+                  <hr style={{ width: "45%", borderTop: "1px solid #CCC" }} />
+                </div>
+                <SocialLoginButton strategy="google" />
+                <SocialLoginButton strategy="facebook" />
+                <SocialLoginButton strategy="apple" />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 <style jsx>
     { `
   .body{

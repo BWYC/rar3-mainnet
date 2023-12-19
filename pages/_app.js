@@ -21,6 +21,8 @@ import Banner from "../components/banner"
 import Patner from "../components/partners";
 import ReactLanguageSelect from 'react-languages-select';
 import Announement from "../components/anncounement.";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from '@vercel/analytics/react';
 
 
 import React from "react";
@@ -59,7 +61,8 @@ export default function MyApp({ Component: Component, pageProps: pageProps }) {
       <Patner />
       <Announement />
       <Footer />
-      
+      <SpeedInsights/>  
+      <Analytics />
       </NextThemesProvider>
    
      
