@@ -40,7 +40,7 @@ export default function Login() {
   }, [nfts, router, address]);
     return (
         <div className="body">
-<div style={{height: "150px"}}></div>
+<div style={{height: "50px"}}></div>
 {address ? (
         <div style={{
           display: 'flex',
