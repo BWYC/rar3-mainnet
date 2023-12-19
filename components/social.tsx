@@ -1,5 +1,6 @@
 import { MediaRenderer, embeddedWallet, smartWallet, useConnect, useEmbeddedWallet } from "@thirdweb-dev/react";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/login.module.css";
+import Image from "next/image"
 
 type SocialLoginProps = {
     strategy: any;
@@ -25,14 +26,14 @@ export const SocialLoginButton = ({ strategy }: SocialLoginProps) => {
             smartWalletConfig,
             {
                 personalWallet: personalWallet,
-                chainId: 80001,
+                chainId: 1116,
             } 
         );
     };
 
     return (
         <button
-            className={styles.socialLoginBtn}
+            className="button"
             style={{
                 width: "100%",
                 height: "42px",
@@ -43,8 +44,9 @@ export const SocialLoginButton = ({ strategy }: SocialLoginProps) => {
                 backgroundColor: "#FFF",
                 border: "1px solid #CCC",
                 borderRadius: "8px",
+                fontStyle: "14px"
             }}
             onClick={signInWithSocial}
-        ><span style={{ marginRight: "10px" }}><MediaRenderer src={`/images/${strategy}Icon.png`} height="24px" width="24px"/></span> Sign in with {strategyName}</button>
+        ><span style={{ marginRight: "10px" }}><Image src={`/${strategy}Icon.png`} height={24} width={24} alt=""/></span> Sign in with {strategyName}</button>
     );
 };

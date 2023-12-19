@@ -1,6 +1,6 @@
 import { useEmbeddedWallet } from "@thirdweb-dev/react";
 import { useState } from "react";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/login.module.css";
 
 export default function EmailSignIn() {
     const [state, setState] = useState<
@@ -77,7 +77,6 @@ export default function EmailSignIn() {
 
     return (
         <>
-            <p>Sign in with email or social login below.</p>
             <input 
                 type="text" 
                 style={{

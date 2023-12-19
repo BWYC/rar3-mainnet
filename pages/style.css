@@ -42,7 +42,7 @@
   --dl-space-space-oneandhalfunits: 24px;
 }
 .button {
-  color: var(--dl-color-danger-300);
+  color: lightslategray;
   cursor: pointer;
   display: inline-block;
   padding: 0.5rem 1rem;
