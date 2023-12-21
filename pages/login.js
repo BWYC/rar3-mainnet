@@ -40,14 +40,13 @@ export default function Login() {
   }, [nfts, router, address]);
     return (
         <div className="body">
-<div style={{height: "130px"}}></div>
 {address ? (
         <div style={{
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          height: '50vh',
+          height: '80vh',
         }}>
           <ConnectWallet/>
         <Link className="button" style={{margin: "5%"}} href="">ENTER DEX</Link>
@@ -57,13 +56,13 @@ export default function Login() {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          height: '50vh'
+          height: '80vh'
         }}>
           <div style={{
             display: 'flex',
             flexDirection: 'column',
             width: '80%',
-            height: '50vh',
+            height: '80vh',
           }}>
             <div style={{
               padding: '0.5rem 1rem',
@@ -74,6 +73,7 @@ export default function Login() {
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
+              marginTop: "10%",
               padding: '0.5rem 1rem',
               borderBottom: '1px solid #EEE',
               height: 'auto'
@@ -81,7 +81,8 @@ export default function Login() {
               <div style={{
                 minWidth: "80%"
               }}>
-                 <p style={{ textAlign: "center",  textShadow: "lightblue 1px 1px 5px", margin: "1%", color: "lightgray" }}>RAREBAY SIGN IN</p>
+                 <p style={{ textAlign: "center",  textShadow: "lightblue 1px 1px 5px", margin: "1%", color: "white", fontSize: "20px" }}>RAREBAY SIGN IN</p>
+                 <p style={{ textAlign: "center",  textShadow: "lightblue 1px 1px 5px", margin: "1%", color: "lightgray", fontSize: "10px" }}>Sign in with a social wallet</p>
                 <EmailSignIn />
                 <div style={{
                   display: 'flex',

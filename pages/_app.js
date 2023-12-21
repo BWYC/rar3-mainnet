@@ -29,7 +29,7 @@ import React from "react";
 export default function MyApp({ Component: Component, pageProps: pageProps }) {
   return (
    
-    <ChakraProvider theme={{}}>
+    <ChakraProvider theme="dark">
     <ThirdwebProvider
     clientId="cc3b7731ad9935953abe4a625abea530"
     authConfig={{

@@ -58,7 +58,7 @@ const Patner = () => {
           color: rgb(140, 140, 140);
           height: 100%;
           width: 100%;
-          font-size: 30px;
+          font-size: 23px;
           align-self: center;
           background: -webkit-linear-gradient(
             rgb(1, 12, 241),
