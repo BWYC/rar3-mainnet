@@ -36,7 +36,7 @@ export const SocialLoginButton = ({ strategy }: SocialLoginProps) => {
             className="button"
             style={{
                 width: "100%",
-                height: "42px",
+                height: "50px",
                 marginBottom: "1rem",
                 display: "inline-flex",
                 alignItems: "center",
@@ -44,9 +44,9 @@ export const SocialLoginButton = ({ strategy }: SocialLoginProps) => {
                 backgroundColor: "#FFF",
                 border: "1px solid #CCC",
                 borderRadius: "8px",
-                fontStyle: "14px"
+                fontSize: "12px"
             }}
             onClick={signInWithSocial}
-        ><span style={{ marginRight: "10px" }}><Image src={`/${strategy}Icon.png`} height={24} width={24} alt=""/></span>SIGN IN WITH {strategyName}</button>
+        ><span style={{ marginRight: "10px" }}><Image src={`/${strategy}Icon.png`} height={24} width={24} alt=""/></span>{strategyName} Sign in</button>
     );
 };

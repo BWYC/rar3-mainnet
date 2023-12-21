@@ -3,6 +3,16 @@
   src: url("../public/fonts/pixel_nes.otf");
 }
 
+.spinner {
+  width: 42px;
+  height: 42px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #555;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
 .container {
   font-family: "Pixel_NES";
 }
