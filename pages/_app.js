@@ -23,6 +23,7 @@ import ReactLanguageSelect from 'react-languages-select';
 import Announement from "../components/anncounement.";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from '@vercel/analytics/react';
+import Snowfall from 'react-snowfall'
 
 
 import React from "react";
@@ -53,7 +54,7 @@ export default function MyApp({ Component: Component, pageProps: pageProps }) {
       />
      
       <NextThemesProvider attribute="class" defaultTheme="dark">
-   
+   <Snowfall />
         <Grid />
         
       <Component className="body" {...pageProps} />
