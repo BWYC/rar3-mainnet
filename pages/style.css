@@ -57,7 +57,7 @@
   border-radius: 8px;
   padding-right: var(--dl-space-space-oneandhalfunits);
   padding-bottom: var(--dl-space-space-unit);
-  background-color: rgba(0, 0, 0, 0.873);
+  background-color: rgba(13, 13, 13, 0.873);
   border: solid gray 0.5px;
   margin: 10px;
 }
@@ -65,10 +65,10 @@
   opacity: 0.5;
 }
 body{
-  background-color: rgba(46, 46, 46, 0.68);
+  background-color: rgba(19, 19, 19, 0.68);
   background-image: url("/grids.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   font-family: Pixel NES;
   color: initial;
   height: 100%;
