@@ -1,20 +1,21 @@
 import React from 'react'
 
 import PropTypes from 'prop-types'
+import Link from 'next/link'
 
 const Announement = (props) => {
   return (
     <>
       <div className={`footer-container ${props.rootClassName} `}>
         <div className="footer-container1">
-          <span className="footer-text">TOKEN SWAP IS LIVE</span>
+          <span className="footer-text">$WHLS PRESALE IS LIVE🟢 Buy WHLS Token with CORE, select an amount then<Link className='button' href="/dex">SWAP</Link></span>
         </div>
       </div>
       <style jsx>
         {`
           .footer-container {
             width: 100%;
-            height: 56px;
+            height: 80px;
             display: flex;
             z-index: 1;
             position: static;
