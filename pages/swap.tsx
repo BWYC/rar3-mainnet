@@ -28,6 +28,7 @@ import {
 } from "@thirdweb-dev/react";
 import { useEffect, useState } from "react";
 import SwapInput from "../components/input";
+import {Swap} from '@web3uikit/icons'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -197,12 +198,12 @@ export default function Home() {
             }
             maxW="5"
             mx="auto"
-            style={{margin: "5%", fontWeight: "900"}}
+            style={{margin: "5%", fontWeight: "900", display: "flex"}}
           >
             ↓↑
           </Button>
           <div style={{display: "flex", padding: "1%", gap: "5px"}}>
-    WHLS
+    WHLS <Image src={"/whls.png"} w="20" h="20" />
     </div>
           <SwapInput
             current={currentFrom}
@@ -225,7 +226,7 @@ export default function Home() {
             rounded="xl"
             isDisabled={loading}
           >
-            {loading ? <Spinner /> : "Swap Tokens"}
+            {loading ? <Spinner /> : "Swap Tokens ⇌"}
           </Button>
         ) : (
           <ConnectWallet

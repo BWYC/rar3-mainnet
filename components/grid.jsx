@@ -81,7 +81,7 @@ const Grid = (nft, props) => {
 const { themes, setTheme } = useTheme()
 const [ isDark, setDark ] = useState(true)
 
-const theme = isDark ? dark : dark;
+const theme = isDark ? light : dark;
 const themez = isDark ? setTheme("dark") : setTheme("light");
 
   return (
@@ -593,7 +593,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           .home-mobile-menu {
             top: 0px;
             left: 0px;
-            width: 265px;
+            width: 200px;
             height: 1317px;
             display: flex;
             z-index: 1;

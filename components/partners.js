@@ -187,7 +187,7 @@ const Price =  contractTokenBalance?.decimals / contractBalance
 
   return (
     <>
-      <div  ref={sliderRef} className="keen-slider" style={{width: "100%"}}>
+      <div  ref={sliderRef} className="keen-slider" style={{background: "transparent"}}>
         <div className="keen-slider__slide number-slide1" >
           <Link href="https://coredao.org" style={{display: "flex"}}><Image width="37" height="37" src="/core.png" alt="CORE"/><p style={{padding: "7px", fontFamily: "Arial" }}>CoreDAO</p></Link>
      
@@ -226,7 +226,7 @@ const Price =  contractTokenBalance?.decimals / contractBalance
          .number-slide1 {
            background: transparent;
            backdropfilter: blur(50px);
-           width: 500px;
+           width: auto;
            padding: 1%;
            display: flex;
 
@@ -250,7 +250,7 @@ const Price =  contractTokenBalance?.decimals / contractBalance
             rgb(1, 12, 241),
             rgb(250, 100, 100)
           );
-          margin-top: 0px;
+          margin-top: 15px;
           text-align: center;
           transition: 0.3s;
           font-family: "Pixel NES";
