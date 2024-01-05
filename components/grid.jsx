@@ -135,9 +135,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                   </div>
                   <div className="home-buttons">
                   <div style={{display: "flex", gap: "20px", padding: "10px", borderRadius: "8px", backdropFilter: "blur(100px)", filter: "opacity(1)", background: "rgba(0, 0, 0, 0.281)", fontSize: "13px" }}>
-</div>  
-
-                  
+</div>            
                   </div>
                 </div>
                 <div data-thq="thq-burger-menu" className="home-burger-menu">

@@ -84,7 +84,7 @@ const Patner = () => {
   const [loading, setLoading] = useState(false);
 
 
-const Price = contractBalance  / contractTokenBalance?.decimals
+const Price =  contractTokenBalance?.decimals / contractBalance
 
 
   const { mutateAsync: swapNativeToToken } = useContractWrite(
@@ -189,22 +189,16 @@ const Price = contractBalance  / contractTokenBalance?.decimals
     <>
       <div  ref={sliderRef} className="keen-slider" style={{width: "100%"}}>
         <div className="keen-slider__slide number-slide1" >
-          <Link href="https://coredao.org" style={{display: "flex"}}><Image width="40" height="40" src="/core.png" alt="CORE"/><p style={{padding: "7px", fontFamily: "Arial" }}>CoreDAO</p></Link>
- 
-      <Link href="https://rarebay.xyz"  style={{display: "flex"}}>  <Image width="40" height="40" src="/fav-200h.ico" alt="RARE" style={{borderRadius: "100%"}}/><p style={{padding: "7px", fontFamily: "Arial" }}>RareBay.xyz</p></Link>
+          <Link href="https://coredao.org" style={{display: "flex"}}><Image width="37" height="37" src="/core.png" alt="CORE"/><p style={{padding: "7px", fontFamily: "Arial" }}>CoreDAO</p></Link>
      
       <Link href="https://thirdweb.com"  style={{display: "flex"}}>  <Image width="40" height="40" src="/3rd.png" alt="ThirdWeb"  /><p style={{padding: "7px", fontFamily: "Arial" }}>ThirdWeb</p></Link>
       <Link href="https://metamask.io"  style={{display: "flex"}}>  <Image width="40" height="40" src="/mt.png" alt="" /><p style={{padding: "7px", fontFamily: "Arial" }}>MetaMask</p></Link>
       <Link href="https://bitcoin.org"  style={{display: "flex"}}>  <Image width="40" height="40" src="/btc2.png" alt="" />
       <p style={{padding: "7px", fontFamily: "Arial" }}>Bitcoin</p>
       </Link>
-          <Link href="https://nextjs.org"  style={{display: "flex"}}>  <Image width="40" height="40" src="/px.png" alt="" style={{borderRadius: "100%", padding: "0px", display: "flex"}} /><p style={{padding: "7px", fontFamily: "Arial" }}>NEXTJS</p></Link>
-          <Link  style={{display: "flex"}} href="https://boredwhalesyachtclub,org">  <Image width="40" height="40"  src="/favicon.png" alt="BWYC" />
-          <p style={{padding: "7px", fontFamily: "Arial" }}>BWYC</p>
-          </Link>
         </div>
         <div className="keen-slider__slide number-slide1">
-         <p className="home-heading1" >VOLUME: {contractBalance} CORE </p>
+         <p className="home-heading1" >VOLUME: {contractBalance}</p>
         </div>
         <div className="keen-slider__slide number-slide1">
         <p className="home-heading1" > WHLS/CORE: {Price}$ </p>
