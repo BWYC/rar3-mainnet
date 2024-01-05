@@ -8,14 +8,14 @@ const Announement = (props) => {
     <>
       <div className={`footer-container ${props.rootClassName} `}>
         <div className="footer-container1">
-          <span className="footer-text">$WHLS SWAP IS LIVE🟢 Buy WHLS Token with CORE<Link className='button' href="/dex">SWAP</Link></span>
+          <span className="footer-text">$WHLS SWAP IS LIVE🟢 Trade WHLS Token with CORE<Link className='button' href="/dex">SWAP</Link></span>
         </div>
       </div>
       <style jsx>
         {`
           .footer-container {
             width: 100%;
-            height: 80px;
+            height: 100px;
             display: flex;
             z-index: 1;
             position: static;
