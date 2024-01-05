@@ -106,7 +106,7 @@ export default function Home() {
     try {
       if (currentFrom === "native") {
         await swapNativeToToken({ overrides: { value: toWei(nativeValue) } });
-        toast(: `You have successfully swapped your ${
+        toast( `You have successfully swapped your ${
           ACTIVE_CHAIN.nativeCurrency.symbol
         } to ${symbol || "tokens"}.`, {
           icon: "⚡",
