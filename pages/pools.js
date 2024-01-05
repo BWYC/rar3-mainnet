@@ -225,9 +225,9 @@ const Pools = (props) => {
             flex-direction: column;
             justify-content: flex-start;
             background-image: linear-gradient(
-              45deg,
-              rgba(0, 0, 0, 0.55) 0%,
-              rgb(0, 25, 50) 100%
+              180deg,
+              rgba(255, 255, 255, 0.15) 2%,
+              rgb(0, 20, 50) 100%
             );
           }
           .pools-container01 {

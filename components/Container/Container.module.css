@@ -8,9 +8,10 @@
     height: max-content;
     padding: 10px;
     background: transparent;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(50px);
     text-align: center;
     align-items: center;
+    border-radius: 16px;;
   }
   
   .xs {

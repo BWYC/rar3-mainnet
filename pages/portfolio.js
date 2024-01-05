@@ -74,10 +74,9 @@ const Portfolio = (props) => {
             flex-direction: column;
             justify-content: center;
             background: linear-gradient(
-              90deg,
-              rgb(0, 0, 0, 0.8),
-              rgba(0, 50, 150, 0.406),
-              rgba(0, 0, 0, 0.906)
+              180deg,
+              rgba(255, 255, 255, 0.15) 2%,
+              rgb(0, 20, 50) 100%
             );
           }
           .home-container01 {

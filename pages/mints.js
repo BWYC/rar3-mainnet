@@ -235,8 +235,8 @@ const Mints = (props)  => {
             
             background-image: linear-gradient(
               180deg,
-              rgba(0, 0, 0, 0.55) 0%,
-              rgb(0, 25, 50) 100%
+              rgba(255, 255, 255, 0.15) 2%,
+              rgb(0, 20, 50) 100%
             );
           }
           .mints-container01 {

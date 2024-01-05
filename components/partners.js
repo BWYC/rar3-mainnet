@@ -187,7 +187,7 @@ const Price =  contractTokenBalance?.decimals / contractBalance
 
   return (
     <>
-      <div  ref={sliderRef} className="keen-slider" style={{background: "transparent"}}>
+      <div  ref={sliderRef} className="keen-slider" style={{backdropFilter: "blur(50px)", height: "auto"}}>
         <div className="keen-slider__slide number-slide1" >
           <Link href="https://coredao.org" style={{display: "flex"}}><Image width="37" height="37" src="/core.png" alt="CORE"/><p style={{padding: "7px", fontFamily: "Arial" }}>CoreDAO</p></Link>
      
@@ -198,7 +198,7 @@ const Price =  contractTokenBalance?.decimals / contractBalance
       </Link>
         </div>
         <div className="keen-slider__slide number-slide1">
-         <p className="home-heading1" >VOLUME: {contractBalance}</p>
+         <p className="home-heading1" >VOLUME TRADED: {contractBalance}</p>
         </div>
         <div className="keen-slider__slide number-slide1">
         <p className="home-heading1" > WHLS/CORE: {Price}$ </p>
@@ -212,10 +212,9 @@ const Price =  contractTokenBalance?.decimals / contractBalance
            display: flex;
            align-items: center;
            justify-content: center;
-           font-size: 17px;
+           font-size: 19px;
            font-weight: 900;
-           height: 70px;
-           max-height: 100vh;
+           height: 50px;
            text-align: center;
            gap: 100px;
            padding: 10px;
@@ -243,7 +242,7 @@ const Price =  contractTokenBalance?.decimals / contractBalance
           color: rgb(140, 140, 140);
           height: 100%;
           width: 100%;
-          font-size: 16px;
+          font-size: 18px;
           align-self: center;
           padding: 10px;
           background: -webkit-linear-gradient(

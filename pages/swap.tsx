@@ -172,7 +172,7 @@ export default function Home() {
         rounded="2xl"
         borderWidth="1px"
         borderColor="gray.300"
-        style={{padding: "2%", borderRadius: "16px", border: "solid 2px"}}
+        style={{padding: "2%", borderRadius: "16px", border: "solid 2px", backdropFilter: "blur(20px)"}}
       >
         <Flex
           direction={currentFrom === "native" ? "column" : "column-reverse"}
