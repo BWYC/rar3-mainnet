@@ -9,7 +9,15 @@
     margin: 0px;
     margin-bottom: 8px;
   }
-  
+  .spinner {
+    width: 32px;
+    height: 32px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #555;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+  }
   .input {
     display: block;
     width: 98%;

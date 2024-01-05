@@ -8,7 +8,7 @@ const Announement = (props) => {
     <>
       <div className={`footer-container ${props.rootClassName} `}>
         <div className="footer-container1">
-          <span className="footer-text">$WHLS SWAP IS LIVE🟢 Trade WHLS Token with CORE<Link  style={{color: "link", borderBottom: "solid 2px", padding: "1px", margin: "10px", color: "blue"}} href="/dex">SWAP</Link></span>
+          <span className="footer-text">$WHLS SWAP IS LIVE🟢 Trade WHLS Token with CORE<Link  style={{color: "link", borderBottom: "solid 2px", padding: "1px", margin: "10px", color: "lightblue"}} href="/dex">SWAP</Link></span>
         </div>
       </div>
       <style jsx>
@@ -26,13 +26,14 @@ const Announement = (props) => {
             flex-direction: row;
             padding-bottom: 6px;
             justify-content: center;
-            background: transparent;
+            background: rbga(0, 0, 0, 0.7);
             backdrop-filter: blur(100px);
             border-top-width: 1px;
             border-left-width: 0px;
             border-right-width: 0px;
             border-bottom-width: 0px;
-            color: gray;
+            color: whitesmoke;
+            text-shadow: black 1px 2px 4px;
           }
           .footer-container1 {
             width: 100%;

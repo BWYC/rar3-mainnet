@@ -47,7 +47,9 @@ const [randomColor1, randomColor2, randomColor3, randomColor4] = [
 
 export default function Profile() {
   const address = useAddress()
-  const verfied = false
+  const verified = true
+
+
   const router = useRouter();
   const [tab, setTab] = useState<"nfts" | "listings" | "auctions" | "sell">("nfts");
 
@@ -167,7 +169,7 @@ return(
         <Blockie scale={16.5} seed={address} />
         <h3 className={styles.profileName}>
           {truncateEthAddress(address)}
-          {verfied ? ( <Checkmark fontSize={16} style={{background: "blue", padding: "0.2px", border: "dashed 1px", borderRadius: "100%"}} />)
+          {verified ? ( <Checkmark fontSize={16} style={{background: "blue", padding: "0.2px", border: "dashed 1px", borderRadius: "100%"}} />)
           : (<></>)}
            
         </h3>
@@ -175,7 +177,6 @@ return(
        </Container>
 
       </div>
-      <Container maxWidth="lg">
     <div className={styles.tabs}>
         <h3
           className={`${styles.tab} 
@@ -207,7 +208,7 @@ return(
         </h3>
      
       </div>
-      </Container>
+ 
       <div
         className={`${
           tab === "nfts" ? styles.activeTabContent : styles.tabContent

@@ -187,23 +187,24 @@ const Price =  contractTokenBalance?.decimals / contractBalance
 
   return (
     <>
-      <div  ref={sliderRef} className="keen-slider" style={{backdropFilter: "blur(50px)", height: "50px"}}>
+      <div  ref={sliderRef} className="keen-slider" style={{backdropFilter: "blur(50px)", height: "75px", backgroundColor: "rbga(0, 0, 0, 1)"}}>
         <div className="keen-slider__slide number-slide1" >
-          <Link href="https://coredao.org" style={{display: "flex"}}><Image width="30" height="30" src="/core.png" alt="CORE"/><p style={{padding: "7px", fontFamily: "Arial" }}>CoreDAO</p></Link>
-     
-      <Link href="https://thirdweb.com"  style={{display: "flex"}}>  <Image width="30" height="30" src="/3rd.png" alt="ThirdWeb"  /><p style={{padding: "7px", fontFamily: "Arial" }}>ThirdWeb</p></Link>
-      <Link href="https://metamask.io"  style={{display: "flex"}}>  <Image width="30" height="30" src="/mt.png" alt="" /><p style={{padding: "7px", fontFamily: "Arial" }}>MetaMask</p></Link>
-      <Link href="https://bitcoin.org"  style={{display: "flex"}}>  <Image width="30" height="30" src="/btc2.png" alt="" />
+       <Link href="https://thirdweb.com"  style={{display: "flex"}}>  <Image width="30" height="30" src="/3rd.png" alt="ThirdWeb"  /><p style={{padding: "7px", fontFamily: "Arial" }}>ThirdWeb</p></Link>
+       <Link href="https://coredao.org" style={{display: "flex"}}><Image width="30" height="30" src="/core.png" alt="CORE"/><p style={{padding: "7px", fontFamily: "Arial" }}>CoreDAO</p></Link>
+       <Link href="https://bitcoin.org"  style={{display: "flex"}}>  <Image width="30" height="30" src="/btc2.png" alt="" />
       <p style={{padding: "7px", fontFamily: "Arial" }}>Bitcoin</p>
       </Link>
+      <Link href="https://metamask.io"  style={{display: "flex"}}>  <Image width="30" height="30" src="/mt.png" alt="" /><p style={{padding: "7px", fontFamily: "Arial" }}>MetaMask</p></Link>
         </div>
         <div className="keen-slider__slide number-slide1">
-         <p className="home-heading1" >VOLUME TRADED: {contractBalance}</p>
+         <p className="home-heading1" >VOLUME TRADED: {contractBalance} CORE</p>
         </div>
         <div className="keen-slider__slide number-slide1">
         <p className="home-heading1" > WHLS/CORE: {Price} </p>
         </div>
-        <p className="home-heading1" > Locked: {contractTokenBalance?.displayValue} </p>
+        <div className="keen-slider__slide number-slide1">
+        <p className="home-heading1" > POOLED WHLS: {contractTokenBalance?.displayValue} </p>
+        </div>
       </div>
       <style jsx>
         {`
@@ -214,10 +215,9 @@ const Price =  contractTokenBalance?.decimals / contractBalance
            justify-content: center;
            font-size: 20px;
            font-weight: 900;
-           height: 50px;
+           height: 100%;
            text-align: center;
-           gap: 100px;
-           padding: 10px;
+           gap: 50px;
            width: 100%;
            color: white;
          }
@@ -226,7 +226,6 @@ const Price =  contractTokenBalance?.decimals / contractBalance
            background: transparent;
            backdropfilter: blur(50px);
            width: auto;
-           padding: 1%;
            display: flex;
 
          }  
@@ -242,9 +241,9 @@ const Price =  contractTokenBalance?.decimals / contractBalance
           color: rgb(140, 140, 140);
           height: 100%;
           width: 100%;
-          font-size: 18px;
+          font-size: 20px;
           align-self: center;
-          padding: 10px;
+          padding: 5px;
           background: -webkit-linear-gradient(
             rgb(1, 12, 241),
             rgb(250, 100, 100)

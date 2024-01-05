@@ -49,7 +49,7 @@ export default function Login() {
           height: '90vh',
         }}>
           <ConnectWallet/>
-        <Link className="button" style={{margin: "5%"}} href="">ENTER DEX</Link>
+        <Link className="button" style={{margin: "5%"}} href="/dex">ENTER DEX</Link>
         </div>
       ) : (
         <div style={{
