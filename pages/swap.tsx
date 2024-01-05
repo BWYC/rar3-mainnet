@@ -30,6 +30,7 @@ import SwapInput from "../components/input";
 import {Swap} from '@web3uikit/icons'
 import toast, { Toaster } from "react-hot-toast";
 import toastStyle from "../util/toastConfig";
+import styles from "../styles/login.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -105,12 +106,12 @@ export default function Home() {
     try {
       if (currentFrom === "native") {
         await swapNativeToToken({ overrides: { value: toWei(nativeValue) } });
-        toast({
-          status: "success",
-          title: "Swap Successful",
-          description: `You have successfully swapped your ${
-            ACTIVE_CHAIN.nativeCurrency.symbol
-          } to ${symbol || "tokens"}.`,
+        toast( `You have successfully swapped your ${
+          symbol || "tokens"
+        } to ${ACTIVE_CHAIN.nativeCurrency.symbol}.`, {
+          icon: "✅",
+          style: toastStyle,
+          position: "bottom-center",
         });
       } else {
         // Approve token spending
@@ -203,7 +204,7 @@ export default function Home() {
             ↓↑
           </Button>
           <div style={{display: "flex", padding: "1%", gap: "5px"}}>
-    WHLS <Image src={"/whls.png"} w="20" h="20" />
+    WHLS <Image src={"/whls.ico"} w="20" h="20" />
     </div>
           <SwapInput
             current={currentFrom}
@@ -226,7 +227,7 @@ export default function Home() {
             rounded="xl"
             isDisabled={loading}
           >
-            {loading ? <Spinner /> : "Swap Tokens ⇌"}
+            {loading ? <div className={styles.spinner} /> : "Swap Tokens ⇌"}
           </Button>
         ) : (
           <ConnectWallet
