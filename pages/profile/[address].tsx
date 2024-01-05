@@ -89,7 +89,7 @@ return(
       <div className={styles.profileHeader}>
    
          
-      <div style={{width: "100%", padding: "5%", height: "50px", marginBottom: "20px"}}></div>
+      <div style={{width: "100%", padding: "5%", height: "30px", marginBottom: "20px"}}></div>
       <Container maxWidth="xl">
         <div
           className={styles.coverImage}
@@ -144,8 +144,7 @@ return(
       <div className={styles.profileHeader}>
    
          
-      <div style={{width: "100%", padding: "5%", height: "20px", marginBottom: "20px"}}></div>
-      <Container maxWidth="xl">
+      <div style={{width: "100%", padding: "5%", height: "20px", marginBottom: "20px"}} />
       <div
           className={styles.coverImage}
           style={{
@@ -174,9 +173,9 @@ return(
            
         </h3>
        </div>
-       </Container>
-
+       <div style={{width: "100%", padding: "1%", height: "10px", margin: "10px"}}><Data /></div>
       </div>
+      <div style={{width: "100%", padding: "2%", height: "20px", margin: "10px"}} />
     <div className={styles.tabs}>
         <h3
           className={`${styles.tab} 

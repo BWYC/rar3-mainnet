@@ -1,5 +1,5 @@
 import { useContract, useContractEvents, useContractRead, useTotalCirculatingSupply, useAddress } from "@thirdweb-dev/react";
-import {Link, Twitter, Discord, UserTeam, ArrowDown, Dapps, Checkmark } from '@web3uikit/icons'
+import {Link, Twitter, Discord, HandCoin, ArrowDown, Dapps, Checkmark } from '@web3uikit/icons'
 
 
 export default function Data() {
@@ -10,9 +10,9 @@ export default function Data() {
 
     return(
         <>
-        <div style={{display: "flex", marginLeft: "0%", marginBottom: "7%", position: "absolute", zIndex: "1", outline: "solid 1px lightgray", padding: "1%", borderRadius: "8px", backdropFilter: "blur(100px)", filter: "opacity(1)", background: "rgba(0, 0, 0, 0.281)", fontSize: "13px", gap: "10px", color: "", marginTop: "1%" }}>
-<ArrowDown fontSize='20px'/>  ITEMS: 0.0 ⚡<hr style={{margin: "5px"}} />
-  <UserTeam fontSize='20px'/> OWNED: 0%
+        <div style={{display: "flex", marginLeft: "0%", marginBottom: "2%", position: "absolute", zIndex: "1", outline: "solid 0px lightgray", padding: "1%", borderRadius: "8px", backdropFilter: "blur(100px)", filter: "opacity(1)", background: "rgba(0, 0, 0, 0.281)", fontSize: "13px", gap: "10px", color: "", marginTop: "1%" }}>
+<ArrowDown fontSize='20px'/><Link href="/mints">MINT</Link><hr style={{margin: "5px", width: "1px", height: "30px", color: "white"}} />
+  <HandCoin fontSize='20px'/> <Link href="/pools">STAKE</Link>
 </div>
         </>
     )

@@ -106,10 +106,10 @@ export default function Home() {
     try {
       if (currentFrom === "native") {
         await swapNativeToToken({ overrides: { value: toWei(nativeValue) } });
-        toast( `You have successfully swapped your ${
-          symbol || "tokens"
-        } to ${ACTIVE_CHAIN.nativeCurrency.symbol}.`, {
-          icon: "✅",
+        toast(: `You have successfully swapped your ${
+          ACTIVE_CHAIN.nativeCurrency.symbol
+        } to ${symbol || "tokens"}.`, {
+          icon: "⚡",
           style: toastStyle,
           position: "bottom-center",
         });
@@ -121,7 +121,7 @@ export default function Home() {
         toast( `You have successfully swapped your ${
           symbol || "tokens"
         } to ${ACTIVE_CHAIN.nativeCurrency.symbol}.`, {
-          icon: "✅",
+          icon: "⚡",
           style: toastStyle,
           position: "bottom-center",
         });

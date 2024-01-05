@@ -26,7 +26,7 @@ const Announement = (props) => {
             flex-direction: row;
             padding-bottom: 6px;
             justify-content: center;
-            background: rbga(0, 0, 0, 0.7);
+            background: black;
             backdrop-filter: blur(100px);
             border-top-width: 1px;
             border-left-width: 0px;
