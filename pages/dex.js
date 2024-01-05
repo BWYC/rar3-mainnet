@@ -61,9 +61,9 @@ const Dex = (props) => {
             flex-direction: column;
             justify-content: center;
             background-image: linear-gradient(
-              145deg,
-              rgba(0, 0, 0, 0.15) 2%,
-              rgba(0, 20, 50, 0.80) 100%
+              180deg,
+              rgba(255, 255, 255, 0.15) 2%,
+              rgb(0, 20, 50) 100%
             ); 
           }
           .home-container01 {
