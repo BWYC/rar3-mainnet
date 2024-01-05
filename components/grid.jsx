@@ -247,6 +247,21 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                             </div>
                           </a>
                         </Link>
+                        <Link legacyBehavior href="/mints">
+                          <a className="home-link11">
+                            <div className="home-container29">
+                              <div className="home-container30">
+                                <svg
+                                  viewBox="0 0 1024 1024"
+                                  className="home-icon26"
+                                >
+                                  <path d="M1011.328 134.496c-110.752-83.928-281.184-134.034-455.91-134.034-216.12 0-392.226 75.456-483.16 207.020-42.708 61.79-66.33 134.958-70.208 217.474-3.454 73.474 8.884 154.726 36.684 242.146 94.874-284.384 359.82-507.102 665.266-507.102 0 0-285.826 75.232-465.524 308.192-0.112 0.138-2.494 3.090-6.614 8.698-36.080 48.278-67.538 103.162-91.078 165.328-39.87 94.83-76.784 224.948-76.784 381.782h128c0 0-19.43-122.222 14.36-262.79 55.89 7.556 105.858 11.306 150.852 11.306 117.678 0 201.37-25.46 263.388-80.124 55.568-48.978 86.198-114.786 118.624-184.456 49.524-106.408 105.654-227.010 268.654-320.152 9.33-5.332 15.362-14.992 16.056-25.716s-4.040-21.080-12.606-27.572z"></path>
+                                </svg>
+                                <span className="home-text11">MINTS</span>
+                              </div>
+                            </div>
+                          </a>
+                        </Link>
                       </div>
                   
                       <div className="home-container31">
@@ -669,6 +684,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             position: fixed;
             align-items: center;
             justify-content: center;
+            margin-left: -20px;
           }
           .home-image1 {
             top: 6px;
@@ -686,7 +702,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           .home-heading {
             color: rgb(140, 140, 140);
             height: 24px;
-            font-size: 1.5em;
+            font-size: 1.7em;
             align-self: center;
             background: -webkit-linear-gradient(
               rgb(1, 12, 241),
@@ -698,9 +714,9 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             font-family: "Pixel NES";
             text-decoration: none;
             background-image: linear-gradient(
-              rgb(100, 100, 155) 1%,
+              rgb(200, 200, 255) 1%,
               rgb(100, 100, 100) 49%,
-              rgb(255, 100, 0) 98%
+              rgba(50, 50, 50, 0.5) 98%
             );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -1158,7 +1174,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             border-top-width: 1px;
             border-left-width: 0px;
             border-right-width: 0px;
-            border-bottom-width: 0px;
+            border-bottom-width: 1px;
           }
           .home-container29:hover {
             color: var(--dl-color-gray-black);
@@ -2034,7 +2050,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                 180deg,
                 rgb(255, 255, 255) 0%,
                 rgb(45, 45, 45) 49%,
-                rgb(255, 0, 0) 98%
+                rgba(50, 50, 50, 0.5) 98%
               );
             }
             .home-container31 {
