@@ -201,7 +201,7 @@ const Price =  contractTokenBalance?.decimals / contractBalance
          <p className="home-heading1" >VOLUME TRADED: {contractBalance}</p>
         </div>
         <div className="keen-slider__slide number-slide1">
-        <p className="home-heading1" > WHLS/CORE: {Price}$ </p>
+        <p className="home-heading1" > WHLS/CORE: {Price} </p>
         </div>
         <p className="home-heading1" > Locked: {contractTokenBalance?.displayValue} </p>
       </div>
