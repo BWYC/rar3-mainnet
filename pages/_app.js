@@ -26,6 +26,7 @@ import { Analytics } from '@vercel/analytics/react';
 import Snowfall from 'react-snowfall'
 
 
+
 import React from "react";
 export default function MyApp({ Component: Component, pageProps: pageProps }) {
   return (
@@ -57,7 +58,7 @@ export default function MyApp({ Component: Component, pageProps: pageProps }) {
         <Grid />
       <Component className="body" {...pageProps} />
       <Patner />
-    
+      <Announement />
       <Footer />
       <SpeedInsights/>  
       <Analytics />
