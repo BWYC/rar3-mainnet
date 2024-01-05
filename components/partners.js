@@ -187,7 +187,7 @@ const Price = contractBalance  / contractTokenBalance?.decimals
 
   return (
     <>
-      <div  ref={sliderRef} className="keen-slider" >
+      <div  ref={sliderRef} className="keen-slider" style={{width: "100%"}}>
         <div className="keen-slider__slide number-slide1" >
           <Link href="https://coredao.org" style={{display: "flex"}}><Image width="40" height="40" src="/core.png" alt="CORE"/><p style={{padding: "7px", fontFamily: "Arial" }}>CoreDAO</p></Link>
  
@@ -204,15 +204,47 @@ const Price = contractBalance  / contractTokenBalance?.decimals
           </Link>
         </div>
         <div className="keen-slider__slide number-slide1">
-         <p className="home-heading1" >Liquidity: {contractBalance} CORE </p>
+         <p className="home-heading1" >VOLUME: {contractBalance} CORE </p>
         </div>
         <div className="keen-slider__slide number-slide1">
-        <p className="home-heading1" > Locked: {contractTokenBalance?.displayValue} </p>
         <p className="home-heading1" > WHLS/CORE: {Price}$ </p>
         </div>
+        <p className="home-heading1" > Locked: {contractTokenBalance?.displayValue} </p>
       </div>
       <style jsx>
         {`
+         [class^="number-slide"],
+         [class*=" number-slide"] {
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           font-size: 17px;
+           font-weight: 900;
+           height: 70px;
+           max-height: 100vh;
+           text-align: center;
+           gap: 100px;
+           padding: 10px;
+           width: 100%;
+           color: white;
+         }
+         
+         .number-slide1 {
+           background: transparent;
+           backdropfilter: blur(50px);
+           width: 500px;
+           padding: 1%;
+           display: flex;
+
+         }  
+           .number-slide12{
+           background: rgba(0, 0, 0, 0.498);
+           backdropfilter: blur(50px);
+           width: 100%;
+           padding: 1%;
+           fontStyle: arial italics;
+
+         }  
          .home-heading1 {
           color: rgb(140, 140, 140);
           height: 100%;
@@ -352,7 +384,7 @@ const Price = contractBalance  / contractTokenBalance?.decimals
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 900;
             height: 70px;
             max-height: 100vh;
@@ -360,14 +392,16 @@ const Price = contractBalance  / contractTokenBalance?.decimals
             gap: 100px;
             padding: 10px;
             width: 100%;
+            color: white;
           }
           
           .number-slide1 {
             background: transparent;
             backdropfilter: blur(50px);
-            width: 100%;
+            width: 500px;
             padding: 1%;
             display: flex;
+
           }  
             .number-slide12{
             background: rgba(0, 0, 0, 0.498);
