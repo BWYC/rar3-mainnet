@@ -593,7 +593,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           .home-mobile-menu {
             top: 0px;
             left: 0px;
-            width: 200px;
+            width: 230px;
             height: 1317px;
             display: flex;
             z-index: 1;
