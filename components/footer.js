@@ -16,7 +16,7 @@ const Footer = (props) => {
         {`
           .footer-container {
             width: 100%;
-            height: 56px;
+            height: auto;
             display: flex;
             z-index: 1;
             position: static;

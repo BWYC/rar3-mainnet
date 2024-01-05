@@ -54,13 +54,10 @@ export default function MyApp({ Component: Component, pageProps: pageProps }) {
       />
      
       <NextThemesProvider attribute="class" defaultTheme="dark">
-   <Snowfall />
         <Grid />
-        
       <Component className="body" {...pageProps} />
-    
       <Patner />
-      <Announement />
+    
       <Footer />
       <SpeedInsights/>  
       <Analytics />

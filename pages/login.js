@@ -46,7 +46,7 @@ export default function Login() {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          height: '80vh',
+          height: '90vh',
         }}>
           <ConnectWallet/>
         <Link className="button" style={{margin: "5%"}} href="">ENTER DEX</Link>
@@ -56,13 +56,13 @@ export default function Login() {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          height: '80vh'
+          height: '85vh'
         }}>
           <div style={{
             display: 'flex',
             flexDirection: 'column',
             width: '80%',
-            height: '80vh',
+            height: '85vh',
           }}>
             <div style={{
               padding: '0.5rem 1rem',
@@ -78,29 +78,46 @@ export default function Login() {
               borderBottom: '1px solid #EEE',
               height: 'auto'
             }}>
-              <div style={{
-                minWidth: "80%"
-              }}>
-                 <p style={{ textAlign: "center",  textShadow: "lightblue 1px 1px 5px", margin: "1%", color: "white", fontSize: "20px" }}>RAREBAY SIGN IN</p>
-                 <p style={{ textAlign: "center",  textShadow: "lightblue 1px 1px 5px", margin: "1%", color: "lightgray", fontSize: "10px" }}>Sign in with a social wallet</p>
-                <EmailSignIn />
-                <div style={{
+       
+                 <p style={{ textAlign: "center",  textShadow: "lightblue 1px 1px 5px", color: "white", fontSize: "20px" }}>RAREBAY SIGN IN</p>
+                 <p style={{ textAlign: "center",  textShadow: "lightblue 1px 1px 5px", color: "lightgray", fontSize: "10px" }}>Sign in with a social wallet</p>
+                 <div style={{
                   display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'center',
                   width: '100%',
-                  height: '2rem',
-                  marginBottom: '1rem',
-                  color: '#CCC'
+                  height: '3rem',
+                  marginBottom: '4rem',
+                  marginTop: '4rem',
+                  color: '#CCC',
+                  margin: "2%"
                 }}>
-                  <hr style={{ width: "45%", borderTop: "1px solid #CCC" }}/>
-                  <p>or</p>
-                  <hr style={{ width: "45%", borderTop: "1px solid #CCC" }} />
+                   <ConnectWallet
+   theme="system"
+ style={{border: "solid 1px white", borderWidth: "0.5px", fontFamily: "Pixel NES", background: "gray", textShadow: "gray 2px 1px 1px" }}
+ modalSize={"compact"}
+ btnTitle={"CONNECT WALLET"}
+ modalTitle={"RAREBAY"}
+ switchToActiveChain={true}
+ welcomeScreen={{
+   title: "WELCOME TO THE HOME OF RAR3",
+   Image: {
+     src: "https://bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a.ipfs.nftstorage.link/ipfs/bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a/xcxczxz.png",
+     width: 150,
+     height: 150,
+   },
+   subtitle:
+     "Connect wallet to get started.",
+ }}
+ modalTitleIconUrl={
+   "https://bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a.ipfs.nftstorage.link/ipfs/bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a/xcxczxz.png"
+ }
+/>
                 </div>
+                ————— OR —————
                 <SocialLoginButton strategy="google" />
                 <SocialLoginButton strategy="facebook" />
                 <SocialLoginButton strategy="apple" />
-              </div>
             </div>
           </div>
         </div>
