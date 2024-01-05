@@ -207,7 +207,7 @@ const Price = contractBalance  / contractTokenBalance?.decimals
          <p className="home-heading1" >Liquidity: {contractBalance} CORE </p>
         </div>
         <div className="keen-slider__slide number-slide1">
-        <p className="home-heading1" > WHLS Locked: {contractTokenBalance?.displayValue} </p>
+        <p className="home-heading1" > Locked: {contractTokenBalance?.displayValue} </p>
         <p className="home-heading1" > WHLS/CORE: {Price}$ </p>
         </div>
       </div>
@@ -352,26 +352,27 @@ const Price = contractBalance  / contractTokenBalance?.decimals
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 900;
             height: 70px;
             max-height: 100vh;
             text-align: center;
             gap: 100px;
             padding: 10px;
+            width: 100%;
           }
           
           .number-slide1 {
             background: transparent;
             backdropfilter: blur(50px);
-            width: 20px;
+            width: 100%;
             padding: 1%;
             display: flex;
           }  
             .number-slide12{
             background: rgba(0, 0, 0, 0.498);
             backdropfilter: blur(50px);
-            width: 20px;
+            width: 100%;
             padding: 1%;
             fontStyle: arial italics;
 
