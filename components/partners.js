@@ -217,7 +217,7 @@ const Price = contractBalance  / contractTokenBalance?.decimals
           color: rgb(140, 140, 140);
           height: 100%;
           width: 100%;
-          font-size: 19px;
+          font-size: 16px;
           align-self: center;
           padding: 10px;
           background: -webkit-linear-gradient(
