@@ -1,6 +1,6 @@
 import { useContract, useContractEvents, useContractRead, useTotalCirculatingSupply, useAddress } from "@thirdweb-dev/react";
-import {Link, Twitter, Discord, HandCoin, ArrowDown, Dapps, Checkmark } from '@web3uikit/icons'
-
+import {Twitter, Discord, HandCoin, ArrowDown, Dapps, Checkmark } from '@web3uikit/icons'
+import Link from "next/link";
 
 export default function Data() {
     const address = useAddress();
@@ -10,8 +10,8 @@ export default function Data() {
 
     return(
         <>
-        <div style={{display: "flex", marginLeft: "0%", marginBottom: "2%", position: "absolute", zIndex: "1", outline: "solid 0px lightgray", padding: "1%", borderRadius: "8px", backdropFilter: "blur(100px)", filter: "opacity(1)", background: "rgba(0, 0, 0, 0.281)", fontSize: "13px", gap: "10px", color: "", marginTop: "1%" }}>
-<ArrowDown fontSize='20px'/><Link href="/mints">MINT</Link><hr style={{margin: "5px", width: "1px", height: "30px", color: "white"}} />
+        <div style={{display: "flex", height: "40px", marginLeft: "10px", marginBottom: "2%", position: "absolute", zIndex: "1", outline: "solid 0px lightgray", padding: "1%", borderRadius: "4px", backdropFilter: "blur(100px)", filter: "opacity(1)", background: "rgba(0, 0, 0, 0.281)", fontSize: "13px", gap: "10px", color: "", marginTop: "1%" }}>
+<ArrowDown fontSize='20px'/><Link href="/mints">MINT</Link><div style={{margin: "5px", width: "1px", height: "30px", background: "white"}} />
   <HandCoin fontSize='20px'/> <Link href="/pools">STAKE</Link>
 </div>
         </>

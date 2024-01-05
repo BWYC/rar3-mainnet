@@ -81,7 +81,7 @@ export default function Buy() {
       >
         {loadingDirects ? (
          <Container maxWidth="lg">
-          <Skeleton width="100%" height="100%" />
+          <div className={styles.spinner} />
          </Container>
         ) : directListings && directListings.length === 0 ? (
           <p>Nothing for sale yet! Head to the sell tab to list an NFT.</p>
@@ -99,7 +99,7 @@ export default function Buy() {
       >
         {loadingAuctions ? (
          <Container maxWidth="lg">
-         <Skeleton width="100%" height="100%" />
+        <div className={styles.spinner} />
         </Container>
         ) : auctionListings && auctionListings.length === 0 ? (
           <p style={{display: "flex", color: "initial"}}>Nothing for sale yet! Head to the sell tab to list an NFT.</p>

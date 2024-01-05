@@ -215,7 +215,7 @@ return(
       >
         <Container maxWidth="xl">
           {isLoading ? (
-            <p>LOADING..</p>
+            <div className={styles.spinner} />
           ) : (
             <Container maxWidth="xl">
             <NFTGrid
@@ -236,7 +236,7 @@ return(
         }`}
       >
         {loadingDirects ? (
-          <p>LOADING...</p>
+          <div className={styles.spinner} />
         ) : directListings && directListings.length === 0 ? (
           <p>Nothing for sale yet! Head to the sell tab to list an NFT.</p>
         ) : (
@@ -254,7 +254,7 @@ return(
       >
       
       {loadingAuctions ? (
-          <p style={{padding: "5%", textAlign: "center", display: "flex"}}> LOADING..</p>
+          <p style={{padding: "5%", textAlign: "center", display: "flex"}}>  <div className={styles.spinner} /></p>
         ) : auctionListings && auctionListings.length === 0 ? (
           <p>Nothing for sale yet! Head to the sell tab to list an NFT.</p>
         ) : (
