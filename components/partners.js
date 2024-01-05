@@ -254,9 +254,9 @@ const Price =  contractTokenBalance?.decimals / contractBalance
           font-family: "Pixel NES";
           text-decoration: none;
           background-image: linear-gradient(
-            rgb(100, 100, 155) 1%,
-            rgb(100, 100, 100) 49%,
-            rgb(255, 100, 0) 98%
+            rgb(255, 255, 255) 1%,
+            rgb(150, 150, 150) 60%,
+            rgb(0, 0, 0) 98%
           );
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;

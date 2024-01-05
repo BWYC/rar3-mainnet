@@ -65,8 +65,8 @@
   opacity: 0.5;
 }
 body{
-  background-color: rgba(46, 46, 46, 0.512);
-  background-image: url("/grid.png");
+  background-color: rgba(46, 46, 46, 0.68);
+  background-image: url("/grids.png");
   background-repeat: no-repeat;
   background-size: cover;
   font-family: Pixel NES;
