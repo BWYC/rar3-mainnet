@@ -7,7 +7,7 @@ const Announement = (props) => {
     <>
       <div className={`footer-container ${props.rootClassName} `}>
         <div className="footer-container1">
-          <span className="footer-text">⚠️maintenance ONGOING, SOME BUTTONS MAY NOT WORK⚠️</span>
+          <span className="footer-text">TOKEN SWAP IS LIVE</span>
         </div>
       </div>
       <style jsx>
@@ -30,6 +30,7 @@ const Announement = (props) => {
             border-left-width: 0px;
             border-right-width: 0px;
             border-bottom-width: 0px;
+            color: gray;
           }
           .footer-container1 {
             width: auto;

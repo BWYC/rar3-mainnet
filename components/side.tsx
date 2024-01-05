@@ -2,30 +2,65 @@ import React from "react";
 import Link from "next/link";
 import Head from "next/head";
 
-import Search from "../components/search";
-import Footer from "../components/footer";
-import { ConnectWallet } from "@thirdweb-dev/react";
+import Search from "./search";
+import Footer from "./footer";
+import { ConnectWallet, useConnect } from "@thirdweb-dev/react";
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
-import ReactThemeToggleButton from "../components/toggle"
+import ReactThemeToggleButton from "./toggle"
 import {useTheme} from "next-themes";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useAddress } from "@thirdweb-dev/react";
-
 import { Blockie } from "web3uikit";
-import styles from "../styles/Home.module.css";
-import Buy from "./buy"
-import Listings from "./listing";
-import Buy1 from "./bwyc"
-import Swap from "./swap"
+import styles from "../styles/Token.module.css";
+import Banner from "./banner";
+import {Testnet} from '@web3uikit/icons'
+import ReactLanguageSelect from 'react-languages-select';
+import { NFT, ThirdwebSDK } from "@thirdweb-dev/sdk";
+import ResponsiveMenu from 'react-responsive-navbar';
+import 'react-languages-select/css/react-languages-select.css';
+import {ArrowUp} from '@web3uikit/icons'
 
-
-const Dex = (props) => {
-  
-  const address = useAddress()
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  
  
+//OR import sass module
+import 'react-languages-select/scss/react-languages-select.scss';
+import { Token } from "web3uikit";
+import { Ref } from "react";
+import { useRouter } from "next/router";
+import randomColor from "../util/randomColor";
+import {Swap} from '@web3uikit/icons'
+import {ArrowDown} from '@web3uikit/icons'
+
+ 
+
+
+const [randomColor1, randomColor2, randomColor3, randomColor4] = [
+  randomColor(),
+  randomColor(),
+  randomColor(),
+  randomColor(),
+];
+
+
+
+const light = { background: "black" };
+const dark = { background: "#d3d3d3" };
+
+const GlobalStyle = createGlobalStyle`
+.body{
+  background: black;
+  transition: background 0.4s;
+  color: white;
+}
+`;
+
+const Side = () => {
+    
+  const address = useAddress()
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+
 
   useEffect(() => {
     if (!address) {
@@ -37,34 +72,97 @@ const Dex = (props) => {
 
 
 
+const { themes, setTheme } = useTheme()
+const [ isDark, setDark ] = useState(false)
+
+const theme = isDark ? dark : light;
+const themez = isDark ? setTheme("light") : setTheme("dark");
+
 
   return (
     <>
-  
-      <div className="home-container">
-        <Head>
-          <title>RareBay | DEX</title>
-          <meta property="og:title" content="RareBay | DEX" />
-        </Head>
-        <Swap />
+          <div className="home-container" >
+    
+    <div className="home-container01">
+      <div className="home-container02">
+        <div className="home-container03">
+          <div className="home-container04">
+            <Link href="/">
+            <Swap fontSize='20px'/>
+            </Link>
+            <Link
+             href="/dex"
+              className="home-text"
+            >
+               <div  className="home-link01">
+          SWAP
+              </div>
+            </Link>
+            <ArrowDown fontSize='20px'/>
+            <Link
+               href="/portfolio"
+              className="home-link"
+            >
+               <div  className="home-link01">
+               SELL
+              </div>
+          
+            </Link>
+            <ArrowUp fontSize='20px'/>
+            <Link
+              href="/rare"
+            >
+
+              <div  className="home-link01">
+             BUY
+              </div>
+            
+            </Link>
           </div>
-      
-      <style jsx>
+          <header data-thq="thq-navbar" className="home-navbar-interactive">
+            <div data-thq="thq-navbar-nav" className="home-desktop-menu">
+              <div className="home-container05">
+                <Search placeholder="Search" rootClassName="search-root-class-name15"></Search>
+              </div>
+              <div className="home-buttons">
+              <div style={{display: "flex", gap: "20px", padding: "10px", borderRadius: "8px", backdropFilter: "blur(100px)", filter: "opacity(1)", background: "rgba(0, 0, 0, 0.281)", fontSize: "13px" }}>
+</div>  
+
+              
+              </div>
+            </div>
+            <div data-thq="thq-burger-menu" className="home-burger-menu">
+              <svg viewBox="0 0 1024 1024" className="home-icon06">
+                <path d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
+              </svg>
+            </div>
+            <Link legacyBehavior href="/">
+              <a className="home-link02">
+                <Image
+                style={{borderRadius: "100%"}}
+                width={50}
+                height={50}
+                  alt="logo"
+                  src="/fav-200h.ico"
+                  className="home-image"
+                />
+              </a>
+            </Link>
+            <Search placeholder="Search" rootClassName="search-root-class-name14"></Search>
+          </header>
+  </div>
+  </div>
+   </div>
+   </div>
+   <style jsx>
         {`
           .home-container {
-            font-family: Pixel NES;
             width: 100%;
             display: flex;
             overflow: auto;
-            min-height: 85vh;
             align-items: center;
             flex-direction: column;
             justify-content: center;
-            background-image: linear-gradient(
-              145deg,
-              rgba(0, 0, 0, 0.15) 2%,
-              rgba(0, 20, 50, 0.80) 100%
-            ); 
           }
           .home-container01 {
             flex: 0 0 auto;
@@ -117,8 +215,7 @@ const Dex = (props) => {
             border-bottom-width: 1px;
           }
           .home-container04:hover {
-            background: rgba(100, 100, 100, 0.39);
-            backdrop-filter: blur(10px);
+            background: rgba(100, 100, 100, 0.69);
           }
           .home-icon {
             fill: #008aff;
@@ -230,7 +327,7 @@ const Dex = (props) => {
           }
           .home-navbar-interactive {
             top: -1px;
-            color: var(--dl-color-gray-500);
+            color: lightgray;
             right: -1px;
             width: 100%;
             height: 68px;
@@ -243,7 +340,7 @@ const Dex = (props) => {
             padding-left: 35px;
             padding-right: var(--dl-space-space-threeunits);
             padding-bottom: 11px;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(20px);
             justify-content: center;
           }
           .home-desktop-menu {
@@ -272,12 +369,11 @@ const Dex = (props) => {
             align-items: center;
             margin-left: var(--dl-space-space-unit);
             justify-content: center;
+            cursor: pointer;
           }
           .home-burger-menu:hover{
-            background: gray;
-            border-radius: 16px;
             cursor: pointer;
-
+            margin-left: 50px;
           }
           .home-icon06 {
             fill: #606060;
@@ -301,7 +397,7 @@ const Dex = (props) => {
             z-index: 1;
             position: absolute;
             transform: translateX(-100%);
-            box-shadow: 5px 5px 10px 0px #005ba3;
+            box-shadow: 5px 5px 10px 0px gray;
             transition: 0.5s;
             flex-direction: column;
             padding-bottom: 32px;
@@ -314,12 +410,12 @@ const Dex = (props) => {
             display: flex;
             z-index: 1;
             align-self: center;
-            background: rgba(0, 0, 0, 0.77);
+            background: rgba(0, 0, 0, 0.57);
             align-items: center;
             border-color: #5f5f5f;
             border-width: 0.5px;
             flex-direction: column;
-            backdrop-filter: blur(500px);
+            backdrop-filter: blur(50px);
             justify-content: center;
             border-top-width: 0px;
             border-left-width: 0px;
@@ -439,8 +535,9 @@ const Dex = (props) => {
           }
           .home-text01 {
             color: #ffffff;
-            font-size: 13px;
+            font-size: 12px;
             font-family: "Pixel NES";
+            margin-bottom: 5%;
           }
           .home-link04 {
             display: contents;
@@ -937,16 +1034,15 @@ const Dex = (props) => {
             margin-top: 5px;
           }
           .home-container35 {
-            width: 80%;
+            width: 100%;
             height: 100%;
             display: flex;
             align-items: center;
             flex-direction: column;
-            margin-top: 2%;
           }
           .home-container36 {
             width: 100%;
-            height: 100%;
+            height: auto;
             display: flex;
             position: inherit;
             align-self: center;
@@ -958,11 +1054,11 @@ const Dex = (props) => {
           }
           .home-container37 {
             width: 100%;
-            height: 100%;
+            height: auto;
             display: flex;
             position: relative;
             align-self: center;
-            margin-top: 100px;
+            margin-top: var(--dl-space-space-unit);
             align-items: center;
             margin-bottom: var(--dl-space-space-unit);
             flex-direction: column;
@@ -986,9 +1082,10 @@ const Dex = (props) => {
             font-family: "Pixel NES";
             text-decoration: none;
             background-image: linear-gradient(
-              rgb(100, 100, 155) 1%,
-              rgb(100, 100, 100) 49%,
-              rgb(255, 100, 0) 98%
+              180deg,
+              rgb(255, 255, 255) 0%,
+              rgb(45, 45, 45) 49%,
+              rgb(0, 100, 250) 98%
             );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -1007,7 +1104,7 @@ const Dex = (props) => {
             justify-content: center;
           }
           .home-video {
-            width: 100%;
+            width: 70%;
             filter: opacity(1);
             height: auto;
             margin-left: var(--dl-space-space-oneandhalfunits);
@@ -1193,7 +1290,7 @@ const Dex = (props) => {
             flex-direction: column;
             background-size: cover;
             justify-content: center;
-            background-image: url("/1080x360-1200w.jpeg");
+            background-image: url("/w.jpeg");
             background-position: center;
           }
           .home-container48:hover {
@@ -1588,12 +1685,13 @@ const Dex = (props) => {
             backdrop-filter: blur(50px);
           }
           .home-container69 {
-            width: 90%;
+            width: 75%;
             font-family: Pixel NES;
             height: 375px;
             display: flex;
             align-items: center;
             flex-direction: column;
+            color: lightgray;
           }
           .home-feature-card {
             width: 100%;
@@ -1673,11 +1771,9 @@ const Dex = (props) => {
           }
           @media (max-width: 479px) {
             .home-container01 {
-              height: auto;
             }
             .home-container02 {
               width: 100%;
-              height: 1113px;
               margin-right: 0px;
             }
             .home-container03 {
@@ -1761,7 +1857,7 @@ const Dex = (props) => {
             }
             .home-container35 {
               height: 100%;
-              margin-top: 150px;
+              margin-top: 135px;
             }
             .home-container36 {
               height: auto;
@@ -1823,4 +1919,20 @@ const Dex = (props) => {
   );
 };
 
-export default Dex;
+Side.defaultProps = {
+  text11: "EXPLORE RAR3",
+  text1: "RAREBAY.XYZ",
+  text11111: "PORTFOLIO",
+  text111: "DEX",
+  text1111: "POOLS",
+  text11113: "SATS",
+  rootClassName: "",
+  image_alt: "image",
+  image_src: "/fav-200h.ico",
+  rootClassName3: "",
+  text11112: "MINT",
+};
+
+
+
+export default Side;

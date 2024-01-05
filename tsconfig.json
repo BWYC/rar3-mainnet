@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/buy.tsx", "auth.config.js", "pages/login.js", "pages/mints.js", "pages/collection2.js", "pages/collection.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/buy.tsx", "auth.config.js", "pages/login.js", "pages/mints.js", "pages/collection2.js", "pages/collection.js", "pages/rare.js", "components/partners.js"],
   "exclude": ["node_modules"]
 }

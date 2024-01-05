@@ -20,11 +20,12 @@ import Buy1 from "./bwyc"
 import Swap from "./swap"
 
 
+
 const Dex = (props) => {
-  
+
   const address = useAddress()
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  
+
  
 
   useEffect(() => {
@@ -46,7 +47,7 @@ const Dex = (props) => {
           <title>RareBay | DEX</title>
           <meta property="og:title" content="RareBay | DEX" />
         </Head>
-        <Swap />
+        <Buy />
           </div>
       
       <style jsx>
@@ -56,14 +57,15 @@ const Dex = (props) => {
             width: 100%;
             display: flex;
             overflow: auto;
-            min-height: 85vh;
+            min-height: 100vh;
             align-items: center;
             flex-direction: column;
             justify-content: center;
+            margin-top: 1%;
             background-image: linear-gradient(
               145deg,
               rgba(0, 0, 0, 0.15) 2%,
-              rgba(0, 20, 50, 0.80) 100%
+              rgba(0, 20, 50, 0.50) 100%
             ); 
           }
           .home-container01 {
@@ -1823,4 +1825,4 @@ const Dex = (props) => {
   );
 };
 
-export default Dex;
+export default Buy;

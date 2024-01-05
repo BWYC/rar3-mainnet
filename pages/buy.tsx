@@ -50,7 +50,7 @@ export default function Buy() {
 
   return (
     <Container maxWidth="lg">
-        <div  style={{color: "white", height: "80px", width: "60%", padding: "1%", backdropFilter: "blur(10px)", borderRadius: "8px", fontSize: "16px", display: "flex", flexDirection: "row", gap: "5px", marginTop: "7%" }}>
+        <div  style={{color: "white", height: "80px", width: "60%", padding: "1%", backdropFilter: "blur(10px)", borderRadius: "8px", fontSize: "16px", display: "flex", flexDirection: "row", gap: "5px", marginTop: "9%" }}>
         <Data />
         <p className={styles.verify}  style={{color: "white", width: "100%", fontSize: "14px",  padding: "2%", borderRadius: "8px", display: "flex"}}>
         RAR31ONES
