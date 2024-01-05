@@ -8,7 +8,6 @@ import {
   Image,
   Input,
   Spinner,
-  useToast,
 } from "@chakra-ui/react";
 import { ACTIVE_CHAIN, DEX_ADDRESS, TOKEN_ADDRESS } from "../const/details";
 import {
@@ -29,11 +28,12 @@ import {
 import { useEffect, useState } from "react";
 import SwapInput from "../components/input";
 import {Swap} from '@web3uikit/icons'
+import toast, { Toaster } from "react-hot-toast";
+import toastStyle from "../util/toastConfig";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const toast = useToast();
   const address = useAddress();
   const { contract: tokenContract } = useContract(TOKEN_ADDRESS, "token");
   const { contract: dexContract } = useContract(DEX_ADDRESS, "custom");
@@ -117,22 +117,21 @@ export default function Home() {
         await approveTokenSpending({ args: [DEX_ADDRESS, toWei(tokenValue)] });
         // Swap!
         await swapTokenToNative({ args: [toWei(tokenValue)] });
-        toast({
-          status: "success",
-          title: "Swap Successful",
-          description: `You have successfully swapped your ${
-            symbol || "tokens"
-          } to ${ACTIVE_CHAIN.nativeCurrency.symbol}.`,
+        toast( `You have successfully swapped your ${
+          symbol || "tokens"
+        } to ${ACTIVE_CHAIN.nativeCurrency.symbol}.`, {
+          icon: "✅",
+          style: toastStyle,
+          position: "bottom-center",
         });
       }
       setLoading(false);
     } catch (err) {
       console.error(err);
-      toast({
-        status: "error",
-        title: "Swap Failed",
-        description:
-          "There was an error performing the swap. Please try again.",
+      toast(`SWAP FAILED, PLEASE TRY AGAIN`, {
+        icon: "❌",
+        style: toastStyle,
+        position: "bottom-center",
       });
       setLoading(false);
     }
@@ -154,6 +153,7 @@ export default function Home() {
 
   return (
     <>
+      <Toaster position="top-center" reverseOrder={false} />
       <Head>
         <title>RareBay | Swap</title>
         <meta name="description" content="Swap WHLS" />
