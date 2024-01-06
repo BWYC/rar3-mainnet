@@ -40,7 +40,7 @@ class Clock extends Component {
   }
   render() {
     return (
-      <div style={{ display: "flex", textAlign: "center", gap: "2px", marginBottom: "1.5%", padding: "10px", borderBottom: "solid 2px lightgray" }}>
+      <div style={{ display: "flex", textAlign: "center", gap: "2px", marginBottom: "1.5%", padding: "10px", borderBottom: "solid 1px lightgray" }}>
         <div >
           <p style={{ color: "lightgray", padding: "7px", backdropFilter: "blur(50px)", border: "solid 0.1px gray", margin: "2px", background: "rgba(0, 0, 0, 0.3)", borderRadius: "8px", fontSize: "14px" }}>Days</p>{this.leading0(this.state.days)} </div>
         <div>
