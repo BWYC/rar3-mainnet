@@ -172,7 +172,7 @@ export default function Home() {
         rounded="2xl"
         borderWidth="1px"
         borderColor="gray.300"
-        style={{padding: "2%", margin: "1%", borderRadius: "16px", border: "solid 2px", backdropFilter: "blur(10px)", background: `linear-gradient(
+        style={{padding: "2.5%", margin: "1%", borderRadius: "16px", border: "solid 2px", backdropFilter: "blur(10px)", background: `linear-gradient(
           180deg,
           rgba(255, 255, 255, 0.15) 2%,
           rgba(0, 0, 0, 0.5) 100%
@@ -184,7 +184,7 @@ export default function Home() {
          
         >
            <div style={{display: "flex", padding: "1%", gap: "5px"}}>
-    CORE <Image src={"/core.png"} w="20" h="20" />
+    CORE<Image src={"/core.png"} w="20" h="20" />
     </div>
           <SwapInput
             current={currentFrom}
@@ -203,12 +203,12 @@ export default function Home() {
             }
             maxW="5"
             mx="auto"
-            style={{margin: "5%", fontWeight: "900", display: "flex"}}
+            style={{margin: "5%", fontWeight: "900", fontSize: "25px", display: "flex", alignItems: "center", textAlign: "center"}}
           >
-            ↓↑
+            ⇅
           </Button>
           <div style={{display: "flex", padding: "1%", gap: "5px"}}>
-    WHLS <Image src={"/whls.ico"} w="20" h="20" />
+    WHLS<Image src={"/whls.ico"} w="20" h="20" />
     </div>
           <SwapInput
             current={currentFrom}

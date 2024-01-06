@@ -2015,7 +2015,8 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
               padding: 16px;
               border-color: #444444;
               border-width: 0.5px;
-              background-color: black;
+              background-color: transparent;
+              backdrop-filter: blur(50px);
               overflow: auto;
             }
             .home-nav {
