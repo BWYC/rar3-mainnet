@@ -75,7 +75,6 @@ export default function Login() {
               alignItems: 'center',
               marginTop: "10%",
               padding: '0.5rem 1rem',
-              borderBottom: '1px solid #EEE',
               height: 'auto'
             }}>
        
