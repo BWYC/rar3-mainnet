@@ -203,7 +203,7 @@ const Price =  contractTokenBalance?.decimals / contractBalance
         <p className="home-heading1" > WHLS/CORE: {Price} </p>
         </div>
         <div className="keen-slider__slide number-slide1">
-        <p className="home-heading1" > PRESALE: {contractTokenBalance?.displayValue} WHLS </p>
+        <p className="home-heading1" > PRESALE: {contractTokenBalance?.displayValue}</p>
         </div>
       </div>
       <style jsx>
@@ -213,7 +213,7 @@ const Price =  contractTokenBalance?.decimals / contractBalance
            display: flex;
            align-items: center;
            justify-content: center;
-           font-size: 20px;
+           font-size: 18px;
            font-weight: 900;
            height: 100%;
            text-align: center;
@@ -241,7 +241,7 @@ const Price =  contractTokenBalance?.decimals / contractBalance
           color: rgb(140, 140, 140);
           height: 100%;
           width: 100%;
-          font-size: 20px;
+          font-size: 18px;
           align-self: center;
           padding: 7px;
           background: -webkit-linear-gradient(
@@ -376,7 +376,7 @@ const Price =  contractTokenBalance?.decimals / contractBalance
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 17px;
+            font-size: 16px;
             font-weight: 900;
             height: 70px;
             max-height: 100vh;
@@ -390,7 +390,6 @@ const Price =  contractTokenBalance?.decimals / contractBalance
           .number-slide1 {
             background: transparent;
             backdropfilter: blur(50px);
-            width: 500px;
             padding: 1%;
             display: flex;
 
