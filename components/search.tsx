@@ -56,10 +56,10 @@ const Search = ({ placeholder }: { placeholder: string }) => {
             border-radius: var(--dl-radius-radius-radius8);
             backdrop-filter: blur(10px);
             background-color: inherit;
-            color: lightgray;
+            color: white;
           }
           .search-textinput:focus {
-            border: solid blue 2px;
+            border: solid lightblue 2px;
           }
           .search-textinput:hover {
             color: lightgray;
