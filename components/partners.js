@@ -197,7 +197,7 @@ const Price =  contractTokenBalance?.decimals / contractBalance
       <Link href="https://metamask.io"  style={{display: "flex"}}>  <Image width="40" height="40" src="/mt.png" alt="" /><p style={{padding: "10px", fontFamily: "Arial", fontSize: "20px" }}>MetaMask</p></Link>
         </div>
         <div className="keen-slider__slide number-slide1">
-         <p className="home-heading1" >VOLUME TRADED: {contractBalance} CORE</p>
+         <p className="home-heading1" >VOLUME SOLD: {contractBalance} CORE</p>
         </div>
         <div className="keen-slider__slide number-slide1">
         <p className="home-heading1" > WHLS/CORE: {Price} </p>

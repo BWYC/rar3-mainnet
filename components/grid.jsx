@@ -581,6 +581,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           .home-burger-menu {
             width: 50px;
             height: 50px;
+            color: white;
             display: flex;
             align-items: center;
             margin-left: var(--dl-space-space-unit);
