@@ -2011,7 +2011,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
               width: 59px;
             }
             .home-mobile-menu {
-              width: 250px;
+              width: 280px;
               height: 1098px;
               padding: 16px;
               border-color: #444444;
@@ -2020,7 +2020,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             }
             .home-nav {
               width: 289px;
-              height: auto;
+              height: 1000px;
               border-width: 0px;
               justify-content: flex-start;
               background-color: transparent;
