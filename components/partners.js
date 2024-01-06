@@ -187,7 +187,7 @@ const Price =  contractTokenBalance?.decimals / contractBalance
 
   return (
     <>
-      <div  ref={sliderRef} className="keen-slider" style={{backdropFilter: "blur(50px)", height: "75px", backgroundColor: "rbga(0, 0, 0, 1)"}}>
+      <div  ref={sliderRef} className="keen-slider" style={{backdropFilter: "blur(50px)", height: "75px", background: "rgba(0, 0, 0, 0.4)"}}>
         <div className="keen-slider__slide number-slide1" >
        <Link href="https://thirdweb.com"  style={{display: "flex"}}>  <Image width="40" height="40" src="/3rd.png" alt="ThirdWeb"  /><p style={{padding: "10px", fontFamily: "Arial", fontSize: "20px" }}>ThirdWeb</p></Link>
        <Link href="https://coredao.org" style={{display: "flex"}}><Image width="40" height="40" src="/core.png" alt="CORE"/><p style={{padding: "10px", fontFamily: "Arial", fontSize: "20px" }}>CoreDAO</p></Link>
@@ -203,7 +203,7 @@ const Price =  contractTokenBalance?.decimals / contractBalance
         <p className="home-heading1" > WHLS/CORE: {Price} </p>
         </div>
         <div className="keen-slider__slide number-slide1">
-        <p className="home-heading1" > POOLED WHLS: {contractTokenBalance?.displayValue} </p>
+        <p className="home-heading1" > PRESALE: {contractTokenBalance?.displayValue} WHLS </p>
         </div>
       </div>
       <style jsx>

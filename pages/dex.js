@@ -18,6 +18,7 @@ import Buy from "./buy"
 import Listings from "./listing";
 import Buy1 from "./bwyc"
 import Swap from "./swap"
+import Count from "../components/count"
 
 
 const Dex = (props) => {
@@ -46,6 +47,7 @@ const Dex = (props) => {
           <title>RareBay | DEX</title>
           <meta property="og:title" content="RareBay | DEX" />
         </Head>
+        <Count />
         <Swap />
           </div>
       
@@ -56,7 +58,8 @@ const Dex = (props) => {
             width: 100%;
             display: flex;
             overflow: auto;
-            min-height: 85vh;
+            min-height: 78vh;
+            margin-top: 2.5%;
             align-items: center;
             flex-direction: column;
             justify-content: center;
