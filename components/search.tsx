@@ -46,7 +46,7 @@ const Search = ({ placeholder }: { placeholder: string }) => {
           .search-container {
             display: flex;
             position: relative;
-            color: gray;
+            color: white;
           }
           .search-textinput {
             width: 163px;
