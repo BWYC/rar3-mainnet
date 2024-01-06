@@ -168,7 +168,7 @@ return(
         <Blockie scale={16.5} seed={address} />
         <h3 className={styles.profileName}>
           {truncateEthAddress(address)}
-          {verified ? ( <Checkmark fontSize={16} style={{background: "blue", padding: "0.2px", border: "dashed 1px", borderRadius: "100%"}} />)
+          {verified ? ( <Checkmark fontSize={16} style={{background: "lightblue", padding: "0.2px", border: "dashed 1px", borderRadius: "100%"}} />)
           : (<></>)}
            
         </h3>
