@@ -589,7 +589,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           }
           .home-burger-menu:hover{
             cursor: pointer;
-            background: gray;
+            background: white;
             border-radius: 100%;
           }
           .home-icon06 {
