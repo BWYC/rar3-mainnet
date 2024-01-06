@@ -52,11 +52,11 @@ const Search = ({ placeholder }: { placeholder: string }) => {
             width: 163px;
             height: 39px;
             transition: 0.3s;
-            border-color: #6f6f6f;
+            border-color: white;
             border-radius: var(--dl-radius-radius-radius8);
             backdrop-filter: blur(10px);
             background-color: inherit;
-            color: gray
+            color: lightgray;
           }
           .search-textinput:focus {
             border: solid blue 2px;
