@@ -608,7 +608,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           .home-mobile-menu {
             top: 0px;
             left: 0px;
-            width: 230px;
+            width: 250px;
             height: 1317px;
             display: flex;
             z-index: 1;
@@ -2010,13 +2010,12 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
               width: 59px;
             }
             .home-mobile-menu {
-              width: 278px;
+              width: 250px;
               height: 1098px;
               padding: 16px;
               border-color: #444444;
               border-width: 0.5px;
               background-color: black;
-              overflow: auto;
             }
             .home-nav {
               width: 289px;
