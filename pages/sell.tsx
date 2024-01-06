@@ -23,7 +23,7 @@ import {
     if (isLoading) {
       return (
        <Container maxWidth="md">
-          <div className={tokenPageStyles.spinner} />
+           <div className={tokenPageStyles.spinner} style={{margin: "10%"}} />
         </Container>
       );
     }

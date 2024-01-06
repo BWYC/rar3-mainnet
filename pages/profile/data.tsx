@@ -10,7 +10,7 @@ export default function Data() {
 
     return(
         <>
-        <div style={{display: "flex", height: "40px", marginLeft: "10px", marginBottom: "2%", position: "absolute", zIndex: "1", outline: "solid 0px lightgray", padding: "1%", borderRadius: "4px", backdropFilter: "blur(100px)", filter: "opacity(1)", background: "rgba(0, 0, 0, 0.281)", fontSize: "13px", gap: "10px", color: "lightgray", marginTop: "1%" }}>
+        <div style={{display: "flex", marginLeft: "10px", marginBottom: "2%", position: "absolute", zIndex: "1", outline: "solid 0px lightgray", padding: "10px", borderRadius: "4px", filter: "opacity(1)", background: "rgba(0, 0, 0, 0.1)", fontSize: "13px", gap: "10px", color: "lightgray", marginTop: "1%" }}>
 <ArrowDown fontSize='20px'/><Link href="/mints">MINT</Link><div style={{width: "2px", height: "100%", background: "white"}} />
   <HandCoin fontSize='20px'/> <Link href="/pools">STAKE</Link>
 </div>
