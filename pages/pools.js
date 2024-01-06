@@ -462,6 +462,7 @@ const Pools = (props) => {
             font-weight: 600;
             margin-bottom: var(--dl-space-space-twounits);
             text-transform: uppercase;
+            text-align: center;
           }
           .pools-container08 {
             display: flex;
