@@ -41,7 +41,7 @@ const [randomColor1, randomColor2, randomColor3, randomColor4] = [
   randomColor(),
   randomColor(),
   randomColor(),
-];
+];s
 
 
 
@@ -173,7 +173,7 @@ return(
            
         </h3>
        </div>
-       <div style={{width: "100%", padding: "1%", height: "20px", margin: "20px"}}><Data /></div>
+       <div style={{width: "100%", padding: "1%", height: "20px", marginTop: "20px"}}><Data /></div>
       </div>
       <div style={{width: "100%", padding: "2%", height: "20px", margin: "10px"}} />
     <div className={styles.tabs}>
@@ -215,7 +215,7 @@ return(
       >
         <Container maxWidth="xl">
           {isLoading ? (
-             <div className={styles.spinner} style={{margin: "10%"}} />
+             <div className={styles.spinner} style={{marginTop: "10%"}} />
           ) : (
             <Container maxWidth="xl">
             <NFTGrid
@@ -236,7 +236,7 @@ return(
         }`}
       >
         {loadingDirects ? (
-          <div className={styles.spinner} style={{margin: "10%"}} />
+          <div className={styles.spinner} style={{marginTop: "10%"}} />
         ) : directListings && directListings.length === 0 ? (
           <p>Nothing for sale yet! Head to the sell tab to list an NFT.</p>
         ) : (
@@ -253,7 +253,7 @@ return(
       >
       
       {loadingAuctions ? (
-          <Container maxWidth="md">  <div className={styles.spinner} style={{margin: "10%"}} /></Container>
+          <Container maxWidth="md">  <div className={styles.spinner} style={{marginTop: "10%"}} /></Container>
         ) : auctionListings && auctionListings.length === 0 ? (
           <p>Nothing for sale yet! Head to the sell tab to list an NFT.</p>
         ) : (
