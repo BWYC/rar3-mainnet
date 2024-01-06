@@ -702,7 +702,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           .home-heading {
             color: rgb(140, 140, 140);
             height: 24px;
-            font-size: 1.7em;
+            font-size: 1.4em;
             align-self: center;
             background: -webkit-linear-gradient(
               rgb(1, 12, 241),
@@ -2044,7 +2044,6 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             .home-heading {
               width: 100%;
               height: 35px;
-              font-size: 2em;
               text-align: center;
               background-image: linear-gradient(
                 180deg,

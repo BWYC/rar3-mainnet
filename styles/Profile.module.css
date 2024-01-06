@@ -23,7 +23,14 @@
   margin-top: -100px;
   margin-left: 5%;
 }
-
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .profileName {
   margin: 5%;
   width: 100%;

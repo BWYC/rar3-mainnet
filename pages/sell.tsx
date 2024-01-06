@@ -22,20 +22,18 @@ import {
   
     if (isLoading) {
       return (
-        <div
-          style={{ margin: "10%"}}
-        >
-          LOADING NFTs..
-        </div>
+       <Container maxWidth="md">
+          <div className={tokenPageStyles.spinner} />
+        </Container>
       );
     }
   
     return (
-      <Container maxWidth="lg">
+      <div>
       
        {!selectedNft ? (     <>
             <p style={{ marginTop: "1%", fontFamily: "Pixel Nes" }}>
-              Select which NFT you&rsquo;d like to sell below.
+              Select which NFT to sell below.
             </p>
             <NFTGrid
               data={data}
@@ -82,6 +80,6 @@ import {
             </div>
           </div>
         )}
-      </Container>
+      </div>
     );
   }

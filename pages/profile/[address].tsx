@@ -221,7 +221,7 @@ return(
             <NFTGrid
             data={ownedNfts}
             isLoading={isLoading}
-            emptyText="Looks like you don't have any NFTs from this collection. Head to DEX and buy page to buy some!"
+            emptyText="Looks like you don't have any NFTs from this collection. Head to Buy Tab and buy some!"
           />
              </Container>
           )}
@@ -254,7 +254,7 @@ return(
       >
       
       {loadingAuctions ? (
-          <p style={{padding: "5%", textAlign: "center", display: "flex"}}>  <div className={styles.spinner} /></p>
+          <Container maxWidth="md"><div className={styles.spinner} /></Container>
         ) : auctionListings && auctionListings.length === 0 ? (
           <p>Nothing for sale yet! Head to the sell tab to list an NFT.</p>
         ) : (
@@ -272,10 +272,7 @@ return(
           tab === "sell" ? styles.activeTabContent : styles.tabContent
         }`}
       >
-          <Container maxWidth="xl">
-
        <Sell />
-       </Container>
       </div>
       </Container>
     </section>
