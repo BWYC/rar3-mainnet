@@ -11,7 +11,7 @@ class Clock extends Component {
     };
   }
   timer;
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.getTimeUntil(this.props.deadline);
   }
   componentDidMount() {
