@@ -32,8 +32,8 @@ import {
       <div>
       
        {!selectedNft ? (     <>
-            <p style={{ marginTop: "1%", fontFamily: "Pixel Nes" }}>
-              Select which NFT to sell below.
+            <p style={{ color: "lightgray", fontFamily: "Pixel Nes" }}>
+              Select which NFT to sell from below.
             </p>
             <NFTGrid
               data={data}
@@ -42,7 +42,7 @@ import {
                 setSelectedNft(nft);
               }}
               emptyText={
-                "Looks like you don't own any NFT in your Wallet. Head to the buy page to buy some!"
+                "Looks like you don't own any NFT in your Wallet. Head to the buy tab to buy some!"
               }
             />
           </>

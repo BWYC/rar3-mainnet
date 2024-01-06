@@ -245,8 +245,7 @@ return(
           ))
         )}
       </div>
-     
-      <Container maxWidth="xl">
+    
       <div
         className={`${
           tab === "auctions" ? styles.activeTabContent : styles.tabContent
@@ -265,7 +264,7 @@ return(
 
       
       </div>
-      </Container>
+
       <div
 
         className={`${
