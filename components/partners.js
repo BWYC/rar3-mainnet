@@ -189,7 +189,7 @@ const Price =  contractTokenBalance?.decimals / contractBalance
     <>
       <div  ref={sliderRef} className="keen-slider" style={{backdropFilter: "blur(50px)", height: "75px", backgroundColor: "rbga(0, 0, 0, 1)"}}>
         <div className="keen-slider__slide number-slide1" >
-       <Link href="https://thirdweb.com"  style={{display: "flex"}}>  <Image width="30" height="30" src="/3rd.png" alt="ThirdWeb"  /><p style={{padding: "7px", fontFamily: "Arial" }}>ThirdWeb</p></Link>
+       <Link href="https://thirdweb.com"  style={{display: "flex"}}>  <Image width="30" height="30" src="/3rd.png" alt="ThirdWeb"  /><p style={{padding: "10px", fontFamily: "Arial" }}>ThirdWeb</p></Link>
        <Link href="https://coredao.org" style={{display: "flex"}}><Image width="30" height="30" src="/core.png" alt="CORE"/><p style={{padding: "7px", fontFamily: "Arial" }}>CoreDAO</p></Link>
        <Link href="https://bitcoin.org"  style={{display: "flex"}}>  <Image width="30" height="30" src="/btc2.png" alt="" />
       <p style={{padding: "7px", fontFamily: "Arial" }}>Bitcoin</p>
@@ -213,7 +213,7 @@ const Price =  contractTokenBalance?.decimals / contractBalance
            display: flex;
            align-items: center;
            justify-content: center;
-           font-size: 20px;
+           font-size: 22px;
            font-weight: 900;
            height: 100%;
            text-align: center;
