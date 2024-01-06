@@ -618,8 +618,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             flex-direction: column;
             padding-bottom: 32px;
             justify-content: space-between;
-            background: rbga(255, 255, 255, 0.5);
-            backdrop-filter: blur(200px);
+            background: black;
           }
           .home-nav {
             width: 100%;
@@ -2016,8 +2015,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
               padding: 16px;
               border-color: #444444;
               border-width: 0.5px;
-              background-color: transparent;
-              backdrop-filter: blur(100px);
+              background-color: black;
               overflow: auto;
             }
             .home-nav {
