@@ -40,19 +40,19 @@ class Clock extends Component {
   }
   render() {
     return (
-      <div style={{ display: "flex", textAlign: "center", gap: "2px", marginBottom: "1%" }}>
+      <div style={{ display: "flex", textAlign: "center", gap: "2px", marginBottom: "1%", padding: "10px", borderBottom: "solid 2px lightgray" }}>
         <div >
-          <p style={{ color: "gray", padding: "7px", backdropFilter: "blur(50px)", border: "solid 0.5px gray", margin: "2px", background: "rgba(0, 0, 0, 0.3)", borderRadius: "8px", fontSize: "14px" }}>Days</p>{this.leading0(this.state.days)} </div>
+          <p style={{ color: "lightgray", padding: "7px", backdropFilter: "blur(50px)", border: "solid 0.1px gray", margin: "2px", background: "rgba(0, 0, 0, 0.3)", borderRadius: "8px", fontSize: "14px" }}>Days</p>{this.leading0(this.state.days)} </div>
         <div>
-          <p style={{ color: "gray", padding: "7px", backdropFilter: "blur(50px)", border: "solid 0.5px gray", margin: "2px", background: "rgba(0, 0, 0, 0.3)", borderRadius: "8px", fontSize: "14px" }}>Hours</p>
+          <p style={{ color: "lightgray", padding: "7px", backdropFilter: "blur(50px)", border: "solid 0.1px gray", margin: "2px", background: "rgba(0, 0, 0, 0.3)", borderRadius: "8px", fontSize: "14px" }}>Hours</p>
           {this.leading0(this.state.hours)}    
         </div>
         <div>
-          <p style={{ color: "gray", padding: "7px", backdropFilter: "blur(50px)", border: "solid 0.5px gray", margin: "2px", background: "rgba(0, 0, 0, 0.3)", borderRadius: "8px", fontSize: "14px" }}>Minutes</p>
+          <p style={{ color: "lightgray", padding: "7px", backdropFilter: "blur(50px)", border: "solid 0.1px gray", margin: "2px", background: "rgba(0, 0, 0, 0.3)", borderRadius: "8px", fontSize: "14px" }}>Minutes</p>
           {this.leading0(this.state.minutes)}   
         </div>
         <div>
-          <p style={{ color: "gray", padding: "7px", backdropFilter: "blur(50px)", border: "solid 0.5px gray", margin: "2px", background: "rgba(0, 0, 0, 0.3)", borderRadius: "8px", fontSize: "14px" }}>Seconds</p>
+          <p style={{ color: "lightgray", padding: "7px", backdropFilter: "blur(50px)", border: "solid 0.1px gray", margin: "2px", background: "rgba(0, 0, 0, 0.3)", borderRadius: "8px", fontSize: "14px" }}>Seconds</p>
           {this.leading0(this.state.seconds)}
         </div>
       </div>

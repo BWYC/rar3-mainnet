@@ -52,9 +52,9 @@ const Search = ({ placeholder }: { placeholder: string }) => {
             width: 163px;
             height: 39px;
             transition: 0.3s;
-            border-color: white;
+            border-color: gray;
             border-radius: var(--dl-radius-radius-radius8);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(50px);
             background-color: inherit;
             color: white;
           }

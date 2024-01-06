@@ -65,7 +65,7 @@
   opacity: 0.5;
 }
 body{
-  background-color: rgba(0, 0, 0, 0.36);
+  background-color: rgba(40, 40, 40, 0.408);
   background-image: url("/grids.png");
   background-repeat: no-repeat;
   background-size: cover;
