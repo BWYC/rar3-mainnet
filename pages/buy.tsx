@@ -99,7 +99,7 @@ export default function Buy() {
       >
         {loadingAuctions ? (
          <Container maxWidth="lg">
-        <div className={styles.spinner} />
+        <div className={styles.spinner}  style={{marginTop: "10%"}} />
         </Container>
         ) : auctionListings && auctionListings.length === 0 ? (
           <p style={{display: "flex", color: "initial"}}>Nothing for sale yet! Head to the sell tab to list an NFT.</p>

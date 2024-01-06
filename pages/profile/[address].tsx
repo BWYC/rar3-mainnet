@@ -41,7 +41,7 @@ const [randomColor1, randomColor2, randomColor3, randomColor4] = [
   randomColor(),
   randomColor(),
   randomColor(),
-];s
+];
 
 
 
