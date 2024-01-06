@@ -187,7 +187,7 @@ const Price =  contractTokenBalance?.decimals / contractBalance
 
   return (
     <>
-      <div  ref={sliderRef} className="keen-slider" style={{backdropFilter: "blur(50px)", height: "75px", background: "rgba(0, 0, 0, 0.4)"}}>
+      <div  ref={sliderRef} className="keen-slider" style={{backdropFilter: "blur(50px)", height: "77px", background: "rgba(0, 0, 0, 0.4)"}}>
         <div className="keen-slider__slide number-slide1" >
        <Link href="https://thirdweb.com"  style={{display: "flex"}}>  <Image width="40" height="40" src="/3rd.png" alt="ThirdWeb"  /><p style={{padding: "10px", fontFamily: "Arial", fontSize: "20px" }}>ThirdWeb</p></Link>
        <Link href="https://coredao.org" style={{display: "flex"}}><Image width="40" height="40" src="/core.png" alt="CORE"/><p style={{padding: "10px", fontFamily: "Arial", fontSize: "20px" }}>CoreDAO</p></Link>
@@ -243,7 +243,7 @@ const Price =  contractTokenBalance?.decimals / contractBalance
           width: 100%;
           font-size: 20px;
           align-self: center;
-          padding: 5px;
+          padding: 7px;
           background: -webkit-linear-gradient(
             rgb(1, 12, 241),
             rgb(250, 100, 100)

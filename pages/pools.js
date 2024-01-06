@@ -294,7 +294,8 @@ const Pools = (props) => {
           }
           .pools-text {
             color: rgb(111, 111, 111);
-            font-size: 1.5rem;
+            font-size: 1.2rem;
+            margin: 3px;            
             text-align: center;
             font-weight: 600;
             margin-bottom: var(--dl-space-space-twounits);
@@ -380,7 +381,8 @@ const Pools = (props) => {
           }
           .pools-text08 {
             color: #626262;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
+            margin: 3px;            
             font-weight: 600;
             margin-bottom: var(--dl-space-space-twounits);
             text-transform: uppercase;
@@ -392,7 +394,8 @@ const Pools = (props) => {
             flex-direction: row;
           }
           .pools-text09 {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
+            margin: 3px;            
             text-align: center;
             font-weight: 700;
           }
@@ -458,7 +461,7 @@ const Pools = (props) => {
           }
           .pools-text16 {
             color: rgb(98, 98, 98);
-            font-size: 1.5rem;
+            font-size: 1rem;
             font-weight: 600;
             margin-bottom: var(--dl-space-space-twounits);
             text-transform: uppercase;
@@ -471,7 +474,8 @@ const Pools = (props) => {
             flex-direction: row;
           }
           .pools-text17 {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
+            margin: 3px;            
             text-align: center;
             font-weight: 700;
           }
@@ -534,7 +538,8 @@ const Pools = (props) => {
           }
           .pools-text24 {
             color: rgb(80, 80, 80);
-            font-size: 1.5rem;
+            font-size: 1.2rem;
+            margin: 3px;            
             text-align: center;
             font-weight: 600;
             margin-bottom: var(--dl-space-space-twounits);
@@ -547,7 +552,8 @@ const Pools = (props) => {
             flex-direction: row;
           }
           .pools-text25 {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
+            margin: 3px;            
             text-align: center;
             font-weight: 700;
           }

@@ -2032,7 +2032,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
               border-color: rgba(53, 53, 53, 0.04);
             }
             .home-container07 {
-              width: 265px;
+              width: auto;
               height: 82px;
               justify-content: center;
             }
