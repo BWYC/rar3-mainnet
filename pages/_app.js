@@ -1,3 +1,5 @@
+console.warn = () => {}
+
 import "./style.css";
 import { ThirdwebProvider, lightTheme } from "@thirdweb-dev/react";
 import {ThemeProvider as NextThemesProvider} from "next-themes";
@@ -24,6 +26,7 @@ import Announement from "../components/anncounement.";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from '@vercel/analytics/react';
 import Snowfall from 'react-snowfall'
+
 
 
 
