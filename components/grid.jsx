@@ -46,7 +46,7 @@ const [randomColor1, randomColor2, randomColor3, randomColor4] = [
 
 
 
-const light = { background: "black" };
+const light = { background: "white" };
 const dark = { background: "black" };
 
 const GlobalStyle = createGlobalStyle`
@@ -81,8 +81,8 @@ const Grid = (nft, props) => {
 const { themes, setTheme } = useTheme()
 const [ isDark, setDark ] = useState(true)
 
-const theme = isDark ? light : dark;
-const themez = isDark ? setTheme("dark") : setTheme("light");
+const theme = isDark ? dark : light;
+const themez = isDark ? setTheme("light") : setTheme("dark");
 
   return (
     <>
